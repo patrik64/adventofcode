@@ -161,14 +161,14 @@ function BFS(g, xroot, yroot)
             var xa = adj[a]["x"];
             var ya = adj[a]["y"];
             var nodeTest = getNodeFromGraph(g, xa, ya);
-            if(nodeTest["node"]["x"] == resx && nodeTest["node"]["y"] == resy)
-                return {"distance" : currentDist+1, "queue" : queue }
-
             if(nodeTest["distance"] < 0)
             {
                 nodeTest["distance"] = currentDist + 1;
                 nodeTest["parent"] = nodeCurrent;
                 queue.push(nodeTest);
+
+                if(nodeTest["node"]["x"] == resx && nodeTest["node"]["y"] == resy)
+                    return nodeTest;
             }
         }
     }
@@ -229,13 +229,10 @@ function createPath(node)
 }
 
 graph = createGraph(xx, yy);
-var obj = BFS(graph, 1, 1);
-
-var path = createPath(obj["queue"].shift());
+var nodeFinish = BFS(graph, 1, 1);
+var path = createPath(nodeFinish);
 var scr = makeScreen(xx, yy, path);
 printScreen(scr);
-
-console.log(obj["distance"]);
-
+console.log(nodeFinish["distance"]);
 graph2 = createGraph(xx, yy);
 BFS2(graph2, 1, 1, walkLimit);
