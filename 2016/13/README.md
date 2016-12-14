@@ -13,24 +13,24 @@ If the number of bits that are 1 is even, it's an open space.
 If the number of bits that are 1 is odd, it's a wall.
 For example, if the office designer's favorite number were 10, drawing walls as # and open spaces as ., the corner of the building containing 0,0 would look like this:
 
-  0123456789
-0 .#.####.##
-1 ..#..#...#
-2 #....##...
-3 ###.#.###.
-4 .##..#..#.
-5 ..##....#.
-6 #...##.###
+  0123456789  
+0 .#.####.##  
+1 ..#..#...#  
+2 #....##...  
+3 ###.#.###.  
+4 .##..#..#.  
+5 ..##....#.  
+6 #...##.###  
 Now, suppose you wanted to reach 7,4. The shortest route you could take is marked as O:
 
-  0123456789
-0 .#.####.##
-1 .O#..#...#
-2 #OOO.##...
-3 ###O#.###.
-4 .##OO#OO#.
-5 ..##OOO.#.
-6 #...##.###
+  0123456789  
+0 .#.####.##  
+1 .O#..#...#  
+2 #OOO.##...  
+3 ###O#.###.  
+4 .##OO#OO#.  
+5 ..##OOO.#.  
+6 #...##.###  
 Thus, reaching 7,4 would take a minimum of 11 steps (starting from your current location, 1,1).
 
 What is the fewest number of steps required for you to reach 31,39?
