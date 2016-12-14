@@ -15,7 +15,7 @@ function getHash(str)
 
 function getTripletChar(str)
 {
-    for(var i = 0; i < str.length; i++)
+    for(var i = 0; i < str.length-2; i++)
     {
         var ch1 = str[i];
         var ch2 = str[i+1];
@@ -28,7 +28,7 @@ function getTripletChar(str)
 
 function has5(str, ch)
 {
-    for(var i = 0; i < str.length; i++)
+    for(var i = 0; i < str.length-4; i++)
     {
         var ch1 = str[i];
         var ch2 = str[i+1];
