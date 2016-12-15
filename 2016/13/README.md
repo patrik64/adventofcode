@@ -14,7 +14,7 @@ While it seems chaotic, a nearby morale-boosting poster explains, the layout is 
 
 For example, if the office designer's favorite number were ``10``, drawing walls as ``#`` and open spaces as ``.``, the corner of the building containing ``0,0`` would look like this:
 
-``  0123456789``    
+&nbsp;&nbsp;&nbsp;``0123456789``    
 ``0 .#.####.##``    
 ``1 ..#..#...#``  
 ``2 #....##...``  
@@ -25,11 +25,11 @@ For example, if the office designer's favorite number were ``10``, drawing walls
 
 Now, suppose you wanted to reach 7,4. The shortest route you could take is marked as O:
 
-``  0123456789``  
+&nbsp;&nbsp;&nbsp;``0123456789``  
 ``0 .#.####.##``  
 ``1 .O#..#...#``  
 ``2 #OOO.##...``  
-``3 ###O#.###.`` 
+``3 ###O#.###.``  
 ``4 .##OO#OO#.``  
 ``5 ..##OOO.#.``  
 ``6 #...##.###``  
