@@ -30,7 +30,7 @@ For example, if the Door ID is ``abc``:
 
  - The first interesting hash is from ``abc3231929``, which produces ``0000015...``; so, ``5`` goes in position ``1``: ``_5______``.
  - In the previous method, ``5017308`` produced an interesting hash; however, it is ignored, because it specifies an invalid position (8).
- - The second interesting hash is at index ``5357525``, which produces ``000004e...``; so, e goes in position ``4``: ``_5__e___``.  
+ - The second interesting hash is at index ``5357525``, which produces ``000004e...``; so, ``e`` goes in position ``4``: ``_5__e___``.  
 
 You almost choke on your popcorn as the final character falls into place, producing the password ``05ace8e3``.
 
