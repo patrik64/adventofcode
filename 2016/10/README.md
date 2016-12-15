@@ -1,4 +1,4 @@
-#--- Day 10: Balance Bots ---
+#[--- Day 10: Balance Bots ---](http://adventofcode.com/2016/day/10)
 
 You come upon a factory in which many robots are zooming around handing small microchips to each other.
 
