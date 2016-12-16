@@ -23,9 +23,9 @@ Repeat these steps until you have enough data to fill the desired disk.
 
 Once the data has been generated, you also need to create a checksum of that data. Calculate the checksum only for the data that fits on the disk, even if you generated more data than that in the previous step.
 
-The checksum for some given data is created by considering each non-overlapping pair of characters in the input data. If the two characters match (00 or 11), the next checksum character is a 1. If the characters do not match (01 or 10), the next checksum character is a 0. This should produce a new string which is exactly half as long as the original. If the length of the checksum is even, repeat the process until you end up with a checksum with an odd length.
+The checksum for some given data is created by considering each non-overlapping pair of characters in the input data. If the two characters match (``00`` or ``11``), the next checksum character is a ``1``. If the characters do not match (``01`` or ``10``), the next checksum character is a ``0``. This should produce a new string which is exactly half as long as the original. If the length of the checksum is even, repeat the process until you end up with a checksum with an odd length.
 
-For example, suppose we want to fill a disk of length 12, and when we finally generate a string of at least length 12, the first 12 characters are 110010110100. To generate its checksum:
+For example, suppose we want to fill a disk of length ``12``, and when we finally generate a string of at least length ``12``, the first ``12`` characters are ``110010110100``. To generate its checksum:
 
 - Consider each pair: ``11``, ``00``, ``10``, ``11``, ``01``, ``00``.
 - These are same, same, different, same, different, same, producing ``110101``.
