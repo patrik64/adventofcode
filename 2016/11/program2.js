@@ -269,9 +269,11 @@ function printPath(node)
 }
 
 
-var nodeStart = [0,0,1,2,1,2,1,2,1,2,0];
+var nodeStart = [0,0,0,0,3,3,3];
 createGraph(nodeStart);
 //console.log(Object.keys(graph).length);
 var nodeFinal = BFS(nodeStart);
 printPath(nodeFinal);
-console.log(nodeFinal["distance"]);
+var previousDist = 33;
+var partialDist = nodeFinal["distance"];
+console.log(previousDist + " + " + partialDist + " = " + (previousDist+partialDist));
