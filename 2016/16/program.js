@@ -9,7 +9,7 @@ function reverseString(str)
 
 String.prototype.replaceAll = function(target, replacement) 
 {
-  return this.split(target).join(replacement);
+    return this.split(target).join(replacement);
 }
 
 function dragon(a)
@@ -25,7 +25,7 @@ function dragon(a)
     return ret;
 }
 
-function isEven(n) 
+function isEven(n)
 {
    return n % 2 == 0;
 }
@@ -33,7 +33,7 @@ function isEven(n)
 function checksum(x)
 {
     var ret = '';
-    for(var i = 0; i < x.length; i= i+2)
+    for( var i = 0; i < x.length; i = i+2 )
     {
         var ch1 = x[i];
         var ch2 = x[i+1];
