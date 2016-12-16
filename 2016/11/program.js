@@ -38,14 +38,7 @@ function hasGenerators(j, node, val)
         {
             if(node[i] == val && (i+1 != j))
                 return true;
-
-            //if((node[i] != node[i+1]) && (node[i] == val))
-            //    return true;
         }
-        //else
-        //{
-        //    
-        //}
     }
     return false;
 }
@@ -103,7 +96,6 @@ function move(node, dir)
             }
         }
     }
-    //ret = filterAllowedMoves(ret);
     var moves = {"floor" : floor, "nbors" : ret }; 
     return moves;
 }
@@ -207,16 +199,6 @@ function isFinalNode(node)
     return true;
 }
 
-function isFinalNodeEx(node)
-{
-    for(var x in node)
-    {
-        if(node[x] != 3)
-            return false;
-    }
-    return true;
-}
-
 function BFS(nodeStart)
 {
     var queue = [];
@@ -271,7 +253,6 @@ function printPath(node)
 
 var nodeStart = [0,0,1,2,1,2,1,2,1,2,0];
 createGraph(nodeStart);
-//console.log(Object.keys(graph).length);
 var nodeFinal = BFS(nodeStart);
 printPath(nodeFinal);
 console.log(nodeFinal["distance"]);
