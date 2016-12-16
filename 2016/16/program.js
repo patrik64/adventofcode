@@ -10,7 +10,7 @@ function reverseString(str)
 String.prototype.replaceAll = function(target, replacement) 
 {
   return this.split(target).join(replacement);
-};
+}
 
 function dragon(a)
 {
