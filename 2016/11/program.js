@@ -239,13 +239,34 @@ function BFS(nodeStart)
     return nodeRoot;
 }
 
+function printNode(n)
+{
+    var j = 0;
+    var str = "";
+    for(var i in n)
+    {
+        if(isEven(i))
+            j++;
+
+        if(i == n.length-1)
+            str = "[ FLOOR[" + n[i] + "] : " + str;
+        else if(isEven(i))
+            str += "G" + j + "[" + n[i] + "], ";
+        else
+            str += "M" + j + "[" + n[i] + "], ";
+    }
+    str = str.substring(0, str.length-2);
+    str += " ]";
+    console.log(str);
+}
+
 function printPath(node)
 {
-    console.log(node["node"]);
+    printNode(node["node"]);
     var nodeParent = node["parent"];
     while(nodeParent["node"] !== undefined)
     {
-        console.log(nodeParent["node"]);
+        printNode(nodeParent["node"]);
         nodeParent = nodeParent["parent"];
     }
 }
