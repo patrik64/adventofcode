@@ -6,7 +6,7 @@ Each Elf brings a present. They all sit in a circle, numbered starting with posi
 
 For example, with five Elves (numbered ``1`` to ``5``):
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``1``  
+&nbsp;&nbsp;&nbsp;&nbsp;``1``  
 ``5``&nbsp;&nbsp;&nbsp;``2``  
 &nbsp;``4``&nbsp;``3 ``  
 
@@ -40,7 +40,7 @@ Elves ``3`` and ``4`` are across the circle; Elf ``3``'s present is stolen, bein
 
 &nbsp;&nbsp;&nbsp;``1``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``1``  
 ``5``&nbsp;&nbsp;&nbsp;``2 `` ``-->`` ``5``&nbsp;&nbsp;&nbsp;``2``  
-&nbsp;``4``&nbsp;``-``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``4``  
+&nbsp;``4``&nbsp;``-``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``4``  
 
 Elf ``2`` steals from the Elf directly across the circle, Elf ``5``:  
 
