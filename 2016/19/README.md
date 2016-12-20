@@ -50,9 +50,9 @@ Elf ``2`` steals from the Elf directly across the circle, Elf ``5``:
 
 Next is Elf ``4`` who, choosing between Elves ``1`` and ``2``, steals from Elf ``1``:  
 
-`` -   ``         ``  2  ``  
-``    2``  ``-->````     ``  
-`` 4   ``         ``  4  ``  
+``-``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``2``  
+&nbsp;&nbsp;&nbsp;``2``&nbsp;``-->``    
+`` 4``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``4``  
 
 Finally, Elf ``2`` steals from Elf ``4``:  
 
