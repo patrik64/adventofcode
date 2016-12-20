@@ -6,9 +6,9 @@ Each Elf brings a present. They all sit in a circle, numbered starting with posi
 
 For example, with five Elves (numbered ``1`` to ``5``):
 
-&nbsp;&nbsp;&nbsp;``1``  
-``5``&nbsp;&nbsp;&nbsp;``2``  
-&nbsp;``4``&nbsp;``3 ``  
+&nbsp;&nbsp;&nbsp;&nbsp;``1``  
+``5``&nbsp;&nbsp;&nbsp;&nbsp;``2``  
+&nbsp;``4``&nbsp;&nbsp;``3 ``  
 
 - Elf ``1`` takes Elf ``2``'s present.
 - Elf ``2`` has no presents and is skipped.
