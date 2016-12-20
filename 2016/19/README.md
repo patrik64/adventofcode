@@ -45,8 +45,8 @@ Elves ``3`` and ``4`` are across the circle; Elf ``3``'s present is stolen, bein
 Elf ``2`` steals from the Elf directly across the circle, Elf ``5``:  
 
 &nbsp;&nbsp;&nbsp;&nbsp;``1``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``  1   ``  
-``-``&nbsp;&nbsp;&nbsp;&nbsp;``2``&nbsp;&nbsp;&nbsp;``-->``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``2``  
-&nbsp;&nbsp;&nbsp;&nbsp;``4``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``4``  
+``-``&nbsp;&nbsp;&nbsp;&nbsp;``2``&nbsp;&nbsp;&nbsp;``-->``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``2``  
+&nbsp;&nbsp;&nbsp;&nbsp;``4``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``4``  
 
 Next is Elf ``4`` who, choosing between Elves ``1`` and ``2``, steals from Elf ``1``:  
 
