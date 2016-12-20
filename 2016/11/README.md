@@ -34,7 +34,7 @@ Then, to get everything up to the assembling machine on the fourth floor, the fo
 
 Bring the Hydrogen-compatible Microchip to the second floor, which is safe because it can get power from the Hydrogen Generator:
 
-``F4 .  .  .  .  .  ``  
+``F4 .````.``&nbsp;``.``&nbsp;``.``&nbsp;``.``&nbsp;    
 ``F3 .  .  .  LG .  ``  
 ``F2 E  HG HM .  .  ``  
 ``F1 .  .  .  .  LM ``  
