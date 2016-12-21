@@ -42,6 +42,18 @@ for (i in arr)
     var str = arr[i];
     for(x in str)
         pos = move(str[x], pos);
-    res.push(pos);
+    
+    if(pos > 9)
+    {
+        var s = '';
+        if(pos == 10) s = 'A';
+        else if(pos == 11) s = 'B';
+        else if(pos == 12) s = 'C';
+        else if(pos == 13) s = 'D';
+        else s = 'X';
+        res.push(s);
+    }
+    else
+        res.push(pos);
 }
-console.log(res);
+console.log(res.join(''));

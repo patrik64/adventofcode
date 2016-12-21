@@ -37,4 +37,4 @@ for (i in arr)
         pos = move(str[x], pos);
     res.push(pos);
 }
-console.log(res);
+console.log(res.join(''));
