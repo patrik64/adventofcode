@@ -9,7 +9,6 @@ function parse(str)
     var nr2 = '';
     var pos = 0;
 
-    disknr = Number(str[pos]);
     while(str[pos] != '-')
     {
         nr1 += str[pos];
