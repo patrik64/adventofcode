@@ -2,12 +2,12 @@
 
 You gain access to a massive storage cluster arranged in a grid; each storage node is only connected to the four nodes directly adjacent to it (three if the node is on an edge, two if it's in a corner).
 
-You can directly access data only on node /dev/grid/node-x0-y0, but you can perform some limited actions on the other nodes:
+You can directly access data only on node ``/dev/grid/node-x0-y0``, but you can perform some limited actions on the other nodes:
 
 - You can get the disk usage of all nodes (via df). The result of doing this is in your puzzle input.
 - You can instruct a node to move (not copy) all of its data to an adjacent node (if the destination node has enough space to receive the data). The sending node is left empty after this operation.  
 
-Nodes are named by their position: the node named node-x10-y10 is adjacent to nodes ``node-x9-y10``, ``node-x11-y10``, ``node-x10-y9``, and ``node-x10-y11``.
+Nodes are named by their position: the node named ``node-x10-y10`` is adjacent to nodes ``node-x9-y10``, ``node-x11-y10``, ``node-x10-y9``, and ``node-x10-y11``.
 
 Before you begin, you need to understand the arrangement of data on these nodes. Even though you can only move data between directly connected nodes, you're going to need to rearrange a lot of the data to get access to the data you need. Therefore, you need to work out how you might be able to shift data around.
 
@@ -25,7 +25,7 @@ Your puzzle answer was ``993``.
 
 Now that you have a better understanding of the grid, it's time to get to work.
 
-Your goal is to gain access to the data which begins in the node with y=0 and the highest x (that is, the node in the top-right corner).
+Your goal is to gain access to the data which begins in the node with ``y=0`` and the highest ``x`` (that is, the node in the top-right corner).
 
 For example, suppose you have the following grid:
 
@@ -40,9 +40,9 @@ For example, suppose you have the following grid:
 ``/dev/grid/node-x2-y1    9T    8T     1T   88%``  
 ``/dev/grid/node-x2-y2    9T    6T     3T   66%``  
 
-In this example, you have a storage grid ``3`` nodes wide and ``3`` nodes tall. The node you can access directly, node-x0-y0, is almost full. The node containing the data you want to access, node-x2-y0 (because it has y=0 and the highest x value), contains 6 terabytes of data - enough to fit on your node, if only you could make enough space to move it there.
+In this example, you have a storage grid ``3`` nodes wide and ``3`` nodes tall. The node you can access directly, ``node-x0-y0``, is almost full. The node containing the data you want to access, ``node-x2-y0`` (because it has ``y=0`` and the highest ``x`` value), contains ``6`` terabytes of data - enough to fit on your node, if only you could make enough space to move it there.
 
-Fortunately, ``node-x1-y1`` looks like it has enough free space to enable you to move some of this data around. In fact, it seems like all of the nodes have enough space to hold any node's data (except node-x0-y2, which is much larger, very full, and not moving any time soon). So, initially, the grid's capacities and connections look like this:
+Fortunately, ``node-x1-y1`` looks like it has enough free space to enable you to move some of this data around. In fact, it seems like all of the nodes have enough space to hold any node's data (except ``node-x0-y2``, which is much larger, very full, and not moving any time soon). So, initially, the grid's capacities and connections look like this:
 
 ``( 8T/10T) --  7T/ 9T -- [ 6T/10T]``  
 ``    |           |           |    ``  
@@ -52,13 +52,13 @@ Fortunately, ``node-x1-y1`` looks like it has enough free space to enable you to
 
 The node you can access directly is in parentheses; the data you want starts in the node marked by square brackets.
 
-In this example, most of the nodes are interchangable: they're full enough that no other node's data would fit, but small enough that their data could be moved around. Let's draw these nodes as .. The exceptions are the empty node, which we'll draw as _, and the very large, very full node, which we'll draw as #. Let's also draw the goal data as G. Then, it looks like this:
+In this example, most of the nodes are interchangable: they're full enough that no other node's data would fit, but small enough that their data could be moved around. Let's draw these nodes as ``.``. The exceptions are the empty node, which we'll draw as ``_``, and the very large, very full node, which we'll draw as ``#``. Let's also draw the goal data as ``G``. Then, it looks like this:
 
 ``(.) .  G``  
 `` .  _  .``  
 `` #  .  .``  
 
-The goal is to move the data in the top right, G, to the node in parentheses. To do this, we can issue some commands to the grid and rearrange the data:
+The goal is to move the data in the top right, ``G``, to the node in parentheses. To do this, we can issue some commands to the grid and rearrange the data:
 
 Move data from ``node-y0-x1`` to ``node-y1-x1``, leaving node ``node-y0-x1`` empty:
 
