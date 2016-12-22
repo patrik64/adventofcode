@@ -60,23 +60,23 @@ In this example, most of the nodes are interchangable: they're full enough that 
 
 The goal is to move the data in the top right, G, to the node in parentheses. To do this, we can issue some commands to the grid and rearrange the data:
 
-Move data from node-y0-x1 to node-y1-x1, leaving node node-y0-x1 empty:
+Move data from ``node-y0-x1`` to ``node-y1-x1``, leaving node ``node-y0-x1`` empty:
 
 ``(.) _  G``  
 `` .  .  .``  
 `` #  .  .``  
 
-Move the goal data from node-y0-x2 to node-y0-x1:
+Move the goal data from ``node-y0-x2`` to ``node-y0-x1``:
 
 ``(.) G  _``  
 `` .  .  .``  
 `` #  .  .``  
 
-At this point, we're quite close. However, we have no deletion command, so we have to move some more data around. So, next, we move the data from node-y1-x2 to node-y0-x2:
+At this point, we're quite close. However, we have no deletion command, so we have to move some more data around. So, next, we move the data from ``node-y1-x2`` to ``node-y0-x2``:
 
-``(.) G  .``  
- .  .  _  ``  
- #  .  .  ``  
+``(.) G  .  ``  
+`` .  .  _  ``  
+`` #  .  .  ``  
 
 Move the data from ``node-y1-x1`` to ``node-y1-x2``:
 
