@@ -229,8 +229,4 @@ function createPath(node)
 }
 
 graph = createGraph(xx, yy);
-var nodeFinish = BFS(graph, 1, 1);
-var path = createPath(nodeFinish);
-var scr = makeScreen(xx, yy, path);
-printScreen(scr);
-console.log(nodeFinish["distance"]);
+BFS2(graph, 1, 1, walkLimit);

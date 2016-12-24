@@ -91,7 +91,7 @@ cum = [].concat.apply([], cum);
 var cres = getTriangleNr(cum);
 console.log(cres);
 
-var res = getTriangleNr(one);
-res += getTriangleNr(two);
-res += getTriangleNr(three);
-console.log(res);
+//var res = getTriangleNr(one);
+//res += getTriangleNr(two);
+//res += getTriangleNr(three);
+//console.log(res);

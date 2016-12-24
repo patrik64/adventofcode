@@ -1,5 +1,5 @@
 var input = "10111100110001111";
-var len = 272;
+var len = 35651584;
 
 function reverseString(str) 
 {

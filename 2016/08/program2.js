@@ -221,5 +221,5 @@ for (var i in arr)
     }
 }
 
-//printScreen(scr);
-console.log(pixelCount(scr));
+printScreen(scr);
+//console.log(pixelCount(scr));

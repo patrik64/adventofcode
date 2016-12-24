@@ -186,7 +186,7 @@ function process(instructions)
         }
     }
 
-    console.log("a --> ", a);
+    console.log(a);
 }
 
 var instructions = [];
@@ -197,6 +197,4 @@ for (var i in arr)
     instructions.push(obj);
 }
 
-process(instructions);
-instructions.unshift({ "op" : "cpy", "arg1" : "1", "arg2" : "c" });
 process(instructions);

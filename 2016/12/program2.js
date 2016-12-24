@@ -1,6 +1,6 @@
 var fs = require('fs');
  
-var input = fs.readFileSync('Day23.in', 'utf8');
+var input = fs.readFileSync('Day12.in', 'utf8');
 var arr = input.split('\n');
 
 function parse(str)
@@ -48,16 +48,6 @@ function parse(str)
             idx++;
         }
     }
-    else if(str[idx] == 't')
-    {
-        op = "tgl";
-        idx = 4;
-        while(idx < str.length)
-        {
-            arg1 += str[idx];
-            idx++;
-        }
-    }
     else
     {
         op = "jnz";
@@ -80,8 +70,9 @@ function parse(str)
     return ret;
 }
 
-function process(a, instructions)
+function process(instructions)
 {
+    var a = 0;
     var b = 0;
     var c = 0;
     var d = 0;
@@ -119,7 +110,7 @@ function process(a, instructions)
                     b = val;
                 else if(arg2 == "c")
                     c = val;
-                else if(arg2 == "d")
+                else
                     d = val;
             }
             i++;
@@ -132,7 +123,7 @@ function process(a, instructions)
                 b = b + 1;
             else if(arg1 == "c")
                 c = c + 1;
-            else if(arg1 == "d")
+            else
                 d = d + 1;
             i++;
         }
@@ -144,39 +135,8 @@ function process(a, instructions)
                 b = b - 1;
             else if(arg1 == "c")
                 c = c - 1;
-            else if(arg1 == "d")
+            else
                 d = d - 1;
-            i++;
-        }
-        else if(op == "tgl")
-        {
-            var v = arg1;
-
-            if(arg1 == "a")
-                v = a;
-            else if(arg1 == "b")
-                v = b;
-            else if(arg1 == "c")
-                v = c;
-            else if(arg1 == "d")
-                v = d;
-            
-            if((v+i) < instructions.length)
-            {
-                var reach = v + i;
-
-                if(instructions[reach]["op"] == "jnz")
-                    instructions[reach]["op"] = "cpy";
-                else if(instructions[reach]["op"] == "cpy")
-                    instructions[reach]["op"] = "jnz";
-                else if(instructions[reach]["op"] == "tgl")
-                    instructions[reach]["op"] = "inc";
-                else if(instructions[reach]["op"] == "dec")
-                    instructions[reach]["op"] = "inc";
-                else if(instructions[reach]["op"] == "inc")
-                    instructions[reach]["op"] = "dec";
-
-            }
             i++;
         }
         else
@@ -184,8 +144,7 @@ function process(a, instructions)
             if( (arg1 == "a" && a != 0) ||
                 (arg1 == "b" && b != 0) ||
                 (arg1 == "c" && c != 0) ||
-                (arg1 == "d" && d != 0) ||
-                (arg1 > 0))
+                (arg1 == "d" && d != 0))
             {
                 if(isNaN(arg2))
                 {
@@ -197,7 +156,7 @@ function process(a, instructions)
                         j = b;
                     else if(arg2 == "c")
                         j = c;
-                    else if(arg2 == "d")
+                    else
                         j = d;
                 
                     i = i + j;
@@ -226,6 +185,7 @@ function process(a, instructions)
             }
         }
     }
+
     console.log(a);
 }
 
@@ -237,5 +197,5 @@ for (var i in arr)
     instructions.push(obj);
 }
 
-var a = 12;
-process(a, instructions);
+instructions.unshift({ "op" : "cpy", "arg1" : "1", "arg2" : "c" });
+process(instructions);

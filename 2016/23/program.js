@@ -226,7 +226,7 @@ function process(a, instructions)
             }
         }
     }
-    console.log("a --> ", a);
+    console.log(a);
 }
 
 var instructions = [];

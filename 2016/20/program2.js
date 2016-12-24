@@ -69,4 +69,4 @@ while(ip < mx)
     ip++;
 }
 
-console.log(res[0]);
+console.log(res.length);

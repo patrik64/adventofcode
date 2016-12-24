@@ -43,6 +43,7 @@ for (var i in arr)
     all.push(obj);
 }
 
+all.push({ "ps" : 11, "p" : 0 });
 var i = 0;
 while(!isUnlocked(all, i)) i++;
 console.log(i);

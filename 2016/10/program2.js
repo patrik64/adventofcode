@@ -301,8 +301,69 @@ function classify(arr)
 
     solved.sort(compare);
 
-    var bot = findLowHigh(solved, 17, 61);
-    console.log(bot);
+    var output0_bot = -1;
+    var output0_bot_lh = '';
+    var output1_bot = -1;
+    var output1_bot_lh = '';
+    var output2_bot = -1;
+    var output2_bot_lh = '';
+
+    for(var x in directions)
+    {
+        if(directions[x]["low_output"] == 0)
+        {
+            output0_bot = directions[x]["bot"];
+            output0_bot_lh = "low";
+        }
+        else if(directions[x]["high_output"] == 0)
+        {
+            output0_bot = directions[x]["bot"];
+            output0_bot_lh = "high";
+        }
+
+        if(directions[x]["low_output"] == 1)
+        {
+            output1_bot = directions[x]["bot"];
+            output1_bot_lh = "low";
+        }
+        else if(directions[x]["high_output"] == 1)
+        {
+            output1_bot = directions[x]["bot"];
+            output1_bot_lh = "high";
+        }
+
+        if(directions[x]["low_output"] == 2)
+        {
+            output2_bot = directions[x]["bot"];
+            output2_bot_lh = "low";
+        }
+        else if(directions[x]["high_output"] == 2)
+        {
+            output2_bot = directions[x]["bot"];
+            output2_bot_lh = "low";
+        }
+    }
+
+    var output0;
+    if(output0_bot_lh == "low")
+        output0 = getLow(solved, output0_bot);
+    else
+        output0 = getHigh(solved, output0_bot);
+
+    var output1;
+    if(output1_bot_lh == "low")
+        output1 = getLow(solved, output1_bot);
+    else
+        output1 = getHigh(solved, output0_bot);
+
+    var output2;
+    if(output2_bot_lh == "low")
+        output2 = getLow(solved, output2_bot);
+    else
+        output2 = getHigh(solved, output2_bot);
+
+    var m = output0 * output1 * output2;
+    console.log(m);
 }
 
 var bots = [];
