@@ -194,7 +194,7 @@ function BFS(g, xroot, yroot, xfinish, yfinish)
 
 
 var all = [];
-for (var i in arr)
+for (var i = 2; i < arr.length; i++)
 {
     var obj = parse(arr[i]);
     all.push(obj);    
