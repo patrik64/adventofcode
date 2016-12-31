@@ -108,7 +108,7 @@ function validateParse(line, obj)
 
 var counter = 0;
 var errors = 0;
-for (i in arr)
+for(var i in arr)
 {
     var line = arr[i];
     var obj = parse(arr[i]);
