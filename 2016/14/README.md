@@ -50,3 +50,5 @@ The rest of the process remains the same, but now the keys are entirely differen
 - Given the actual salt in your puzzle input and using ``2016`` extra MD5 calls of key stretching, what index now produces your 64th one-time pad key?
 
 Your puzzle answer was ``22423``.
+
+Your puzzle input was ``zpqevtbw``.
