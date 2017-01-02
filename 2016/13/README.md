@@ -45,3 +45,5 @@ Your puzzle answer was ``92``.
 How many locations (distinct ``x,y`` coordinates, including your starting location) can you reach in at most ``50`` steps?
 
 Your puzzle answer was ``124``.
+
+Your puzzle input was ``1350``.
