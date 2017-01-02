@@ -51,4 +51,4 @@ What is the length of the longest path that reaches the vault?
 
 Your puzzle answer was ``590``.
 
-Your puzzle input was mmsxrhfx.
+Your puzzle input was ``mmsxrhfx``.
