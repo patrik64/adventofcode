@@ -55,3 +55,5 @@ Your puzzle answer was ``11100110111101110``.
 The second disk you have to fill has length ``35651584``. Again using the initial state in your puzzle input, what is the correct checksum for this disk?
 
 Your puzzle answer was ``10001101010000101``.
+
+Your puzzle input was ``10111100110001111``.
