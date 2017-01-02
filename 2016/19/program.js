@@ -2,7 +2,7 @@ var input = 3001330;
 var arr = [];
 
 for(var k = 0; k < input; k++)
-    arr.push(1);
+    arr.push(k);
 
 while(arr.length > 1)
 {
