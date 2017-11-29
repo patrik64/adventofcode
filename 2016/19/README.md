@@ -1,4 +1,4 @@
-#[--- Day 19: An Elephant Named Joseph ---](http://adventofcode.com/2016/day/19)
+# [--- Day 19: An Elephant Named Joseph ---](http://adventofcode.com/2016/day/19)
 
 The Elves contact you over a highly secure emergency channel. Back at the North Pole, the Elves are busy misunderstanding White Elephant parties.
 
