@@ -1,4 +1,4 @@
-#[--- Day 25: Clock Signal ---](http://adventofcode.com/2016/day/25)
+# [--- Day 25: Clock Signal ---](http://adventofcode.com/2016/day/25)
 
 You open the door and find yourself on the roof. The city sprawls away from you for miles and miles.
 
