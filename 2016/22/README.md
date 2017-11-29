@@ -1,4 +1,4 @@
-#[--- Day 22: Grid Computing ---](http://adventofcode.com/2016/day/22)
+# [--- Day 22: Grid Computing ---](http://adventofcode.com/2016/day/22)
 
 You gain access to a massive storage cluster arranged in a grid; each storage node is only connected to the four nodes directly adjacent to it (three if the node is on an edge, two if it's in a corner).
 
