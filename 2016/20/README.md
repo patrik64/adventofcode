@@ -1,4 +1,4 @@
-#[--- Day 20: Firewall Rules ---](http://adventofcode.com/2016/day/20)
+# [--- Day 20: Firewall Rules ---](http://adventofcode.com/2016/day/20)
 
 You'd like to set up a small hidden computer here so you can use it to get back into the network later. However, the corporate firewall only allows communication with certain external IP addresses.
 
