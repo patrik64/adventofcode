@@ -1,4 +1,4 @@
-#[--- Day 12: Leonardo's Monorail ---](http://adventofcode.com/2016/day/12)
+# [--- Day 12: Leonardo's Monorail ---](http://adventofcode.com/2016/day/12)
 
 You finally reach the top floor of this building: a garden with a slanted glass ceiling. Looks like there are no more stars to be had.
 
