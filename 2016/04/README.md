@@ -13,11 +13,11 @@ A room is real (not a decoy) if the checksum is the five most common letters in 
  
 Of the real rooms from the list above, the sum of their sector IDs is ``1514``.
 
-What is the sum of the sector IDs of the real rooms?
+What is the **sum of the sector IDs of the real rooms**?
 
 Your puzzle answer was ``361724``.
 
---- Part Two ---
+**--- Part Two ---**
 
 With all the decoy data out of the way, it's time to decrypt this list and get moving.
 
@@ -25,8 +25,8 @@ The room names are encrypted by a state-of-the-art shift cipher, which is nearly
 
 To decrypt a room name, rotate each letter forward through the alphabet a number of times equal to the room's sector ID. ``A`` becomes ``B``, ``B`` becomes ``C``, ``Z`` becomes ``A``, and so on. Dashes become spaces.
 
-For example, the real name for ``qzmt-zixmtkozy-ivhz-343`` is very encrypted name.
+For example, the real name for ``qzmt-zixmtkozy-ivhz-343`` is ``very encrypted name``.
 
-What is the sector ID of the room where North Pole objects are stored?
+**What is the sector ID** of the room where North Pole objects are stored?
 
 Your puzzle answer was ``482``.
