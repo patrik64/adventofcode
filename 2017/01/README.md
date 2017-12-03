@@ -1,8 +1,8 @@
 # [--- Day 1: Inverse Captcha ---](http://adventofcode.com/2017/day/1)
 
-The night before Christmas, one of Santa's Elves calls you in a panic. "The printer's broken! We can't print the Naughty or Nice List!" By the time you make it to sub-basement 17, there are only a few minutes until midnight. "We have a big problem," she says; "there must be almost fifty bugs in this system, but nothing else can print The List. Stand in this square, quick! There's no time to explain; if you can convince them to pay you in stars, you'll be able to--" She pulls a lever and the world goes blurry.
+The night before Christmas, one of Santa's Elves calls you in a panic. "The printer's broken! We can't print the **Naughty or Nice List**!" By the time you make it to sub-basement 17, there are only a few minutes until midnight. "We have a big problem," she says; "there must be almost **fifty** bugs in this system, but nothing else can print The List. Stand in this square, quick! There's no time to explain; if you can convince them to pay you in stars, you'll be able to--" She pulls a lever and the world goes blurry.
 
-When your eyes can focus again, everything seems a lot more pixelated than before. She must have sent you inside the computer! You check the system clock: 25 milliseconds until midnight. With that much time, you should be able to collect all fifty stars by December 25th.
+When your eyes can focus again, everything seems a lot more pixelated than before. She must have sent you inside the computer! You check the system clock: **25 milliseconds** until midnight. With that much time, you should be able to collect all fifty stars by December 25th.
 
 Collect stars by solving puzzles. Two puzzles will be made available on each day millisecond in the advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
 
@@ -19,15 +19,15 @@ For example:
 - ``1234`` produces ``0`` because no digit matches the next.
 - ``91212129`` produces ``9`` because the only digit that matches the next one is the last digit, ``9``.
 
-What is the solution to your captcha?
+**What is the solution** to your captcha?
 
 Your puzzle answer was ``1150``.
 
---- Part Two ---
+**--- Part Two ---**
 
 You notice a progress bar that jumps to 50% completion. Apparently, the door isn't yet satisfied, but it did emit a star as encouragement. The instructions change:
 
-Now, instead of considering the next digit, it wants you to consider the digit halfway around the circular list. That is, if your list contains 10 items, only include a digit in your sum if the digit ``10/2 = 5`` steps forward matches it. Fortunately, your list has an even number of elements.
+Now, instead of considering the **next** digit, it wants you to consider the digit **halfway around** the circular list. That is, if your list contains 10 items, only include a digit in your sum if the digit ``10/2 = 5`` steps forward matches it. Fortunately, your list has an even number of elements.
 
 For example:
 
@@ -37,6 +37,6 @@ For example:
 - ``123123`` produces ``12``.
 - ``12131415`` produces ``4``.
 
-What is the solution to your new captcha?
+**What is the solution** to your new captcha?
 
 Your puzzle answer was ``1064``.
