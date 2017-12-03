@@ -1,6 +1,6 @@
 # [--- Day 5: How About a Nice Game of Chess? ---](http://adventofcode.com/2016/day/5)
 
-You are faced with a security door designed by Easter Bunny engineers that seem to have acquired most of their security knowledge by watching hacking movies.
+You are faced with a security door designed by Easter Bunny engineers that seem to have acquired most of their security knowledge by watching [hacking movies](https://en.wikipedia.org/wiki/Hackers_(film)).
 
 The eight-character password for the door is generated one character at a time by finding the MD5 hash of some Door ID (your puzzle input) and an increasing integer index (starting with ``0``).
 
@@ -18,7 +18,7 @@ Given the actual Door ID, what is the password?
 
 Your puzzle answer was ``f97c354d``.
 
---- Part Two ---
+**--- Part Two ---**
 
 As the door slides open, you are presented with a second door that uses a slightly more inspired security mechanism. Clearly unimpressed by the last version (in what movie is the password decrypted in order?!), the Easter Bunny engineers have worked out a better solution.
 
