@@ -1,10 +1,10 @@
 # [--- Day 2: Bathroom Security ---](http://adventofcode.com/2016/day/2)
 
-You arrive at Easter Bunny Headquarters under cover of darkness. However, you left in such a rush that you forgot to use the bathroom! Fancy office buildings like this one usually have keypad locks on their bathrooms, so you search the front desk for the code.
+You arrive at **Easter Bunny Headquarters** under cover of darkness. However, you left in such a rush that you forgot to use the bathroom! Fancy office buildings like this one usually have keypad locks on their bathrooms, so you search the front desk for the code.
 
 "In order to improve security," the document you find says, "bathroom codes will no longer be written down. Instead, please memorize and follow the procedure below to access the bathrooms."
 
-The document goes on to explain that each button to be pressed can be found by starting on the previous button and moving to adjacent buttons on the keypad: ``U`` moves up, ``D`` moves down, ``L`` moves left, and ``R`` moves right. Each line of instructions corresponds to one button, starting at the previous button (or, for the first line, the ``"5"`` button); press whatever button you're on at the end of each line. If a move doesn't lead to a button, ignore it.
+The document goes on to explain that each button to be pressed can be found by starting on the previous button and moving to adjacent buttons on the keypad: ``U`` moves up, ``D`` moves down, ``L`` moves left, and ``R`` moves right. Each line of instructions corresponds to one button, starting at the previous button (or, for the first line, **the ``"5"`` button**); press whatever button you're on at the end of each line. If a move doesn't lead to a button, ignore it.
 
 You can't hold it much longer, so you decide to figure out the code as you walk to the bathroom. You picture a keypad like this:
 ```
@@ -34,13 +34,6 @@ Your puzzle answer was 38961.
 **--- Part Two ---**
 
 You finally arrive at the bathroom (it's a several minute walk from the lobby so visitors can behold the many fancy conference rooms and water coolers on this floor) and go to punch in the code. Much to your bladder's dismay, the keypad is not at all like you imagined it. Instead, you are confronted with the result of hundreds of man-hours of bathroom-keypad-design meetings:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1      
-&nbsp;&nbsp;&nbsp;2 3 4      
-5 6 7 8 9  
-&nbsp;&nbsp;&nbsp;A B C  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D    
-
 ```
     1
   2 3 4
@@ -48,7 +41,6 @@ You finally arrive at the bathroom (it's a several minute walk from the lobby so
   A B C
     D
 ```
-
 You still start at ``"5"`` and stop when you're at an edge, but given the same instructions as above, the outcome is very different:
 
 - You start at ``"5"`` and don't move at all (up and left are both edges), ending at ``5``.
