@@ -36,6 +36,7 @@ For example:
 - ``123425`` produces ``4``, because both ``2``s match each other, but no other digit has a match.
 - ``123123`` produces ``12``.
 - ``12131415`` produces ``4``.
+
 What is the solution to your new captcha?
 
 Your puzzle answer was ``1064``.
