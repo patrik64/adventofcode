@@ -10,7 +10,7 @@ Each square on the grid is allocated in a spiral pattern starting at a location 
 20   7   8   9  10   
 21  22  23---> ...   
 ```
-While this is very space-efficient (no squares are skipped), requested data must be carried back to square ``1`` (the location of the only access port for this memory system) by programs that can only move up, down, left, or right. They always take the shortest path: the Manhattan Distance between the location of the data and square ``1``.
+While this is very space-efficient (no squares are skipped), requested data must be carried back to square ``1`` (the location of the only access port for this memory system) by programs that can only move up, down, left, or right. They always take the shortest path: the [Manhattan Distance](https://en.wikipedia.org/wiki/Taxicab_geometry) between the location of the data and square ``1``.
 
 For example:
 
@@ -19,11 +19,11 @@ For example:
 - Data from square ``23`` is carried only ``2`` steps: up twice.
 - Data from square ``1024`` must be carried ``31`` steps.
 
-How many steps are required to carry the data from the square identified in your puzzle input all the way to the access port?
+**How many steps** are required to carry the data from the square identified in your puzzle input all the way to the access port?
 
 Your puzzle answer was ``326``.
 
---- Part Two ---
+**--- Part Two ---**
 
 As a stress test on the system, the programs here clear the grid and then store the value ``1`` in square ``1``. Then, in the same allocation order as shown above, they store the sum of the values in all adjacent squares, including diagonals.
 
@@ -43,7 +43,7 @@ Once a square is written, its value does not change. Therefore, the first few sq
 351   11   23   25   26  
 362  747  806--->   ...  
 ```
-What is the first value written that is larger than your puzzle input?
+What is the **first value written** that is **larger** than your puzzle input?
 
 Your puzzle answer was ``363010``.
 
