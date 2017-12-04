@@ -2,9 +2,9 @@
 
 You come upon a column of four floors that have been entirely sealed off from the rest of the building except for a small dedicated lobby. There are some radiation warnings and a big sign which reads "Radioisotope Testing Facility".
 
-According to the project status board, this facility is currently being used to experiment with Radioisotope Thermoelectric Generators (RTGs, or simply "generators") that are designed to be paired with specially-constructed microchips. Basically, an RTG is a highly radioactive rock that generates electricity through heat.
+According to the project status board, this facility is currently being used to experiment with [Radioisotope Thermoelectric Generators](https://en.wikipedia.org/wiki/Radioisotope_thermoelectric_generator) (RTGs, or simply "generators") that are designed to be paired with specially-constructed microchips. Basically, an RTG is a highly radioactive rock that generates electricity through heat.
 
-The experimental RTGs have poor radiation containment, so they're dangerously radioactive. The chips are prototypes and don't have normal radiation shielding, but they do have the ability to generate an electromagnetic radiation shield when powered. Unfortunately, they can only be powered by their corresponding RTG. An RTG powering a microchip is still dangerous to other microchips.
+The experimental RTGs have poor radiation containment, so they're dangerously radioactive. The chips are prototypes and don't have normal radiation shielding, but they do have the ability to **generate an electromagnetic radiation shield when powered**. Unfortunately, they can only be powered by their corresponding RTG. An RTG powering a microchip is still dangerous to other microchips.
 
 In other words, if a chip is ever left in the same area as another RTG, and it's not connected to its own RTG, the chip will be fried. Therefore, it is assumed that you will follow procedure and keep chips connected to their corresponding RTG when they're in the same room, and away from other RTGs otherwise.
 
@@ -17,35 +17,35 @@ You make some notes of the locations of each component of interest (your puzzle 
 When you enter the containment area, you and the elevator will start on the first floor.
 
 For example, suppose the isolated area has the following arrangement:
-
-``The first floor contains a hydrogen-compatible microchip and a lithium-compatible microchip.``  
-``The second floor contains a hydrogen generator.``  
-``The third floor contains a lithium generator.``  
-``The fourth floor contains nothing relevant.``  
-
+```
+The first floor contains a hydrogen-compatible microchip and a lithium-compatible microchip.  
+The second floor contains a hydrogen generator.  
+The third floor contains a lithium generator.  
+The fourth floor contains nothing relevant.  
+```
 As a diagram (F# for a Floor number, E for Elevator, H for Hydrogen, L for Lithium, M for Microchip, and G for Generator), the initial state looks like this:
-
-``F4 .  .  .  .  .  ``  
-``F3 .  .  .  LG .  ``  
-``F2 .  HG .  .  .  ``  
-``F1 E  .  HM .  LM ``  
-
+```
+F4 .  .  .  .  .    
+F3 .  .  .  LG .    
+F2 .  HG .  .  .    
+F1 E  .  HM .  LM   
+```
 Then, to get everything up to the assembling machine on the fourth floor, the following steps could be taken:
 
 Bring the Hydrogen-compatible Microchip to the second floor, which is safe because it can get power from the Hydrogen Generator:
-
-``F4 .````.``&nbsp;``.``&nbsp;``.``&nbsp;``.``&nbsp;    
-``F3 .  .  .  LG .  ``  
-``F2 E  HG HM .  .  ``  
-``F1 .  .  .  .  LM ``  
-
+```
+F4 .  .  .  .  .    
+F3 .  .  .  LG .    
+F2 E  HG HM .  .    
+F1 .  .  .  .  LM   
+```
 Bring both Hydrogen-related items to the third floor, which is safe because the Hydrogen-compatible microchip is getting power from its generator:
-
-``F4 .  .  .  .  .  ``  
-``F3 E  HG HM LG .  ``  
-``F2 .  .  .  .  .  ``  
-``F1 .  .  .  .  LM ``  
-
+```
+F4 .  .  .  .  .    
+F3 E  HG HM LG .    
+F2 .  .  .  .  .    
+F1 .  .  .  .  LM 
+```
 Leave the Hydrogen Generator on floor three, but bring the Hydrogen-compatible Microchip back down with you so you can still use the elevator:
 
 ``F4 .  .  .  .  . ``  
@@ -115,7 +115,7 @@ In your situation, what is the minimum number of steps required to bring all of 
 
 Your puzzle answer was ``33``.
 
---- Part Two ---
+**--- Part Two ---**
 
 You step into the cleanroom separating the lobby from the isolated area and put on the hazmat suit.
 
