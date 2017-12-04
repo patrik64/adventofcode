@@ -20,11 +20,11 @@ For example, if the pre-arranged salt is ``abc``:
 
 So, using our example salt of ``abc``, index ``22728`` produces the 64th key.
 
-Given the actual salt in your puzzle input, what index produces your 64th one-time pad key?
+Given the actual salt in your puzzle input, **what index** produces your 64th one-time pad key?
 
 Your puzzle answer was ``16106``.
 
---- Part Two ---
+**--- Part Two ---**
 
 Of course, in order to make this process even more secure, you've also implemented key stretching.
 
@@ -47,7 +47,8 @@ The rest of the process remains the same, but now the keys are entirely differen
 - The first triple (``222``, at index ``5``) has no matching ``22222`` in the next thousand hashes.
 - The second triple (``eee``, at index ``10``) hash a matching ``eeeee`` at index ``89``, and so it is the first key.
 - Eventually, index ``22551`` produces the 64th key (triple ``fff`` with matching ``fffff`` at index ``22859``.
-- Given the actual salt in your puzzle input and using ``2016`` extra MD5 calls of key stretching, what index now produces your 64th one-time pad key?
+
+Given the actual salt in your puzzle input and using ``2016`` extra MD5 calls of key stretching, **what index** now produces your 64th one-time pad key?
 
 Your puzzle answer was ``22423``.
 
