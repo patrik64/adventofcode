@@ -62,52 +62,52 @@ F1 E  .  HM .  LM
 ```
 Bring both Microchips up one floor, where there is nothing to fry them:
 ```
-``F4 .  .  .  .  . ``   
-``F3 .  HG .  LG . ``  
-``F2 E  .  HM .  LM``   
-``F1 .  .  .  .  . ``  
+F4 .  .  .  .  .    
+F3 .  HG .  LG .   
+F2 E  .  HM .  LM   
+F1 .  .  .  .  .   
 ```
 Bring both Microchips up again to floor three, where they can be temporarily connected to their corresponding generators while the elevator recharges, preventing either of them from being fried:
 ```
-``F4 .  .  .  .  . ``   
-``F3 E  HG HM LG LM``   
-``F2 .  .  .  .  . ``   
-``F1 .  .  .  .  . ``  
+F4 .  .  .  .  .    
+F3 E  HG HM LG LM   
+F2 .  .  .  .  .    
+F1 .  .  .  .  .   
 ```
 Bring both Microchips to the fourth floor:
 ```
-``F4 E  .  HM .  LM ``  
-``F3 .  HG .  LG .  ``  
-``F2 .  .  .  .  .  ``  
-``F1 .  .  .  .  .  ``  
+F4 E  .  HM .  LM   
+F3 .  HG .  LG .  
+F2 .  .  .  .  .   
+F1 .  .  .  .  .   
 ```
 Leave the Lithium-compatible microchip on the fourth floor, but bring the Hydrogen-compatible one so you can still use the elevator; this is safe because although the Lithium Generator is on the destination floor, you can connect Hydrogen-compatible microchip to the Hydrogen Generator there:
 ```
-``F4 .  .  .  .  LM ``  
-``F3 E  HG HM LG .  ``  
-``F2 .  .  .  .  .  ``  
-``F1 .  .  .  .  .  ``  
+F4 .  .  .  .  LM  
+F3 E  HG HM LG .   
+F2 .  .  .  .  .    
+F1 .  .  .  .  .    
 ```
 Bring both Generators up to the fourth floor, which is safe because you can connect the Lithium-compatible Microchip to the Lithium Generator upon arrival:
 ```
-``F4 E  HG .  LG LM``   
-``F3 .  .  HM .  . ``   
-``F2 .  .  .  .  . ``   
-``F1 .  .  .  .  . ``  
+F4 E  HG .  LG LM  
+F3 .  .  HM .  .   
+F2 .  .  .  .  .   
+F1 .  .  .  .  .  
 ```
 Bring the Lithium Microchip with you to the third floor so you can use the elevator:
 ```
-``F4 .  HG .  LG . ``  
-``F3 E  .  HM .  LM``   
-``F2 .  .  .  .  . ``  
-``F1 .  .  .  .  . ``  
+F4 .  HG .  LG .   
+F3 E  .  HM .  LM   
+F2 .  .  .  .  .   
+F1 .  .  .  .  .   
 ```
 Bring both Microchips to the fourth floor:
 ```
-``F4 E  HG HM LG LM ``  
-``F3 .  .  .  .  .  ``  
-``F2 .  .  .  .  .  ``  
-``F1 .  .  .  .  .  ``  
+F4 E  HG HM LG LM  
+F3 .  .  .  .  .   
+F2 .  .  .  .  .   
+F1 .  .  .  .  .   
 ```
 In this arrangement, it takes 11 steps to collect all of the objects at the fourth floor for assembly. (Each elevator stop counts as one step, even if nothing is added to or removed from it.)
 
