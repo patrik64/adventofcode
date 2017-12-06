@@ -56,7 +56,7 @@ For example, with five Elves (again numbered ``1`` to ``5``):
 ```
 - Finally, Elf ``2`` steals from Elf ``4``:  
 ```
-2
+ 2
     -->  2  
  -
 ```
