@@ -29,7 +29,7 @@ So, in this example, the bathroom code is ``1985``.
 Your puzzle input is the instructions from the document you found at the front desk. 
 What is the **bathroom code**?
 
-Your puzzle answer was 38961.
+Your puzzle answer was ``38961``.
 
 **--- Part Two ---**
 
