@@ -24,7 +24,7 @@ With the number of Elves given in your puzzle input, **which Elf gets all the pr
 
 Your puzzle answer was ``1808357``.
 
---- Part Two ---
+**--- Part Two ---**
 
 Realizing the folly of their present-exchange rules, the Elves agree to instead steal presents from the Elf **directly across the circle**. If two Elves are across the circle, the one on the left (from the perspective of the stealer) is stolen from. The other rules remain unchanged: Elves with no presents are removed from the circle entirely, and the other elves move in slightly to keep the circle evenly spaced.
 
