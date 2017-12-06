@@ -2,7 +2,7 @@
 
 You'd like to set up a small hidden computer here so you can use it to get back into the network later. However, the corporate firewall only allows communication with certain external [IP addresses](https://en.wikipedia.org/wiki/IPv4#Addressing).
 
-You've retrieved the list of blocked IPs from the firewall, but the list seems to be messy and poorly maintained, and it's not clear which IPs are allowed. Also, rather than being written in [dot-decimal notation](https://en.wikipedia.org/wiki/Dot-decimal_notation), they are written as plain [``32``-bit integers](https://en.wikipedia.org/wiki/32-bit), which can have any value from ``0`` through ``4294967295``, inclusive.
+You've retrieved the list of blocked IPs from the firewall, but the list seems to be messy and poorly maintained, and it's not clear which IPs are allowed. Also, rather than being written in [dot-decimal notation](https://en.wikipedia.org/wiki/Dot-decimal_notation), they are written as plain [32-bit integers](https://en.wikipedia.org/wiki/32-bit), which can have any value from ``0`` through ``4294967295``, inclusive.
 
 For example, suppose only the values 0 through 9 were valid, and that you retrieved the following blacklist:
 ```
