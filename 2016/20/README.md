@@ -16,7 +16,7 @@ Given the list of blocked IPs you retrieved from the firewall (your puzzle input
 
 Your puzzle answer was ``17348574``.
 
---- Part Two ---
+**--- Part Two ---**
 
 **How many IPs** are allowed by the blacklist?
 
