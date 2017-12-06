@@ -32,7 +32,7 @@ For example, with five Elves (again numbered ``1`` to ``5``):
 
 - The Elves sit in a circle; Elf ``1`` goes first:
 ```
-**1**
+`**1**`
 5   2
  4 3
 ```
