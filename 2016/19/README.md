@@ -1,15 +1,15 @@
 # [--- Day 19: An Elephant Named Joseph ---](http://adventofcode.com/2016/day/19)
 
-The Elves contact you over a highly secure emergency channel. Back at the North Pole, the Elves are busy misunderstanding White Elephant parties.
+The Elves contact you over a highly secure emergency channel. Back at the North Pole, the Elves are busy misunderstanding [White Elephant parties](https://en.wikipedia.org/wiki/White_elephant_gift_exchange).
 
 Each Elf brings a present. They all sit in a circle, numbered starting with position ``1``. Then, starting with the first Elf, they take turns stealing all the presents from the Elf to their left. An Elf with no presents is removed from the circle and does not take turns.
 
 For example, with five Elves (numbered ``1`` to ``5``):
-
-&nbsp;&nbsp;&nbsp;&nbsp;``1``  
-``5``&nbsp;&nbsp;&nbsp;&nbsp;``2``  
-&nbsp;``4``&nbsp;&nbsp;``3 ``  
-
+```
+  1
+5   2
+ 4 3
+```
 - Elf ``1`` takes Elf ``2``'s present.
 - Elf ``2`` has no presents and is skipped.
 - Elf ``3`` takes Elf ``4``'s present.
@@ -20,7 +20,7 @@ For example, with five Elves (numbered ``1`` to ``5``):
 
 So, with five Elves, the Elf that sits starting in position ``3`` gets all the presents.
 
-With the number of Elves given in your puzzle input, which Elf gets all the presents?
+With the number of Elves given in your puzzle input, **which Elf gets all the presents**?
 
 Your puzzle answer was ``1808357``.
 
@@ -30,13 +30,13 @@ Realizing the folly of their present-exchange rules, the Elves agree to instead 
 
 For example, with five Elves (again numbered ``1`` to ``5``):
 
-The Elves sit in a circle; Elf ``1`` goes first:
-
-&nbsp;&nbsp;&nbsp;&nbsp;``1``  
-``5``&nbsp;&nbsp;&nbsp;&nbsp;``2``  
-&nbsp;``4``&nbsp;&nbsp;``3 ``  
-
-Elves ``3`` and ``4`` are across the circle; Elf ``3``'s present is stolen, being the one to the left. Elf ``3`` leaves the circle, and the rest of the Elves move in:
+- The Elves sit in a circle; Elf ``1`` goes first:
+```
+  1
+5   2
+ 4 3
+```
+- Elves ``3`` and ``4`` are across the circle; Elf ``3``'s present is stolen, being the one to the left. Elf ``3`` leaves the circle, and the rest of the Elves move in:
 
 &nbsp;&nbsp;&nbsp;&nbsp;``1``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``1``  
 ``5``&nbsp;&nbsp;&nbsp;&nbsp;``2 `` ``-->`` ``5``&nbsp;&nbsp;&nbsp;&nbsp;``2``  
