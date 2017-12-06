@@ -32,7 +32,7 @@ For example, with five Elves (again numbered ``1`` to ``5``):
 
 - The Elves sit in a circle; Elf ``1`` goes first:
 ```
-`**1**`
+  1
 5   2
  4 3
 ```
@@ -42,31 +42,28 @@ For example, with five Elves (again numbered ``1`` to ``5``):
 5   2  -->  5   2
  4 -          4
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;``1``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``1``  
-``5``&nbsp;&nbsp;&nbsp;&nbsp;``2 `` ``-->`` ``5``&nbsp;&nbsp;&nbsp;&nbsp;``2``  
-&nbsp;``4``&nbsp;&nbsp;``-``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``4``  
-
-Elf ``2`` steals from the Elf directly across the circle, Elf ``5``:  
-
-&nbsp;&nbsp;&nbsp;&nbsp;``1``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``  1   ``  
-``-``&nbsp;&nbsp;&nbsp;&nbsp;``2``&nbsp;&nbsp;&nbsp;``-->``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``2``  
-&nbsp;&nbsp;&nbsp;&nbsp;``4``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``4``  
-
-Next is Elf ``4`` who, choosing between Elves ``1`` and ``2``, steals from Elf ``1``:  
-
-``-``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``2``  
-&nbsp;&nbsp;&nbsp;&nbsp;``2``&nbsp;``-->``    
-``4``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``4``  
-
-Finally, Elf ``2`` steals from Elf ``4``:  
-
-``2``  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``-->``&nbsp;&nbsp;&nbsp;``2``  
-``-``  
+- Elf ``2`` steals from the Elf directly across the circle, Elf ``5``:  
+```
+  1         1 
+-   2  -->     2
+  4         4 
+ ```
+- Next is Elf ``4`` who, choosing between Elves ``1`` and ``2``, steals from Elf ``1``:  
+```
+ -          2  
+    2  -->
+ 4          4
+```
+- Finally, Elf ``2`` steals from Elf ``4``:  
+```
+2
+    -->  2  
+ -
+```
 
 So, with five Elves, the Elf that sits starting in position ``2`` gets all the presents.
 
-With the number of Elves given in your puzzle input, which Elf now gets all the presents?
+With the number of Elves given in your puzzle input, **which Elf now gets all the presents**?
 
 Your puzzle answer was ``1407007``.
 
