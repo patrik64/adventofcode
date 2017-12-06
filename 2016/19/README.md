@@ -18,7 +18,7 @@ For example, with five Elves (numbered ``1`` to ``5``):
 - Neither Elf ``1`` nor Elf ``2`` have any presents, so both are skipped.
 - Elf ``3`` takes Elf ``5``'s three presents.  
 
-So, with five Elves, the Elf that sits starting in position ``3`` gets all the presents.
+So, with **five** Elves, the Elf that sits starting in position ``3`` gets all the presents.
 
 With the number of Elves given in your puzzle input, **which Elf gets all the presents**?
 
@@ -32,12 +32,16 @@ For example, with five Elves (again numbered ``1`` to ``5``):
 
 - The Elves sit in a circle; Elf ``1`` goes first:
 ```
-  1
+**1**
 5   2
  4 3
 ```
 - Elves ``3`` and ``4`` are across the circle; Elf ``3``'s present is stolen, being the one to the left. Elf ``3`` leaves the circle, and the rest of the Elves move in:
-
+```
+  1           1
+5   2  -->  5   2
+ 4 -          4
+```
 &nbsp;&nbsp;&nbsp;&nbsp;``1``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``1``  
 ``5``&nbsp;&nbsp;&nbsp;&nbsp;``2 `` ``-->`` ``5``&nbsp;&nbsp;&nbsp;&nbsp;``2``  
 &nbsp;``4``&nbsp;&nbsp;``-``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``4``  
