@@ -65,7 +65,7 @@ ugml + (gyxo + ebii + jptl) = 68 + (61 + 61 + 61) = 251
 padx + (pbga + havc + qoyq) = 45 + (66 + 66 + 66) = 243
 fwft + (ktlj + cntj + xhth) = 72 + (57 + 57 + 57) = 243
 ```
-As you can see, tknk's disc is unbalanced: ugml's stack is heavier than the other two. Even though the nodes above ugml are balanced, ugml itself is too heavy: it needs to be 8 units lighter for its stack to weigh 243 and keep the towers balanced. If this change were made, its weight would be 60.
+As you can see, ``tknk``'s disc is unbalanced: ``ugml``'s stack is heavier than the other two. Even though the nodes above ``ugml`` are balanced, ``ugml`` itself is too heavy: it needs to be ``8`` units lighter for its stack to weigh ``243`` and keep the towers balanced. If this change were made, its weight would be ``60``.
 
 Given that exactly one program is the wrong weight, **what would its weight need to be** to balance the entire tower?
 
