@@ -7,7 +7,6 @@ function parse(str)
 {
     var idx = 0;
     var currentLevel = 0;
-    var inGroup = false;
     var inGarbage = false;
     var sum = 0;
     var gchs = 0;
