@@ -34,7 +34,7 @@ The antenna is ready. Now, all you need is the fifty stars required to generate 
 
 You look toward the sky in desperation... suddenly noticing that a lone star has been installed at the top of the antenna! Only 49 more to go.
 
-If you like, you can [Retransmit the Signal].
+If you like, you can [Retransmit the Signal](http://adventofcode.com/2016/day/25/answer).
 
 Both parts of this puzzle are complete! They provide two gold stars: **
 
