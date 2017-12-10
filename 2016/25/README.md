@@ -38,4 +38,4 @@ If you like, you can [Retransmit the Signal](http://adventofcode.com/2016/day/25
 
 Both parts of this puzzle are complete! They provide two gold stars: **
 
-At this point, all that is left is for you to admire your advent calendar.
+At this point, all that is left is for you to [admire your advent calendar](http://adventofcode.com/2016).
