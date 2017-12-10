@@ -4,12 +4,12 @@ The computer system you're breaking into uses a weird scrambling function to sto
 
 The scrambling function is a series of operations (the exact list is provided in your puzzle input). Starting with the password to be scrambled, apply each operation in succession to the string. The individual operations behave as follows:
 
-- swap position ``X`` with position ``Y`` means that the letters at indexes ``X`` and ``Y`` (counting from ``0``) should be swapped.
-- swap letter ``X`` with letter ``Y`` means that the letters ``X`` and ``Y`` should be swapped (regardless of where they appear in the string).
-- rotate left/right ``X`` steps means that the whole string should be rotated; for example, one right rotation would turn ``abcd`` into ``dabc``.
-- rotate based on position of letter ``X`` means that the whole string should be rotated to the right based on the index of letter ``X`` (counting from ``0``) as determined before this instruction does any rotations. Once the index is determined, rotate the string to the right one time, plus a number of times equal to that index, plus one additional time if the index was at least ``4``.
-- reverse positions ``X`` through ``Y`` means that the span of letters at indexes ``X`` through ``Y`` (including the letters at ``X`` and ``Y``) should be reversed in order.
-- move position ``X`` to position ``Y`` means that the letter which is at index ``X`` should be removed from the string, then inserted such that it ends up at index ``Y``.  
+- ``swap position X with position Y`` means that the letters at indexes ``X`` and ``Y`` (counting from ``0``) should be **swapped**.
+- ``swap letter X with letter Y`` means that the letters ``X`` and ``Y`` should be **swapped** (regardless of where they appear in the string).
+- ``rotate left/right X steps`` means that the whole string should be **rotated**; for example, one right rotation would turn ``abcd`` into ``dabc``.
+- ``rotate based on position of letter X`` means that the whole string should be **rotated to the right** based on the **index** of letter ``X`` (counting from ``0``) as determined **before** this instruction does any rotations. Once the index is determined, rotate the string to the right one time, plus a number of times equal to that index, plus one additional time if the index was at least ``4``.
+- ``reverse positions X through Y`` means that the span of letters at indexes ``X`` through ``Y`` (including the letters at ``X`` and ``Y``) should be **reversed in order**.
+- ``move position X to position Y`` means that the letter which is at index ``X`` should be **removed** from the string, then inserted such that it ends up at index ``Y``.  
 
 For example, suppose you start with ``abcde`` and perform the following operations:
 
@@ -24,13 +24,13 @@ For example, suppose you start with ``abcde`` and perform the following operatio
 
 After these steps, the resulting scrambled password is ``decab``.
 
-Now, you just need to generate a new scrambled password and you can access the system. Given the list of scrambling operations in your puzzle input, what is the result of scrambling ``abcdefgh``?
+Now, you just need to generate a new scrambled password and you can access the system. Given the list of scrambling operations in your puzzle input, **what is the result of scrambling ``abcdefgh``**?
 
 Your puzzle answer was ``gcedfahb``.
 
---- Part Two ---
+**--- Part Two ---**
 
-You scrambled the password correctly, but you discover that you can't actually modify the password file on the system. You'll need to un-scramble one of the existing passwords by reversing the scrambling process.
+You scrambled the password correctly, but you discover that you [can't actually modify](https://en.wikipedia.org/wiki/File_system_permissions) the [password file](https://en.wikipedia.org/wiki/Passwd) on the system. You'll need to un-scramble one of the existing passwords by reversing the scrambling process.
 
 What is the un-scrambled version of the scrambled password ``fbgdceah``?
 
