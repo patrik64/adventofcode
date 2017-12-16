@@ -140,15 +140,13 @@ for(;;)
 
     var first = coll[0];
     if(first == obj.res && pos > 0)
-    {
-        pos = coll.length-1;
         break;
-    }
+
     pos++;
 }
 
 var res = '';
-var len = 1000000000%pos;
+var len = 1000000000 % pos;
 
 for(var z = 0; z < len; z++)
 {
