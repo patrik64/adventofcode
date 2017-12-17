@@ -10,10 +10,10 @@ It repeats this process of stepping forward, inserting a new value, and using th
 
 For example, if the spinlock were to step 3 times per insert, the circular buffer would begin to evolve like this (using parentheses to mark the current position after each iteration of the algorithm):
 
-- (0), the initial state before any insertions.
-- 0 (1): the spinlock steps forward three times (0, 0, 0), and then inserts the first value, 1, after it. 1 becomes the current position.
-- 0 (2) 1: the spinlock steps forward three times (0, 1, 0), and then inserts the second value, 2, after it. 2 becomes the current position.
-- 0  2 (3) 1: the spinlock steps forward three times (1, 0, 2), and then inserts the third value, 3, after it. 3 becomes the current position.
+- ``(0)``, the initial state before any insertions.
+- ``0 (1)``: the spinlock steps forward three times (``0``, ``0``, ``0``), and then inserts the first value, ``1``, after it. ``1`` becomes the current position.
+- ``0 (2) 1``: the spinlock steps forward three times (``0``, ``1``, ``0``), and then inserts the second value, ``2``, after it. ``2`` becomes the current position.
+- ``0  2 (3) 1``: the spinlock steps forward three times (``1``, ``0``, ``2``), and then inserts the third value, ``3``, after it. ``3`` becomes the current position.
 
 And so on:
 
