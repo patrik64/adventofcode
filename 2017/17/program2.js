@@ -1,6 +1,5 @@
 var input = 359;
 
-var arr = [0];
 var currentPos = 0;
 var pos1 = 0;
 var len = 1;
