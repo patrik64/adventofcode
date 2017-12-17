@@ -33,6 +33,6 @@ In the example above, their second dance would **begin** with the order ``baedc`
 - ``x3/4``, swapping the last two programs: ``cbade``.
 - ``pe/b``, swapping programs ``e`` and ``b``: ``ceadb``.
 
-In what order are the programs standing after their billion dances?
+**In what order are the programs standing** after their billion dances?
 
 Your puzzle answer was ``gjmiofcnaehpdlbk``.
