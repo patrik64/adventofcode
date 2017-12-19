@@ -12,7 +12,7 @@ You look up the support number for the manufacturer and give them a call. Good t
 
 After putting you on hold for twenty minutes (your call is very important to them, it reminded you repeatedly), they finally find an engineer that remembers how the code system works.
 
-The codes are printed on an infinite sheet of paper, starting in the top-left corner. The codes are filled in by diagonals: starting with the first row with an empty first box, the codes are filled in diagonally up and to the right. This process repeats until the infinite paper is covered. So, the first few codes are filled in in this order:
+The codes are printed on an infinite sheet of paper, starting in the top-left corner. The codes are filled in by diagonals: starting with the first row with an empty first box, the codes are filled in diagonally up and to the right. This process repeats until the [infinite paper is covered](https://en.wikipedia.org/wiki/Cantor's_diagonal_argument). So, the first few codes are filled in in this order:
 ```
    | 1   2   3   4   5   6  
 ---+---+---+---+---+---+---+
