@@ -20,15 +20,6 @@ function parse(str)
     return a;
 }
 
-function printMtx(m)
-{
-    for(var i = 0; i < m.length; i++)
-    {
-        var r = m[i];
-        console.log(r);
-    }
-}
-
 function calcCoor(y, x, m)
 {
     if((y == 0) && (x == 0))
@@ -74,15 +65,6 @@ function calcCoor(y, x, m)
     var c8 = 0; //x+1 y+1
     if(((x+1) < dim) && (y+1) < dim)
         c8 = m[y+1][x+1];
-
-    /*console.log("c1 - ", c1);
-    console.log("c2 - ", c2);
-    console.log("c3 - ", c3);
-    console.log("c4 - ", c4);
-    console.log("c5 - ", c5);
-    console.log("c6 - ", c6);
-    console.log("c7 - ", c7);
-    console.log("c8 - ", c8);*/
 
     var sum = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8;
     if(state == 1)
@@ -141,5 +123,4 @@ fixCorners(mtx);
 
 for(var i = 0; i < 100; i++)
     mtx = rotation(mtx);
-//printMtx(mtx);
 console.log(calcLights(mtx));
