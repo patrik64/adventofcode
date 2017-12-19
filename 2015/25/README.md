@@ -1,8 +1,8 @@
 # [--- Day 25: Let It Snow ---](http://adventofcode.com/2015/day/25)
 
-Merry Christmas! Santa is booting up his weather machine; looks like you might get a white Christmas after all.
+Merry Christmas! Santa is booting up his weather machine; looks like you might get a [white Christmas](http://adventofcode.com/2015/day/1) after all.
 
-The weather machine beeps! On the console of the machine is a copy protection message asking you to enter a code from the instruction manual. Apparently, it refuses to run unless you give it that code. No problem; you'll just look up the code in the--
+The weather machine beeps! On the console of the machine is a copy protection message asking you to [enter a code from the instruction manual](https://en.wikipedia.org/wiki/Copy_protection#Early_video_games). Apparently, it refuses to run unless you give it that code. No problem; you'll just look up the code in the--
 
 "Ho ho ho", Santa ponders aloud. "I can't seem to find the manual."
 
