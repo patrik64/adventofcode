@@ -4,11 +4,11 @@ It's Christmas Eve, and Santa is loading up the sleigh for this year's deliverie
 
 No pressure.
 
-Santa has provided you a list of the weights of every package he needs to fit on the sleigh. The packages need to be split into three groups of exactly the same weight, and every package has to fit. The first group goes in the passenger compartment of the sleigh, and the second and third go in containers on either side. Only when all three groups weigh exactly the same amount will the sleigh be able to fly. Defying physics has rules, you know!
+Santa has provided you a list of the weights of every package he needs to fit on the sleigh. The packages need to be split into **three groups of exactly the same weight**, and every package has to fit. The first group goes in the passenger compartment of the sleigh, and the second and third go in containers on either side. Only when all three groups weigh exactly the same amount will the sleigh be able to fly. Defying physics has rules, you know!
 
-Of course, that's not the only problem. The first group - the one going in the passenger compartment - needs as few packages as possible so that Santa has some legroom left over. It doesn't matter how many packages are in either of the other two groups, so long as all of the groups weigh the same.
+Of course, that's not the only problem. The first group - the one going in the passenger compartment - needs **as few packages as possible** so that Santa has some legroom left over. It doesn't matter how many packages are in either of the other two groups, so long as all of the groups weigh the same.
 
-Furthermore, Santa tells you, if there are multiple ways to arrange the packages such that the fewest possible are in the first group, you need to choose the way where the first group has the smallest quantum entanglement to reduce the chance of any "complications". The quantum entanglement of a group of packages is the product of their weights, that is, the value you get when you multiply their weights together. Only consider quantum entanglement if the first group has the fewest possible number of packages in it and all groups weigh the same amount.
+Furthermore, Santa tells you, if there are multiple ways to arrange the packages such that the fewest possible are in the first group, you need to choose the way where the first group has **the smallest quantum entanglement** to reduce the chance of any "complications". The quantum entanglement of a group of packages is the [product](https://en.wikipedia.org/wiki/Product_%28mathematics%29) of their weights, that is, the value you get when you multiply their weights together. Only consider quantum entanglement if the first group has the fewest possible number of packages in it and all groups weigh the same amount.
 
 For example, suppose you have ten packages with weights 1 through 5 and 7 through 11. For this situation, some of the unique first groups, their quantum entanglements, and a way to divide the remaining packages are as follows:
 ```
@@ -29,7 +29,7 @@ Group 1;             Group 2; Group 3
 ```
 Of these, although 10 9 1 has the smallest quantum entanglement (90), the configuration with only two packages, 11 9, in the passenger compartment gives Santa the most legroom and wins. In this situation, the quantum entanglement for the ideal configuration is therefore 99. Had there been two configurations with only two packages in the first group, the one with the smaller quantum entanglement would be chosen.
 
-What is the quantum entanglement of the first group of packages in the ideal configuration?
+What is the **quantum entanglement** of the first group of packages in the ideal configuration?
 
 Your puzzle answer was ``10723906903``.
 
@@ -53,6 +53,6 @@ Given the example packages above, this would be some of the new unique first gro
 ```
 Of these, there are three arrangements that put the minimum (two) number of packages in the first group: 11 4, 10 5, and 8 7. Of these, 11 4 has the lowest quantum entanglement, and so it is selected.
 
-Now, what is the quantum entanglement of the first group of packages in the ideal configuration?
+Now, what is the **quantum entanglement** of the first group of packages in the ideal configuration?
 
 Your puzzle answer was ``74850409``.
