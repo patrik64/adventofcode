@@ -8,12 +8,12 @@ The included instructions booklet describes how to connect the parts together: x
 
 For example:
 
-    123 -> x means that the signal 123 is provided to wire x.
-    x AND y -> z means that the bitwise AND of wire x and wire y is provided to wire z.
-    p LSHIFT 2 -> q means that the value from wire p is left-shifted by 2 and then provided to wire q.
-    NOT e -> f means that the bitwise complement of the value from wire e is provided to wire f.
+- ``123 -> x`` means that the signal ``123`` is provided to wire ``x``.
+- ``x AND y -> z`` means that the bitwise ``AND`` of wire ``x`` and wire ``y`` is provided to wire ``z``.
+- ``p LSHIFT 2 -> q`` means that the value from wire ``p`` is left-shifted by ``2`` and then provided to wire ``q``.
+- ``NOT e -> f`` means that the bitwise complement of the value from wire ``e`` is provided to wire ``f``.
 
-Other possible gates include OR (bitwise OR) and RSHIFT (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.
+Other possible gates include ``OR`` (bitwise OR) and ``RSHIFT`` (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.
 
 For example, here is a simple circuit:
 ```
