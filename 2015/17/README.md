@@ -1,38 +1,24 @@
---- Day 15: Science for Hungry People ---
+# [--- Day 17: No Such Thing as Too Much ---](http://adventofcode.com/2015/day/17)
 
-Today, you set out on the task of perfecting your milk-dunking cookie recipe. All you have to do is find the right balance of ingredients.
+The elves bought too much eggnog again - 150 liters this time. To fit it all into your refrigerator, you'll need to move it into smaller containers. You take an inventory of the capacities of the available containers.
 
-Your recipe leaves room for exactly 100 teaspoons of ingredients. You make a list of the remaining ingredients you could use to finish the recipe (your puzzle input) and their properties per teaspoon:
+For example, suppose you have containers of size 20, 15, 10, 5, and 5 liters. If you need to store 25 liters, there are four ways to do it:
 
-capacity (how well it helps the cookie absorb milk)
-durability (how well it keeps the cookie intact when full of milk)
-flavor (how tasty it makes the cookie)
-texture (how it improves the feel of the cookie)
-calories (how many calories it adds to the cookie)
-You can only measure ingredients in whole-teaspoon amounts accurately, and you have to be accurate so you can reproduce your results in the future. The total score of a cookie can be found by adding up each of the properties (negative totals become 0) and then multiplying together everything except calories.
+- ``15`` and ``10``
+- ``20`` and ``5`` (the first ``5``)
+- ``20`` and ``5`` (the second ``5``)
+- ``15``, ``5``, and ``5``
 
-For instance, suppose you have these two ingredients:
+Filling all containers entirely, how many different combinations of containers can exactly fit all 150 liters of eggnog?
 
-Butterscotch: capacity -1, durability -2, flavor 6, texture 3, calories 8
-Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3
-Then, choosing to use 44 teaspoons of butterscotch and 56 teaspoons of cinnamon (because the amounts of each ingredient must add up to 100) would result in a cookie with the following properties:
+Your puzzle answer was ``1304``.
 
-A capacity of 44*-1 + 56*2 = 68
-A durability of 44*-2 + 56*3 = 80
-A flavor of 44*6 + 56*-2 = 152
-A texture of 44*3 + 56*-1 = 76
-Multiplying these together (68 * 80 * 152 * 76, ignoring calories for now) results in a total score of 62842880, which happens to be the best score possible given these ingredients. If any properties had produced a negative total, it would have instead become zero, causing the whole score to multiply to zero.
+**--- Part Two ---**
 
-Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make?
+While playing with all the containers in the kitchen, another load of eggnog arrives! The shipping and receiving department is requesting as many containers as you can spare.
 
-Your puzzle answer was 222870.
+Find the minimum number of containers that can exactly fit all ``150`` liters of eggnog. How many different ways can you fill that number of containers and still hold exactly ``150`` litres?
 
---- Part Two ---
-Your cookie recipe becomes wildly popular! Someone asks if you can make another recipe that has exactly 500 calories per cookie (so they can use it as a meal replacement). Keep the rest of your award-winning process the same (100 teaspoons, same ingredients, same scoring system).
+In the example above, the minimum number of containers was two. There were three ways to use that many containers, and so the answer there would be ``3``.
 
-For example, given the ingredients above, if you had instead selected 40 teaspoons of butterscotch and 60 teaspoons of cinnamon (which still adds to 100), the total calorie count would be 40*8 + 60*3 = 500. The total score would go down, though: only 57600000, the best you can do in such trying circumstances.
-
-Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make with a calorie total of 500?
-
-Your puzzle answer was 117936.
-
+Your puzzle answer was ``18``.
