@@ -1,38 +1,131 @@
---- Day 15: Science for Hungry People ---
+# [--- Day 18: Like a GIF For Your Yard ---](http://adventofcode.com/2015/day/18)
 
-Today, you set out on the task of perfecting your milk-dunking cookie recipe. All you have to do is find the right balance of ingredients.
+After the million lights incident, the fire code has gotten stricter: now, at most ten thousand lights are allowed. You arrange them in a 100x100 grid.
 
-Your recipe leaves room for exactly 100 teaspoons of ingredients. You make a list of the remaining ingredients you could use to finish the recipe (your puzzle input) and their properties per teaspoon:
+Never one to let you down, Santa again mails you instructions on the ideal lighting configuration. With so few lights, he says, you'll have to resort to animation.
 
-capacity (how well it helps the cookie absorb milk)
-durability (how well it keeps the cookie intact when full of milk)
-flavor (how tasty it makes the cookie)
-texture (how it improves the feel of the cookie)
-calories (how many calories it adds to the cookie)
-You can only measure ingredients in whole-teaspoon amounts accurately, and you have to be accurate so you can reproduce your results in the future. The total score of a cookie can be found by adding up each of the properties (negative totals become 0) and then multiplying together everything except calories.
+Start by setting your lights to the included initial configuration (your puzzle input). A # means "on", and a . means "off".
 
-For instance, suppose you have these two ingredients:
+Then, animate your grid in steps, where each step decides the next configuration based on the current one. Each light's next state (either on or off) depends on its current state and the current states of the eight lights adjacent to it (including diagonals). Lights on the edge of the grid might have fewer than eight neighbors; the missing ones always count as "off".
 
-Butterscotch: capacity -1, durability -2, flavor 6, texture 3, calories 8
-Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3
-Then, choosing to use 44 teaspoons of butterscotch and 56 teaspoons of cinnamon (because the amounts of each ingredient must add up to 100) would result in a cookie with the following properties:
+For example, in a simplified 6x6 grid, the light marked A has the neighbors numbered 1 through 8, and the light marked B, which is on an edge, only has the neighbors marked 1 through 5:
+```
+1B5...
+234...
+......
+..123.
+..8A4.
+..765.
+```
+The state a light should have next is based on its current state (on or off) plus the number of neighbors that are on:
 
-A capacity of 44*-1 + 56*2 = 68
-A durability of 44*-2 + 56*3 = 80
-A flavor of 44*6 + 56*-2 = 152
-A texture of 44*3 + 56*-1 = 76
-Multiplying these together (68 * 80 * 152 * 76, ignoring calories for now) results in a total score of 62842880, which happens to be the best score possible given these ingredients. If any properties had produced a negative total, it would have instead become zero, causing the whole score to multiply to zero.
+    A light which is on stays on when 2 or 3 neighbors are on, and turns off otherwise.
+    A light which is off turns on if exactly 3 neighbors are on, and stays off otherwise.
 
-Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make?
+All of the lights update simultaneously; they all consider the same current state before moving to the next.
 
-Your puzzle answer was 222870.
+Here's a few steps from an example configuration of another 6x6 grid:
+```
+Initial state:
+.#.#.#
+...##.
+#....#
+..#...
+#.#..#
+####..
 
---- Part Two ---
-Your cookie recipe becomes wildly popular! Someone asks if you can make another recipe that has exactly 500 calories per cookie (so they can use it as a meal replacement). Keep the rest of your award-winning process the same (100 teaspoons, same ingredients, same scoring system).
+After 1 step:
+..##..
+..##.#
+...##.
+......
+#.....
+#.##..
 
-For example, given the ingredients above, if you had instead selected 40 teaspoons of butterscotch and 60 teaspoons of cinnamon (which still adds to 100), the total calorie count would be 40*8 + 60*3 = 500. The total score would go down, though: only 57600000, the best you can do in such trying circumstances.
+After 2 steps:
+..###.
+......
+..###.
+......
+.#....
+.#....
 
-Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make with a calorie total of 500?
+After 3 steps:
+...#..
+......
+...#..
+..##..
+......
+......
 
-Your puzzle answer was 117936.
+After 4 steps:
+......
+......
+..##..
+..##..
+......
+......
+```
+After ``4`` steps, this example has four lights on.
 
+In your grid of 100x100 lights, given your initial configuration, how many lights are on after 100 steps?
+
+Your puzzle answer was ``814``.
+
+**--- Part Two ---**
+
+You flip the instructions over; Santa goes on to point out that this is all just an implementation of Conway's Game of Life. At least, it was, until you notice that something's wrong with the grid of lights you bought: four lights, one in each corner, are stuck on and can't be turned off. The example above will actually run like this:
+```
+Initial state:
+##.#.#
+...##.
+#....#
+..#...
+#.#..#
+####.#
+
+After 1 step:
+#.##.#
+####.#
+...##.
+......
+#...#.
+#.####
+
+After 2 steps:
+#..#.#
+#....#
+.#.##.
+...##.
+.#..##
+##.###
+
+After 3 steps:
+#...##
+####.#
+..##.#
+......
+##....
+####.#
+
+After 4 steps:
+#.####
+#....#
+...#..
+.##...
+#.....
+#.#..#
+
+After 5 steps:
+##.###
+.##..#
+.##...
+.##...
+#.#...
+##...#
+```
+After ``5`` steps, this example now has ``17`` lights on.
+
+In your grid of ``100x100`` lights, given your initial configuration, but with the four corners always in the on state, how many lights are on after ``100`` steps?
+
+Your puzzle answer was ``924``.
