@@ -165,17 +165,14 @@ for(var k = 0; k < 1000; k++)
         var newParticles = [];
         for(var i = 0; i < particles.length; i++)
         {
-            var match = false;
+            var bAdd = true;
             for(var j = 0; j < collisionPositions.length; j++)
-            {
-                var cpx = collisionPositions[j].px;
-                var cpy = collisionPositions[j].py;
-                var cpz = collisionPositions[j].pz;
-                
-                if(particles[i].px == cpx && particles[i].py == cpy && particles[i].pz == cpz)
-                    match = true;
-            }
-            if(!match)
+                if( particles[i].px == collisionPositions[j].px &&
+                    particles[i].py == collisionPositions[j].py &&
+                    particles[i].pz == collisionPositions[j].pz )
+                    bAdd = false;
+            
+            if(bAdd)
                 newParticles.push(particles[i]);
         }
         particles = newParticles;
