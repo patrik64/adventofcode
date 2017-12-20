@@ -13,7 +13,7 @@ Each tick, all particles are updated simultaneously. A particle's properties are
 - Increase the ``Y`` position by the ``Y`` velocity.
 - Increase the ``Z`` position by the ``Z`` velocity.
 
-Because of seemingly tenuous rationale involving z-buffering, the GPU would like to know which particle will stay closest to position ``<0,0,0>`` in the long term. Measure this using the Manhattan distance, which in this situation is simply the sum of the absolute values of a particle's ``X``, ``Y``, and ``Z`` position.
+Because of seemingly tenuous rationale involving [z-buffering](https://en.wikipedia.org/wiki/Z-buffering), the GPU would like to know which particle will stay closest to position ``<0,0,0>`` in the long term. Measure this using the [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry), which in this situation is simply the sum of the absolute values of a particle's ``X``, ``Y``, and ``Z`` position.
 
 For example, suppose you are only given two particles, both of which stay entirely on the X-axis (for simplicity). Drawing the current states of particles ``0`` and ``1`` (in that order) with an adjacent a number line and diagram of current ``X`` positions (marked in parenthesis), the following would take place:
 ```
@@ -61,7 +61,7 @@ p=< 1,0,0>, v=<-1,0,0>, a=< 0,0,0>
 ------destroyed by collision------                      (3)         
 p=< 0,0,0>, v=<-1,0,0>, a=< 0,0,0>
 ```
-In this example, particles 0, 1, and 2 are simultaneously destroyed at the time and place marked X. On the next tick, particle 3 passes through unharmed.
+In this example, particles ``0``, ``1``, and ``2`` are simultaneously destroyed at the time and place marked ``X``. On the next tick, particle ``3`` passes through unharmed.
 
 **How many particles are left** after all collisions are resolved?
 
