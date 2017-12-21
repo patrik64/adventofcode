@@ -256,7 +256,7 @@ function processInstructions(instructions)
             else idx++;
         }
     }
-    console.log("b --> ", b);
+    console.log(b);
 }
 
 var instructions = [];
