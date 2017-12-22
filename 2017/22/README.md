@@ -74,9 +74,9 @@ Now on the same node as before, it sees an infection, which causes it to turn ri
 . . . . . . . . .
 . . . . . . . . .
 ```
-After the above actions, a total of 7 bursts of activity had taken place. Of them, 5 bursts of activity caused an infection.
+After the above actions, a total of ``7`` bursts of activity had taken place. Of them, ``5`` bursts of activity caused an infection.
 
-After a total of 70, the grid looks like this, with the virus carrier facing up:
+After a total of ``70``, the grid looks like this, with the virus carrier facing up:
 ```
 . . . . . # # . .
 . . . . # . . # .
@@ -87,9 +87,9 @@ After a total of 70, the grid looks like this, with the virus carrier facing up:
 . . . . . . . . .
 . . . . . . . . .
 ```
-By this time, 41 bursts of activity caused an infection (though most of those nodes have since been cleaned).
+By this time, ``41`` bursts of activity caused an infection (though most of those nodes have since been cleaned).
 
-After a total of 10000 bursts of activity, 5587 bursts will have caused an infection.
+After a total of ``10000`` bursts of activity, ``5587`` bursts will have caused an infection.
 
 Given your actual map, after ``10000`` bursts of activity, how many bursts cause a node to become infected? (Do not count nodes that begin infected.)
 
@@ -112,9 +112,9 @@ The virus carrier still functions in a similar way, but now uses the following l
 
 - Decide which way to turn based on the current node:
   - If it is clean, it turns left.
-- - If it is weakened, it does not turn, and will continue moving in the same direction.
-- - If it is infected, it turns right.
-- - If it is flagged, it reverses direction, and will go back the way it came.
+  - If it is weakened, it does not turn, and will continue moving in the same direction.
+  - If it is infected, it turns right.
+  - If it is flagged, it reverses direction, and will go back the way it came.
 - Modify the state of the current node, as described above.
 - The virus carrier moves forward one node in the direction it is facing.
 
