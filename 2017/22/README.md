@@ -91,7 +91,7 @@ By this time, 41 bursts of activity caused an infection (though most of those no
 
 After a total of 10000 bursts of activity, 5587 bursts will have caused an infection.
 
-Given your actual map, after 10000 bursts of activity, how many bursts cause a node to become infected? (Do not count nodes that begin infected.)
+Given your actual map, after ``10000`` bursts of activity, how many bursts cause a node to become infected? (Do not count nodes that begin infected.)
 
 Your puzzle answer was ``5352``.
 
@@ -111,7 +111,7 @@ Every node is always in exactly one of the above states.
 The virus carrier still functions in a similar way, but now uses the following logic during its bursts of action:
 
 - Decide which way to turn based on the current node:
-- - If it is clean, it turns left.
+  - If it is clean, it turns left.
 - - If it is weakened, it does not turn, and will continue moving in the same direction.
 - - If it is infected, it turns right.
 - - If it is flagged, it reverses direction, and will go back the way it came.
