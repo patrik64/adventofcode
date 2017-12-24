@@ -162,8 +162,6 @@ var lenghts = [];
 findLongestLen(tree, lenghts);
 lenghts.sort((x,y) => (x-y));
 lenghts.reverse();
-
-console.log(lenghts[0]);
 var len = lenghts[0];
 var sums = [];
 flattenTree(tree, sums, len);
