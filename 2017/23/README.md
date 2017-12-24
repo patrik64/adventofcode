@@ -27,6 +27,6 @@ Immediately, the coprocessor begins to overheat. Whoever wrote this program obvi
 
 The coprocessor's ultimate goal is to determine the final value left in register h once the program completes. Technically, if it had that... it wouldn't even need to run the program.
 
-After setting register a to 1, if the program were to run to completion, **what value would be left in register h?**
+After setting register a to ``1``, if the program were to run to completion, **what value would be left in register h?**
 
 Your puzzle answer was ``903``.
