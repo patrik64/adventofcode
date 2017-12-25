@@ -16,7 +16,7 @@ On each of your turns, you must select one of your spells to cast. If you cannot
 
 **Effects** all work the same way. Effects apply at the start of both the player's turns and the boss' turns. Effects are created with a timer (the number of turns they last); at the start of each turn, after they apply any effect they have, their timer is decreased by one. If this decreases the timer to zero, the effect ends. You cannot cast a spell that would start an effect which is already active. However, effects can be started on the same turn they end.
 
-For example, suppose the player has 10 hit points and 250 mana, and that the boss has 13 hit points and 8 damage:
+For example, suppose the player has ``10`` hit points and ``250`` mana, and that the boss has ``13`` hit points and ``8`` damage:
 ```
 -- Player turn --
 - Player has 10 hit points, 0 armor, 250 mana
