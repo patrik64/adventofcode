@@ -22,11 +22,11 @@ Given the replacements above and starting with HOH, the following molecules coul
 - ``HOOH`` (via ``H => OH`` on the second ``H``).
 - ``HHHH`` (via ``O => HH``).
 
-So, in the example above, there are ``4`` distinct molecules (not five, because ``HOOH`` appears twice) after one replacement from ``HOH``. Santa's favorite molecule, ``HOHOHO``, can become ``7`` distinct molecules (over nine replacements: six from ``H``, and three from ``O``).
+So, in the example above, there are ``4`` **distinct** molecules (not five, because ``HOOH`` appears twice) after one replacement from ``HOH``. Santa's favorite molecule, ``HOHOHO``, can become ``7`` **distinct** molecules (over nine replacements: six from ``H``, and three from ``O``).
 
 The machine replaces without regard for the surrounding characters. For example, given the string ``H2O``, the transition ``H => OO`` would result in ``OO2O``.
 
-Your puzzle input describes all of the possible replacements and, at the bottom, the medicine molecule for which you need to calibrate the machine. How many distinct molecules can be created after all the different ways you can do one replacement on the medicine molecule?
+Your puzzle input describes all of the possible replacements and, at the bottom, the medicine molecule for which you need to calibrate the machine. **How many distinct molecules can be created** after all the different ways you can do one replacement on the medicine molecule?
 
 Your puzzle answer was ``509``.
 
@@ -50,8 +50,8 @@ If you'd like to make ``HOH``, you start with ``e``, and then make the following
 - ``O => HH`` to get ``HH``
 - ``H => OH`` (on the second ``H``) to get ``HOH``
 
-So, you could make ``HOH`` after ``3`` steps. Santa's favorite molecule, ``HOHOHO``, can be made in ``6`` steps.
+So, you could make ``HOH`` after **``3`` steps**. Santa's favorite molecule, ``HOHOHO``, can be made in **``6`` steps**.
 
-How long will it take to make the medicine? Given the available replacements and the medicine molecule in your puzzle input, what is the fewest number of steps to go from e to the medicine molecule?
+How long will it take to make the medicine? Given the available **replacements** and the **medicine molecule** in your puzzle input, what is the **fewest number of steps** to go from e to the medicine molecule?
 
 Your puzzle answer was ``195``.
