@@ -7,7 +7,7 @@ function parse(str)
 {
     str += ',';
 
-    var idx = 0;
+    var idx = 4;
     var x = '';
     var ar = [];
 
