@@ -10,13 +10,13 @@ The My First Crime Scene Analysis Machine (MFCSAM for short) can detect a few sp
 
 - ``children``, by human DNA age analysis.
 - ``cats``. It doesn't differentiate individual breeds.
-- Several seemingly random breeds of dog: samoyeds, pomeranians, akitas, and vizslas.
+- Several seemingly random breeds of dog: [samoyeds](https://en.wikipedia.org/wiki/Samoyed_dog), [pomeranians](https://en.wikipedia.org/wiki/Pomeranian_dog), [akitas](https://en.wikipedia.org/wiki/Akita_%28dog%29), and [vizslas](https://en.wikipedia.org/wiki/Vizsla).
 - ``goldfish``. No other kinds of fish.
 - ``trees``, all in one group.
 - ``cars``, presumably by exhaust or gasoline or something.
 - ``perfumes``, which is handy, since many of your Aunts Sue wear a few kinds.
 
-In fact, many of your Aunts Sue have many of these. You put the wrapping from the gift into the MFCSAM. It beeps inquisitively at you a few times and then prints out a message on ticker tape:
+In fact, many of your Aunts Sue have many of these. You put the wrapping from the gift into the MFCSAM. It beeps inquisitively at you a few times and then prints out a message on [ticker tape](https://en.wikipedia.org/wiki/Ticker_tape):
 ```
 children: 3
 cats: 7
