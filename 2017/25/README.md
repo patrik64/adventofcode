@@ -55,7 +55,7 @@ Running it until the number of steps required to take the listed **diagnostic ch
 ... 0  1 [1] 0  1  0 ... (after 5 steps;    about to run state B)
 ... 0  1  1 [0] 1  0 ... (after 6 steps;    about to run state A)
 ```
-The CPU can confirm that the Turing machine is working by taking a **diagnostic checksum** after a specific number of steps (given in the blueprint). Once the specified number of steps have been executed, the Turing machine should pause; once it does, count the number of times 1 appears on the tape. In the above example, the **diagnostic checksum** is ``3``.
+The CPU can confirm that the Turing machine is working by taking a **diagnostic checksum** after a specific number of steps (given in the blueprint). Once the specified number of steps have been executed, the Turing machine should pause; once it does, count the number of times ``1`` appears on the tape. In the above example, the **diagnostic checksum** is ``3``.
 
 Recreate the Turing machine and save the computer! **What is the diagnostic checksum** it produces once it's working again?
 
