@@ -1,6 +1,6 @@
 var fs = require('fs');
  
-var input = fs.readFileSync('/home/patrik/sources/Patrik64/adventofcode/2017/23/Day23.in', 'utf8');
+var input = fs.readFileSync('Day23.in', 'utf8');
 var arr = input.split('\n');
 
 function parse(str)
