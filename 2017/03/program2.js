@@ -164,6 +164,6 @@ fillSquare(mtx, center-1, center-4);
 fillSquare(mtx, center-2, center-4);
 fillSquare(mtx, center-3, center-4);
 
-printMatrix(mtx, dim);
+//printMatrix(mtx, dim);
 
-console.log("result -> " + mtx[center-4][center-3]);
+console.log(mtx[center-4][center-3]);
