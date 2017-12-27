@@ -124,6 +124,9 @@ function parse(str)
             idx++;
         }
     }
+
+    arg1 = arg1.trim();
+    arg2 = arg2.trim();
     
     ret = { "op" : op, "arg1" : arg1, "arg2" : arg2 };
     return ret;
