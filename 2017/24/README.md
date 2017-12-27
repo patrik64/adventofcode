@@ -39,7 +39,7 @@ With them, you could make the following valid bridges:
 
 Of these bridges, the **strongest** one is ``0/1--10/1--9/10``; it has a strength of ``0+1 + 1+10 + 10+9 = 31``.
 
-What is the strength of the strongest bridge you can make with the components you have available?
+**What is the strength of the strongest bridge you can make** with the components you have available?
 
 Your puzzle answer was ``1656``.
 
@@ -54,6 +54,6 @@ In the example above, there are two longest bridges:
 ```
 Of them, the one which uses the ``3/5`` component is stronger; its strength is ``0+2 + 2+2 + 2+3 + 3+5 = 19``.
 
-What is the strength of the longest bridge you can make? If you can make multiple bridges of the longest length, pick the **strongest** one.
+**What is the strength of the longest bridge you can make?** If you can make multiple bridges of the longest length, pick the **strongest** one.
 
 Your puzzle answer was ``1642``.
