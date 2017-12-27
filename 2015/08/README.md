@@ -11,7 +11,7 @@ For example:
 - ``""`` is ``2`` characters of code (the two double quotes), but the string contains zero characters.
 - ``"abc"`` is ``5`` characters of code, but ``3`` characters in the string data.
 - ``"aaa\"aaa"`` is ``10`` characters of code, but the string itself contains six "a" characters and a single, escaped quote character, for a total of ``7`` characters in the string data.
-- ``"\x27"`` is ``6`` characters of code, but the string itself contains just one - an apostrophe ('), escaped using hexadecimal notation.
+- ``"\x27"`` is ``6`` characters of code, but the string itself contains just one - an apostrophe (``'``), escaped using hexadecimal notation.
 
 Santa's list is a file that contains many double-quoted string literals, one on each line. The only escape sequences used are ``\\`` (which represents a single backslash), ``\"`` (which represents a lone double-quote character), and ``\x`` plus two hexadecimal characters (which represents a single character with that ASCII code).
 
