@@ -2,7 +2,7 @@
 
 Space on the sleigh is limited this year, and so Santa will be bringing his list as a digital copy. He needs to know how much space it will take up when stored.
 
-It is common in many programming languages to provide a way to escape special characters in strings. For example, C, JavaScript, Perl, Python, and even PHP handle special characters in very similar ways.
+It is common in many programming languages to provide a way to escape special characters in strings. For example, [C](https://en.wikipedia.org/wiki/Escape_sequences_in_C), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [Perl](http://perldoc.perl.org/perlop.html#Quote-and-Quote-like-Operators), [Python](https://docs.python.org/2.0/ref/strings.html), and even [PHP](http://php.net/manual/en/language.types.string.php#language.types.string.syntax.double) handle special characters in very similar ways.
 
 However, it is important to realize the difference between the number of characters **in the code representation of the string literal** and the number of characters **in the in-memory string itself**.
 
@@ -17,7 +17,7 @@ Santa's list is a file that contains many double-quoted string literals, one on 
 
 Disregarding the whitespace in the file, what is **the number of characters of code for string literals** minus **the number of characters in memory for the values of the strings** in total for the entire file?
 
-For example, given the four strings above, the total number of characters of string code ``(2 + 5 + 10 + 6 = 23)`` minus the total number of characters in memory for string values ``(0 + 3 + 7 + 1 = 11)`` is ``23 - 11 = 12``.
+For example, given the four strings above, the total number of characters of string code (``2 + 5 + 10 + 6 = 23``) minus the total number of characters in memory for string values (``0 + 3 + 7 + 1 = 11``) is ``23 - 11 = 12``.
 
 Your puzzle answer was ``1371``.
 
