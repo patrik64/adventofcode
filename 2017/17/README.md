@@ -40,7 +40,7 @@ The spinlock does not short-circuit. Instead, it gets **more** angry. At least, 
 
 You have good news and bad news.
 
-The good news is that you have improved calculations for how to stop the spinlock. They indicate that you actually need to identify **the value after 0** in the current state of the circular buffer.
+The good news is that you have improved calculations for how to stop the spinlock. They indicate that you actually need to identify **the value after ``0``** in the current state of the circular buffer.
 
 The bad news is that while you were determining this, the spinlock has just finished inserting its fifty millionth value (``50000000``).
 
