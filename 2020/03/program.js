@@ -1,6 +1,6 @@
 let fs = require('fs');
 
-let input = fs.readFileSync('Day2.in', 'utf8');
+let input = fs.readFileSync('Day3.in', 'utf8');
 let arr = input.split('\n');
 
 function parse(str) {
@@ -9,7 +9,7 @@ function parse(str) {
     while(idx < str.length) {
         if(str[idx] === '.')
             ret.push(0)
-        else 
+        else if(str[idx] === '#')
             ret.push(1)
         idx++;
     }
