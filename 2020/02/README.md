@@ -10,7 +10,8 @@ To try to debug the problem, they have created a list (your puzzle input) of **p
 
 For example, suppose you have the following list:
 
-```1-3 a: abcde
+```
+1-3 a: abcde
 1-3 b: cdefg
 2-9 c: ccccccccc
 ```
