@@ -20,80 +20,65 @@ function parse(str)
     return ret;
 }
 
-function printMatrix(m) {
-    for(let i = 0; i < m.length; i++)
-        console.log(m[i]);
-}
 
-let currPosX = 0;
+let currPos = 0;
 let trees = 0;
-
-function walk3right(m, row) {
-    currPosX += 3;
-}
-
-function walk1down(m, row) {
-    if(m[row][currPosX] === 1) {
-        trees += 1;
-    }
-}
 
 let matrix = [];
 for (var i in arr)
 {
-   var line = arr[i];
-   var obj = parse(line);
-   let cp = []
-   for(let i = 0; i < 200; i++)
-    cp = [...cp, ...obj]
-   matrix.push(cp);
-        
+    var line = arr[i];
+    var obj = parse(line);
+    let cp = []
+    for(let i = 0; i < 200; i++)
+        cp = [...cp, ...obj]
+    matrix.push(cp);    
 }
 
 let t1 = 0;
 for (let i = 0; i < matrix.length-1; i++) {
-    currPosX += 1;
-    if(matrix[i+1][currPosX] === 1) {
+    currPos += 1;
+    if(matrix[i+1][currPos] === 1) {
         t1 += 1;
     }
 }
 // console.log('t1 --> ', t1);
-currPosX = 0;
+currPos = 0;
 
 let t2 = 0;
 for (let i = 0; i < matrix.length-1; i++) {
-    currPosX += 3;
-    if(matrix[i+1][currPosX] === 1) {
+    currPos += 3;
+    if(matrix[i+1][currPos] === 1) {
         t2 += 1;
     }
 }
 // console.log('t2 --> ', t2);
-currPosX = 0;
+currPos = 0;
 
 let t3 = 0;
 for (let i = 0; i < matrix.length-1; i++) {
-    currPosX += 5;
-    if(matrix[i+1][currPosX] === 1) {
+    currPos += 5;
+    if(matrix[i+1][currPos] === 1) {
         t3 += 1;
     }
 }
 // console.log('t3 --> ', t3);
-currPosX = 0;
+currPos = 0;
 
 let t4 = 0;
 for (let i = 0; i < matrix.length-1; i++) {
-    currPosX += 7;
-    if(matrix[i+1][currPosX] === 1) {
+    currPos += 7;
+    if(matrix[i+1][currPos] === 1) {
         t4 += 1;
     }
 }
 // console.log('t4 --> ', t4);
-currPosX = 0;
+currPos = 0;
 
 let t5 = 0;
 for (let i = 0; i < matrix.length-2; i+=2) {
-    currPosX += 1;
-    if(matrix[i+2][currPosX] === 1) {
+    currPos += 1;
+    if(matrix[i+2][currPos] === 1) {
         t5 += 1;
     }
 }

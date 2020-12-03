@@ -20,40 +20,23 @@ function parse(str)
     return ret;
 }
 
-function printMatrix(m) {
-    for(let i = 0; i < m.length; i++)
-        console.log(m[i]);
-}
-
-let currPosX = 0;
-let trees = 0;
-
-function walk3right(m, row) {
-    currPosX += 3;
-}
-
-function walk1down(m, row) {
-    if(m[row][currPosX] === 1) {
-        trees += 1;
-    }
-}
-
 let matrix = [];
 for (var i in arr)
 {
-   var line = arr[i];
-   var obj = parse(line);
-   let cp = []
-   for(let i = 0; i < 200; i++)
-    cp = [...cp, ...obj]
-   matrix.push(cp);
-        
+    var line = arr[i];
+    var obj = parse(line);
+    let cp = []
+    for(let i = 0; i < 200; i++)
+        cp = [...cp, ...obj]
+    matrix.push(cp);
 }
 
+let currPos = 0;
+let trees = 0;
 
 for (let i = 0; i < matrix.length-1; i++) {
-    currPosX += 3;
-    if(matrix[i+1][currPosX] === 1) {
+    currPos += 3;
+    if(matrix[i+1][currPos] === 1) {
         trees += 1;
     }
 }
