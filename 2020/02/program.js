@@ -3,8 +3,7 @@ let fs = require('fs');
 let input = fs.readFileSync('Day2.in', 'utf8');
 let arr = input.split('\n');
 
-function parse(str)
-{
+function parse(str) {
    var idx = 0;
    var lower = '';
    var upper = '';
@@ -12,18 +11,17 @@ function parse(str)
    var password = '';
    var ret = {};
 
-   while(str[idx] != '-')
-   {
+   while(str[idx] != '-') {
         lower += str[idx];
         idx++;
    }
+
    lower.trim();
    lower = parseInt(lower, 10);
 
    idx++;
 
-   while(str[idx] != ' ')
-   {
+   while(str[idx] != ' ') {
         upper += str[idx];
         idx++;
    }
@@ -34,16 +32,15 @@ function parse(str)
    idx++;
    idx++;
 
-    while(idx < str.length)
-    {
+    while(idx < str.length) {
         password += str[idx];
         idx++;
     }
     password.trim();
-   
-   ret = { "lower": lower, 
-            "upper" : upper, 
-            "letter": letter, 
+
+   ret = {  "lower": lower,
+            "upper" : upper,
+            "letter": letter,
             "password":password };
    return ret;
 }
@@ -64,8 +61,7 @@ function validpass(lower, upper, letter, password) {
 }
 
 let sum = 0;
-for (var i in arr)
-{
+for (var i in arr) {
    var line = arr[i];
    var obj = parse(line);
    if (validpass(obj.lower, obj.upper, obj.letter, obj.password))
