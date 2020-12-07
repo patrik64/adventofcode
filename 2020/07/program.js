@@ -103,7 +103,6 @@ let inputBag = "shiny-gold";
 
 let count = 0;
 for (let x in bags) {
-    let bag = bags[x];
     if(x !== inputBag) {
         if(containsBag(bags, inputBag, x))
             count++;
