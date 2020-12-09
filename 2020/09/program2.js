@@ -24,15 +24,15 @@ function findSum(arr, n) {
     }
     return [];
 }
-var inst = []
+var nums = []
 
 for (let i in arr) {
     let line = arr[i];
     line.trim();
     let val = Number(line);
-    inst.push(val);
+    nums.push(val);
 }
 
 let invalid = 26796446;
-let res = findSum(inst, invalid);
+let res = findSum(nums, invalid);
 console.log(res[0] + res[1]);

@@ -15,20 +15,20 @@ function match(arr, n, pos) {
     }
     return false;
 }
-var inst = []
+var nums = []
 
 for (let i in arr) {
     let line = arr[i];
     line.trim();
     let val = Number(line);
-    inst.push(val);
+    nums.push(val);
 }
 
 let pos = 25;
 
-for(let i = 25; i < inst.length; i++ ) {
-    if(!match(inst, inst[i], i)) {
-        console.log(inst[i]);
+for(let i = 25; i < nums.length; i++ ) {
+    if(!match(nums, nums[i], i)) {
+        console.log(nums[i]);
         process.exit();
     }
 }
