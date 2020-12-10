@@ -25,9 +25,6 @@ for(let i = 0; i < nums.length; i++) {
     else if((n-p) === 3) {
         threes += 1;
     }
-    else {
-        console.log('hmmm');
-    }
     p = n;
 }
 

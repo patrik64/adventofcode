@@ -59,14 +59,9 @@ let threes = 0;
 let fours = 0;
 let fives = 0;
 
-if(occ['3'])
-    threes = occ['3'];
-
-if(occ['4'])
-    fours = occ['4'];
-
-if(occ['5'])
-    fives = occ['5'];
+if(occ['3']) threes = occ['3'];
+if(occ['4']) fours = occ['4'];
+if(occ['5']) fives = occ['5'];
 
 let res = 1;
 for(let i = 0; i < threes; i++) {
