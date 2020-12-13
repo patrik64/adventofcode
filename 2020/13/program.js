@@ -39,10 +39,8 @@ function processTime(time, timeFound, ids) {
 }
 
 let time = arr[0];
-console.log(time);
 
 let ids = parse(arr[1]);
-console.log(ids);
 
 let timeFound = time;
 while(processTime(time, timeFound, ids)) {
