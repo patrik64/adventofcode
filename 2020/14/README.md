@@ -25,7 +25,7 @@ The program then attempts to write the value ``11`` to memory address ``8``. By 
 ```
 value:  000000000000000000000000000000001011  (decimal 11)
 mask:   XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
-result: 00000000000000000000000000000**1**0010**0**1  (decimal 73)
+result: 000000000000000000000000000001001001  (decimal 73)
 ```
 
 So, because of the mask, the value ``73`` is written to memory address ``8`` instead. Then, the program tries to write ``101`` to address ``7``:
@@ -90,7 +90,7 @@ After applying the mask, four bits are overwritten, three of which are different
 000000000000000000000000000000111011  (decimal 59)
 ```
 
-Next, the program is about to write to memory address 26 with a different bitmask:
+Next, the program is about to write to memory address ``26`` with a different bitmask:
 
 ```
 address: 000000000000000000000000000000011010  (decimal 26)
@@ -111,8 +111,8 @@ This results in an address with three floating bits, causing writes to eight mem
 000000000000000000000000000000011011  (decimal 27)
 ```
 
-The entire 36-bit address space still begins initialized to the value 0 at every address, and you still need the sum of all values left in memory at the end of the program. In this example, the sum is 208.
+The entire 36-bit address space still begins initialized to the value ``0`` at every address, and you still need the sum of all values left in memory at the end of the program. In this example, the sum is **``208``**.
 
-Execute the initialization program using an emulator for a version 2 decoder chip. What is the sum of all values left in memory after it completes?
+Execute the initialization program using an emulator for a version 2 decoder chip. **What is the sum of all values left in memory after it completes?**
 
 Your puzzle answer was ``4335927555692``.
