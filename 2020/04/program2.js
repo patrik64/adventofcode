@@ -1,5 +1,4 @@
 let fs = require('fs');
-
 let input = fs.readFileSync('Day4.in', 'utf8');
 let arr = input.split('\n');
 
@@ -44,26 +43,21 @@ function isValidPassport(p) {
     if (("byr" in p)) {
         if(!isByrValid(p["byr"])) return false;
     }
-
     if (("iyr" in p)) {
         if(!isIyrValid(p["iyr"])) return false;
     }
     if (("eyr" in p)) {
         if(!isEyrValid(p["eyr"])) return false;
     }
-
     if (("hgt" in p)) {
         if(!isHgtValid(p["hgt"])) return false;
     }
-
     if (("hcl" in p)) {
         if(!isHclValid(p["hcl"])) return false;
     }
-
     if (("ecl" in p)) {
         if(!isEclValid(p["ecl"])) return false;
     }
-
     if (("pid" in p)) {
         if(!isPidValid(p["pid"])) return false;
     }
