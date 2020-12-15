@@ -1,5 +1,4 @@
 let fs = require('fs');
-
 let input = fs.readFileSync('Day9.in', 'utf8');
 let arr = input.split('\n');
 
@@ -33,4 +32,3 @@ for(let i = 25; i < nums.length; i++ ) {
         process.exit();
     }
 }
-
