@@ -1,12 +1,11 @@
-function arrSum(arr)
-{
-    var ret = 0;
-    for(var i = 0; i < arr.length; i++)
+function arrSum(arr) {
+    let ret = 0;
+    for(let i = 0; i < arr.length; i++)
         ret += arr[i];
     return ret;
 }
 
-var input = [
+let input = [
 1,
 2,
 3,
@@ -38,21 +37,19 @@ var input = [
 113
 ];
 
-var sum = arrSum(input);
-var quarter = sum / 4;
+let sum = arrSum(input);
+let quarter = sum / 4;
 
-var currQE = Number.MAX_SAFE_INTEGER;
-for(var i = 0; i < 100000; i++)
-{
+let currQE = Number.MAX_SAFE_INTEGER;
+for(var i = 0; i < 100000; i++) {
     input.sort(function() {return 0.5 - Math.random()});
-    var a1 = input[0];
-    var a2 = input[1];
-    var a3 = input[2];
-    var a4 = input[3];
+    let a1 = input[0];
+    let a2 = input[1];
+    let a3 = input[2];
+    let a4 = input[3];
 
-    if(a1+a2+a3+a4 == quarter)
-    {
-        var QE = a1*a2*a3*a4;
+    if(a1+a2+a3+a4 == quarter) {
+        let QE = a1*a2*a3*a4;
         if(QE < currQE)
             currQE = QE;
     }
