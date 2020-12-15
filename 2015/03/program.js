@@ -1,12 +1,10 @@
-var fs = require('fs');
+let fs = require('fs');
+let input = fs.readFileSync('Day3.in', 'utf8');
+let arr = input.split('\n');
+let mvs = arr[0];
 
-var input = fs.readFileSync('Day3.in', 'utf8');
-var arr = input.split('\n');
-var mvs = arr[0];
-
-function createKey(x, y)
-{
-    var ret = '';
+function createKey(x, y) {
+    let ret = '';
     if(x < 0)
         ret += 'm' + (Math.abs(x)).toString();
     else
@@ -22,15 +20,14 @@ function createKey(x, y)
     return ret;
 }
 
-var x = 0;
-var y = 0;
+let x = 0;
+let y = 0;
 dict = {};
-var key = createKey(x, y);
+let key = createKey(x, y);
 dict[key] = 1;
 
-for(var i = 0; i < mvs.length; i++)
-{
-    var m = mvs[i];
+for(let i = 0; i < mvs.length; i++) {
+    let m = mvs[i];
     if( m == 'v')
         y--;
     else if( m == '^')
