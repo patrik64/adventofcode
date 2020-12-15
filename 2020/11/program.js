@@ -1,5 +1,4 @@
 let fs = require('fs');
-
 let input = fs.readFileSync('Day11.in', 'utf8');
 let arr = input.split('\n');
 
