@@ -4,8 +4,8 @@ let input = fs.readFileSync('Day3.in', 'utf8');
 let arr = input.split('\n');
 
 function parse(str) {
-    var idx = 0;
-    var ret = []
+    let idx = 0;
+    let ret = []
     while(idx < str.length) {
         if(str[idx] === '.')
             ret.push(0)
@@ -21,9 +21,9 @@ let currPos = 0;
 let trees = 0;
 
 let matrix = [];
-for (var i in arr) {
-    var line = arr[i];
-    var obj = parse(line);
+for (let i in arr) {
+    let line = arr[i];
+    let obj = parse(line);
     let cp = []
     for(let i = 0; i < 200; i++)
         cp = [...cp, ...obj]
@@ -37,7 +37,6 @@ for (let i = 0; i < matrix.length-1; i++) {
         t1 += 1;
     }
 }
-// console.log('t1 --> ', t1);
 currPos = 0;
 
 let t2 = 0;
@@ -47,7 +46,7 @@ for (let i = 0; i < matrix.length-1; i++) {
         t2 += 1;
     }
 }
-// console.log('t2 --> ', t2);
+
 currPos = 0;
 
 let t3 = 0;
@@ -57,7 +56,7 @@ for (let i = 0; i < matrix.length-1; i++) {
         t3 += 1;
     }
 }
-// console.log('t3 --> ', t3);
+
 currPos = 0;
 
 let t4 = 0;
@@ -67,7 +66,7 @@ for (let i = 0; i < matrix.length-1; i++) {
         t4 += 1;
     }
 }
-// console.log('t4 --> ', t4);
+
 currPos = 0;
 
 let t5 = 0;
@@ -77,7 +76,6 @@ for (let i = 0; i < matrix.length-2; i+=2) {
         t5 += 1;
     }
 }
-// console.log('t5 --> ', t5);
 
 trees = t1*t2*t3*t4*t5;
 console.log(trees);
