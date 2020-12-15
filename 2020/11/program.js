@@ -3,8 +3,7 @@ let fs = require('fs');
 let input = fs.readFileSync('Day11.in', 'utf8');
 let arr = input.split('\n');
 
-function parse(str)
-{
+function parse(str) {
     let ret = [];
     let idx = 0;
 
@@ -20,10 +19,8 @@ function parse(str)
     return ret;
 }
 
-function printMtx(m)
-{
-    for(var i in m)
-    {
+function printMtx(m) {
+    for(var i in m) {
         var str = m[i].join('');
         console.log(str);
     }
@@ -169,11 +166,10 @@ function countOccupiedSeats(mtx) {
 }
 
 
-var matrix = [];
-for (var i in arr)
-{
-   var line = arr[i];
-   var row = parse(line);
+let matrix = [];
+for (let i in arr) {
+   let line = arr[i];
+   let row = parse(line);
    matrix.push(row);
 }
 
