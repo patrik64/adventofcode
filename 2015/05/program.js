@@ -1,51 +1,39 @@
-var fs = require('fs');
+let fs = require('fs');
+let input = fs.readFileSync('Day2.in', 'utf8');
+let arr = input.split('\n');
 
-var input = fs.readFileSync('Day2.in', 'utf8');
-var arr = input.split('\n');
-
-function req1(str)
-{
-    var vow = [];
-    var cV = 0;
-    for(var i = 0; i < str.length; i++)
-    {
-        var ch = str[i];
-        if(ch == 'a')
-        {
+function req1(str) {
+    let vow = [];
+    let cV = 0;
+    for(var i = 0; i < str.length; i++) {
+        let ch = str[i];
+        if(ch == 'a') {
+            if(!(ch in vow)) {
+                vow.push(ch);
+                cV++;
+            }
+        }
+        else if(ch == 'e') {
+            if(!(ch in vow)) {
+                vow.push(ch);
+                cV++;
+            }
+        }
+        else if(ch == 'i') {
+            if(!(ch in vow)) {
+                vow.push(ch);
+                cV++;
+            }
+        }
+        else if(ch == 'o') {
             if(!(ch in vow))
             {
                 vow.push(ch);
                 cV++;
             }
         }
-        else if(ch == 'e')
-        {
-            if(!(ch in vow))
-            {
-                vow.push(ch);
-                cV++;
-            }
-        }
-        else if(ch == 'i')
-        {
-            if(!(ch in vow))
-            {
-                vow.push(ch);
-                cV++;
-            }
-        }
-        else if(ch == 'o')
-        {
-            if(!(ch in vow))
-            {
-                vow.push(ch);
-                cV++;
-            }
-        }
-        else if(ch == 'u')
-        {
-            if(!(ch in vow))
-            {
+        else if(ch == 'u') {
+            if(!(ch in vow)) {
                 vow.push(ch);
                 cV++;
             }
@@ -57,14 +45,10 @@ function req1(str)
     return false;
 }
 
-function req2(str)
-{
-    for(var i = 0; i < str.length; i++)
-    {
-        if((i+1) < str.length)
-        {
-            if(str[i] == str[i+1])
-            {
+function req2(str) {
+    for(let i = 0; i < str.length; i++) {
+        if((i+1) < str.length) {
+            if(str[i] == str[i+1]) {
                 return true;
             }
         }
@@ -72,14 +56,11 @@ function req2(str)
     return false;
 }
 
-function req3(str)
-{
-    for(var i = 0; i < str.length; i++)
-    {
-        if((i+1) < str.length)
-        {
-            var ch1 = str[i];
-            var ch2 = str[i+1];
+function req3(str) {
+    for(let i = 0; i < str.length; i++) {
+        if((i+1) < str.length) {
+            let ch1 = str[i];
+            let ch2 = str[i+1];
             if(ch1 == 'a' && ch2 == 'b')
                 return false;
             else if(ch1 == 'c' && ch2 == 'd')
@@ -93,8 +74,7 @@ function req3(str)
     return true;
 }
 
-function isNiceString(str)
-{
+function isNiceString(str) {
     if(!req1(str))
         return false;
     if(!req2(str))
@@ -104,11 +84,10 @@ function isNiceString(str)
     return true;
 }
 
-var sum = 0;
+let sum = 0;
 
-for (var i in arr)
-{
-    var line = arr[i];
+for (let i in arr) {
+    let line = arr[i];
     if(isNiceString(line))
         sum++;
 }
