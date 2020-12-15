@@ -4,9 +4,9 @@ let input = fs.readFileSync('Day6.in', 'utf8');
 let arr = input.split('\n');
 
 function parse(str) {
-    var idx = 0;
-    var key = '';
-    var ret = {};
+    let idx = 0;
+    let key = '';
+    let ret = {};
 
     while(idx < str.length) {
         if(str[idx] === '\r' || str[idx] === '\n') break;
