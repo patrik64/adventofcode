@@ -1,10 +1,8 @@
 let fs = require('fs');
-
 let input = fs.readFileSync('Day7.in', 'utf8');
 let arr = input.split('\n');
 
-function parse(str)
-{
+function parse(str) {
     let idx = 0;
     let val = -1;
 
