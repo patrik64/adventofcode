@@ -1,7 +1,7 @@
-var fs = require('fs');
+let fs = require('fs');
 
-var input = fs.readFileSync('Day9.in', 'utf8');
-var arr = input.split('\n');
+let input = fs.readFileSync('Day9.in', 'utf8');
+let arr = input.split('\n');
 
 function findSum(arr, n) {
     let x = -1;
@@ -24,7 +24,8 @@ function findSum(arr, n) {
     }
     return [];
 }
-var nums = []
+
+let nums = []
 
 for (let i in arr) {
     let line = arr[i];
