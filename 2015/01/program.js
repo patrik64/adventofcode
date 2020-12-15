@@ -1,14 +1,12 @@
-var fs = require('fs');
+let fs = require('fs');
+let input = fs.readFileSync('Day1.in', 'utf8');
+let arr = input.split('\n');
 
-var input = fs.readFileSync('Day1.in', 'utf8');
-var arr = input.split('\n');
+let line = arr[0];
 
-var line = arr[0];
-
-var floor = 0;
-for (var x in line)
-{
-    var ch = line[x];
+let floor = 0;
+for (let x in line) {
+    let ch = line[x];
     if(ch == ')')
         floor--;
     else
