@@ -18,7 +18,7 @@ function parse(str) {
         idx++;
     }
 
-    n.trim();
+    n = n.trim();
     let ret = { 'dir' :  dir, 'n' : Number(n)};
 
     return ret;
