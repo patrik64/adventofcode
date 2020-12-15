@@ -1,5 +1,4 @@
 let fs = require('fs');
-
 let input = fs.readFileSync('Day10.in', 'utf8');
 let arr = input.split('\n');
 
@@ -13,8 +12,6 @@ for (let i in arr) {
 }
 
 nums.sort(function(a, b) {return a - b;});
-
-// gather occurences of sequences bigger than 2
 
 occ = {}
 
