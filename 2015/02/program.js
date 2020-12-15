@@ -1,31 +1,26 @@
-var fs = require('fs');
+let fs = require('fs');
+let input = fs.readFileSync('Day2.in', 'utf8');
+let arr = input.split('\n');
 
-var input = fs.readFileSync('Day2.in', 'utf8');
-var arr = input.split('\n');
-
-function parse(str)
-{
+function parse(str) {
     var idx = 0;
     var x = '';
     var y = '';
     var z = '';
 
-    while(str[idx] != 'x')
-    {
+    while(str[idx] != 'x') {
         x += str[idx];
         idx++;
     }
 
     idx++;
-    while(str[idx] != 'x')
-    {
+    while(str[idx] != 'x') {
         y += str[idx];
         idx++;
     }
     idx++;
 
-    while(idx < str.length)
-    {
+    while(idx < str.length) {
         z += str[idx];
         idx++;
     }
@@ -40,27 +35,23 @@ function parse(str)
     return { "x": x, "y": y, "z": z};
 }
 
-function getFullArea(box)
-{
+function getFullArea(box) {
     return (2*box.x*box.y + 2*box.y*box.z + 2*box.z*box.x);
 }
 
-function getMinArea(box)
-{
-    var mdim = 'x';
-    var min1 = box.x;
-    if(box.y < min1)
-    {
+function getMinArea(box) {
+    let mdim = 'x';
+    let min1 = box.x;
+    if(box.y < min1) {
         min1 =  box.y;
         mdim = 'y';
     }
-    if(box.z < min1)
-    {
+    if(box.z < min1) {
         min1 = box.z;
         mdim = 'z';
     }
 
-    var min2;
+    let min2;
     if(mdim == 'x')
         min2 = Math.min(box.y, box.z);
     else if(mdim == 'y')
@@ -71,19 +62,17 @@ function getMinArea(box)
     return min1*min2;
 }
 
-var boxes = [];
-var sum = 0;
+let boxes = [];
+let sum = 0;
 
-for (var i in arr)
-{
-   var line = arr[i];
-   var obj = parse(line);
+for (let i in arr) {
+   let line = arr[i];
+   let obj = parse(line);
    boxes.push(obj);
 }
 
-for(var i in boxes)
-{
-    var box = boxes[i];
+for(let i in boxes) {
+    let box = boxes[i];
     sum += getFullArea(box) + getMinArea(box);
 }
 
