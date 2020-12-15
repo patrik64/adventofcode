@@ -1,7 +1,7 @@
-var fs = require('fs');
+let fs = require('fs');
 
-var input = fs.readFileSync('Day8.in', 'utf8');
-var arr = input.split('\n');
+let input = fs.readFileSync('Day8.in', 'utf8');
+let arr = input.split('\n');
 
 function parse(str)
 {
@@ -18,7 +18,7 @@ function parse(str)
         idx++;
     }
 
-    val.trim();
+    val = val.trim();
     val = Number(val);
 
     let ret = {'op' : op, 'val': val, 'visited': false};
