@@ -31,12 +31,12 @@ Their question for you is: what will be the ``2020``th number spoken? In the exa
 
 Here are a few more examples:
 
-    Given the starting numbers 1,3,2, the 2020th number spoken is 1.
-    Given the starting numbers 2,1,3, the 2020th number spoken is 10.
-    Given the starting numbers 1,2,3, the 2020th number spoken is 27.
-    Given the starting numbers 2,3,1, the 2020th number spoken is 78.
-    Given the starting numbers 3,2,1, the 2020th number spoken is 438.
-    Given the starting numbers 3,1,2, the 2020th number spoken is 1836.
+   - Given the starting numbers ``1,3,2``, the ``2020``th number spoken is ``1``.
+   - Given the starting numbers ``2,1,3``, the ``2020``th number spoken is ``10``.
+   - Given the starting numbers ``1,2,3``, the ``2020``th number spoken is ``27``.
+   - Given the starting numbers ``2,3,1``, the ``2020``th number spoken is ``78``.
+   - Given the starting numbers ``3,2,1``, the ``2020``th number spoken is ``438``.
+   - Given the starting numbers ``3,1,2``, the ``2020``th number spoken is ``1836``.
 
 Given your starting numbers, **what will be the 2020th number spoken?**
 
