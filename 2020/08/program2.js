@@ -1,17 +1,13 @@
 let fs = require('fs');
-
 let input = fs.readFileSync('Day8.in', 'utf8');
 let arr = input.split('\n');
 
-function parse(str)
-{
-    let idx = 0;
+function parse(str) {
+    let idx = 4;
     let op = '';
     let val = '';
 
     op = str.substring(0,3);
-
-    idx = 4;
 
     while(idx < str.length) {
         val += str[idx];
@@ -56,7 +52,7 @@ function processInstruction(inst, pos, acc) {
     }
 }
 
-var inst = []
+let inst = []
 
 for (let i in arr) {
     let line = arr[i];
