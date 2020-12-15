@@ -1,20 +1,16 @@
-var fs = require('fs');
+let fs = require('fs');
+let input = fs.readFileSync('Day1.in', 'utf8');
+let arr = input.split('\n');
 
-var input = fs.readFileSync('Day1.in', 'utf8');
-var arr = input.split('\n');
-
-var line = arr[0];
-
-var floor = 0;
-for (var x = 0; x < line.length; x++)
-{
-    var ch = line[x];
+let line = arr[0];
+let floor = 0;
+for (let x = 0; x < line.length; x++) {
+    let ch = line[x];
     if(ch == ')')
         floor--;
     else
         floor++;
-    if(floor == -1)
-    {
+    if(floor == -1) {
         console.log(x+1);
         process.exit(0);
     }
