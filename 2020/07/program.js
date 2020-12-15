@@ -1,10 +1,8 @@
 let fs = require('fs');
-
 let input = fs.readFileSync('Day7.in', 'utf8');
 let arr = input.split('\n');
 
-function parse(str)
-{
+function parse(str) {
     let idx = 0;
     let val = -1;
 
@@ -49,8 +47,8 @@ function hasMoreBags(str, idx) {
 }
 
 function getBagName(str, idx) {
-    var attr = '';
-    var color = '';
+    let attr = '';
+    let color = '';
 
     while(str[idx] !== ' ')
     {
@@ -91,7 +89,7 @@ function containsBag(bags, inputBag, testBag) {
     return false;
 }
 
-var bags = {}
+let bags = {}
 
 for (let i in arr) {
     let line = arr[i];
