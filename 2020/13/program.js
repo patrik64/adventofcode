@@ -1,5 +1,4 @@
 let fs = require('fs');
-
 let input = fs.readFileSync('Day13.in', 'utf8');
 let arr = input.split('\n');
 
@@ -8,7 +7,6 @@ function parse(str) {
     let idx = 0;
 
     str = str.trim();
-
     let n = '';
 
     while(idx < str.length) {
@@ -46,4 +44,3 @@ let timeFound = time;
 while(processTime(time, timeFound, ids)) {
     timeFound++;
 }
-
