@@ -4,18 +4,17 @@ let input = fs.readFileSync('Day4.in', 'utf8');
 let arr = input.split('\n');
 
 function parse(str) {
-    var idx = 0;
-    var key = '';
-    var prop = '';
-    var ret = {};
+    let idx = 0;
+    let key = '';
+    let prop = '';
+    let ret = {};
 
     while(idx < str.length) {
-
         while(str[idx] != ':') {
             key += str[idx];
             idx++;
         }
-        key.trim();
+        key = key.trim();
 
         idx++;
 
@@ -24,7 +23,7 @@ function parse(str) {
             idx++;
             if(str[idx] === '\r') break;
         }
-        prop.trim();
+        prop = prop.trim();
         ret[key] = prop;
         key = '';
         prop = '';
@@ -32,6 +31,7 @@ function parse(str) {
     }
     return ret;
  }
+
 function isValidPassport(p) {
     if (!("byr" in p)) return false;
     if (!("iyr" in p)) return false;
@@ -125,9 +125,9 @@ function isHclValid(prop) {
 }
 
 function isHgtValid(prop) {
-    var idx = 0;
-    var num = '';
-    var unit = '';
+    let idx = 0;
+    let num = '';
+    let unit = '';
 
     while(idx < prop.length) {
         while(prop[idx] != 'c' && prop[idx] != 'i') {
@@ -135,13 +135,13 @@ function isHgtValid(prop) {
             idx++;
             if(idx >= prop.length) break;
         }
-        num.trim();
+        num = num.trim();
 
         while(idx < prop.length) {
             unit += prop[idx];
             idx++;
         }
-        unit.trim();
+        unit = unit.trim();
     }
 
     num = Number(num);
