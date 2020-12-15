@@ -1,7 +1,7 @@
-var fs = require('fs');
+let fs = require('fs');
 
-var input = fs.readFileSync('Day7.in', 'utf8');
-var arr = input.split('\n');
+let input = fs.readFileSync('Day7.in', 'utf8');
+let arr = input.split('\n');
 
 function parse(str)
 {
@@ -56,8 +56,8 @@ function hasMoreBags(str, idx) {
 }
 
 function getBagName(str, idx) {
-    var attr = '';
-    var color = '';
+    let attr = '';
+    let color = '';
 
     while(str[idx] !== ' ')
     {
@@ -95,7 +95,7 @@ function getBagCount(b, bags) {
 
 }
 
-var bags = {}
+let bags = {}
 
 for (let i in arr) {
     let line = arr[i];
