@@ -1,29 +1,25 @@
-var mtx = [];
+let mtx = [];
 
-dim = 5975;
+let dim = 5975;
 
-for(var i = 0; i < dim; i++ )
-{
-    var row = [];
-    for(var j = 0; j < dim; j++)
-    {
+for(let i = 0; i < dim; i++ ) {
+    let row = [];
+    for(let j = 0; j < dim; j++) {
         row.push(0);
     }
     mtx.push(row);
 }
 
-var x = 20151125;
-var mult = 252533;
-var modd = 33554393;
+let x = 20151125;
+let mult = 252533;
+let modd = 33554393;
 
-var i = 0;
-var j = 0;
-for(var k = 0; k < dim; k++)
-{
+let i = 0;
+let j = 0;
+for(let k = 0; k < dim; k++) {
     j = k;
     i = 0;
-    for(var l = 0; l <= k; l++)
-    {
+    for(let l = 0; l <= k; l++) {
         mtx[j][i] = x;
         x = x*mult;
         x = x % modd;
@@ -32,8 +28,8 @@ for(var k = 0; k < dim; k++)
     }
 }
 
-var xx = 3029;
-var yy = 2947;
+let xx = 3029;
+let yy = 2947;
 xx--;
 yy--;
 
