@@ -13,7 +13,7 @@ occurences[1] = { 'n': 1, 'last1' : 2, 'last2': 2 };
 occurences[0] = { 'n': 1, 'last1' : 3, 'last2': 3 };
 occurences[16] = { 'n': 1, 'last1' : 4, 'last2': 4 };
 occurences[2] = { 'n': 1, 'last1' : 5, 'last2': 5 };
-
+ 
 for(let i = 6; i < 2020; i++) {
     let last = input[input.length-1];
     if(!isSpoken(last, occurences)) {
