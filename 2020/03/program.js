@@ -4,8 +4,8 @@ let input = fs.readFileSync('Day3.in', 'utf8');
 let arr = input.split('\n');
 
 function parse(str) {
-    var idx = 0;
-    var ret = []
+    let idx = 0;
+    let ret = []
     while(idx < str.length) {
         if(str[idx] === '.')
             ret.push(0)
@@ -17,9 +17,9 @@ function parse(str) {
 }
 
 let matrix = [];
-for (var i in arr) {
-    var line = arr[i];
-    var obj = parse(line);
+for (let i in arr) {
+    let line = arr[i];
+    let obj = parse(line);
     let cp = []
     for(let i = 0; i < 200; i++)
         cp = [...cp, ...obj]
