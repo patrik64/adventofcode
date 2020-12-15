@@ -61,9 +61,9 @@ function validpass(lower, upper, letter, password) {
 }
 
 let sum = 0;
-for (var i in arr) {
-   var line = arr[i];
-   var obj = parse(line);
+for (let i in arr) {
+   let line = arr[i];
+   let obj = parse(line);
    if (validpass(obj.lower, obj.upper, obj.letter, obj.password))
     sum += 1
 }
