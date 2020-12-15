@@ -3,10 +3,10 @@ let input = fs.readFileSync('Day2.in', 'utf8');
 let arr = input.split('\n');
 
 function parse(str) {
-    var idx = 0;
-    var x = '';
-    var y = '';
-    var z = '';
+    let idx = 0;
+    let x = '';
+    let y = '';
+    let z = '';
 
     while(str[idx] != 'x') {
         x += str[idx];
