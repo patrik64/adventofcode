@@ -1,4 +1,3 @@
-const { reverse } = require('dns');
 let fs = require('fs');
 
 let input = fs.readFileSync('Day14.in', 'utf8');
