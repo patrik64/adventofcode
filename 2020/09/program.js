@@ -1,7 +1,7 @@
-var fs = require('fs');
+let fs = require('fs');
 
-var input = fs.readFileSync('Day9.in', 'utf8');
-var arr = input.split('\n');
+let input = fs.readFileSync('Day9.in', 'utf8');
+let arr = input.split('\n');
 
 function match(arr, n, pos) {
     for(let i = pos-25; i < pos-1; i++) {
@@ -15,7 +15,8 @@ function match(arr, n, pos) {
     }
     return false;
 }
-var nums = []
+
+let nums = []
 
 for (let i in arr) {
     let line = arr[i];
