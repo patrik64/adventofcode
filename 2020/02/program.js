@@ -4,19 +4,19 @@ let input = fs.readFileSync('Day2.in', 'utf8');
 let arr = input.split('\n');
 
 function parse(str) {
-   var idx = 0;
-   var lower = '';
-   var upper = '';
-   var letter = '';
-   var password = '';
-   var ret = {};
+   let idx = 0;
+   let lower = '';
+   let upper = '';
+   let letter = '';
+   let password = '';
+   let ret = {};
 
    while(str[idx] != '-') {
         lower += str[idx];
         idx++;
    }
 
-   lower.trim();
+   lower = lower.trim();
    lower = parseInt(lower, 10);
 
    idx++;
@@ -25,7 +25,7 @@ function parse(str) {
         upper += str[idx];
         idx++;
    }
-   upper.trim();
+   upper = upper.trim();
    upper = parseInt(upper, 10);
    idx++;
    letter = str[idx];
