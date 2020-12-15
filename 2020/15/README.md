@@ -20,8 +20,8 @@ For example, suppose the starting numbers are ``0``,``3``,``6``:
    - **Turn 4**: Now, consider the last number spoken, ``6``. Since that was the first time the number had been spoken, the ``4``th number spoken is **``0``**.
    - **Turn 5**: Next, again consider the last number spoken, ``0``. Since it had been spoken before, the next number to speak is the difference between the turn number when it was last spoken (the previous turn, ``4``) and the turn number of the time it was most recently spoken before then (turn ``1``). Thus, the ``5``th number spoken is ``4 - 1``, **``3``**.
    - **Turn 6**: The last number spoken, ``3`` had also been spoken before, most recently on turns ``5`` and ``2``. So, the ``6``th number spoken is ``5 - 2``, **``3``**.
-   - **Turn 7**: Since ``3`` was just spoken twice in a row, and the last two turns are 1 turn apart, the 7th number spoken is **``1``**.
-   - **Turn 8**: Since ``1`` is new, the 8th number spoken is **``0``**.
+   - **Turn 7**: Since ``3`` was just spoken twice in a row, and the last two turns are ``1`` turn apart, the ``7``th number spoken is **``1``**.
+   - **Turn 8**: Since ``1`` is new, the ``8``th number spoken is **``0``**.
    - **Turn 9**: ``0`` was last spoken on turns ``8`` and ``4``, so the ``9``th number spoken is the difference between them, **``4``**.
    - **Turn 10**: ``4`` is new, so the ``10``th number spoken is **``0``**.
 
