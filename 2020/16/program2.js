@@ -1,4 +1,3 @@
-const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 let fs = require('fs');
 let input = fs.readFileSync('Day16.in', 'utf8');
 let arr = input.split('\n');
@@ -88,9 +87,51 @@ function parseTicket(str) {
     return ret;
 }
 
-
 function isInArray(value, array) {
     return array.indexOf(value) > -1;
+}
+
+function isTicketValid(ticket, ranges) {
+    for(let x in ticket) {
+        let t = ticket[x];
+        let pass = false;
+        for(let r in ranges) {
+            let range = ranges[r];
+            if((t >= range.r1Start && t <= range.r1End) ||
+                (t >= range.r2Start && t <= range.r2End)) {
+                    pass = true;
+                }
+        }
+        if(!pass) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function matchRange(range, positions) {
+    for(let x in positions) {
+        let position = positions[x];
+        if(!position['used']) {
+            let pass = false;
+            for(let i = 0; i < position['arr'].length; i++) {
+                let pos = position['arr'][i];
+                if((pos >= range.r1Start && pos <= range.r1End) ||
+                    (pos >= range.r2Start && pos <= range.r2End)) {
+                        pass = true;
+                    }
+                else {
+                    pass = false;
+                    break;
+                }
+            }
+            if (pass) {
+                position['used'] = true;
+                return { 'name': range.name, 'idx' : position['idx'] };
+            }
+        }
+    }
+    return { 'name': range.name, 'idx' : 'error' }
 }
 
 let ranges = [];
@@ -120,75 +161,55 @@ while (i < arr.length) {
     i++;
 }
 
-// console.log(ticket);
-// console.log(nearby);
+let validTickets = []
+for(let x in nearby) {
+    let testTicket = nearby[x];
+    if(isTicketValid(testTicket, ranges))
+        validTickets.push(testTicket);
+}
+
+let positions = [];
+for(let i = 0; i < ticket.length; i++) {
+    positions.push({ 'idx' : i, 'arr' : [], 'used' : false });
+}
+
+//transpose
+for(let x in validTickets) {
+    let vt = validTickets[x]
+    for(let i = 0; i < vt.length; i++ ){
+        positions[i].arr.push(vt[i]);
+    }
+}
 
 let res = [];
-let validtickets = [];
 
-for(let i = 0; i < nearby.length; i++) {
-    let valid = true;
-    for(let j = 0; j < nearby[i].length; j++) {
-        let el = nearby[i][j];
-        let pass = false;
-        for(let k = 0; k < ranges.length; k++) {
-            let range = ranges[k];
-            if(el >= range.r1Start && el <= range.r1End)
-                pass = true;
-            if(el >= range.r2Start && el <= range.r2End)
-                pass = true;
-        }
-        if(!pass) {
-            valid = false;
-            res.push(el);
-        }
-    }
-    if(valid)
-        validtickets.push(nearby[i]);
-}
-
-// console.log(validtickets);
-// console.log(nearby.length);
-// console.log(ranges)
-
-let pos = [];
-let posUsed = [];
-let len = validtickets[0].length;
-for(let i = 0; i < len; i++) {
-   for(let k = 0; k < ranges.length; k++) {
-        let pass = true;
-        let range = ranges[k];
-        let skip = isInArray(i, posUsed)
-        if(!range['used'] && !skip) {
-            for(let j = 0; j < validtickets.length; j++) {
-                let el = validtickets[j][i];
-                // console.log('checking --> ', el, 'for range -->', range.name)
-                if(!((el >= range.r1Start && el <= range.r1End) || (el >= range.r2Start && el <= range.r2End))) 
-                    pass = false;
-            }
-            if(pass) {
-                if(!isInArray(range.name, pos)) {
-                    range['used'] = true;
-                    posUsed.push(i);
-                    pos.push({'idx': i, 'name': range.name});
-                }
-            }
-        }
-    }
-}
+res.push(matchRange(ranges[17], positions));
+res.push(matchRange(ranges[6], positions));
+res.push(matchRange(ranges[8], positions));
+res.push(matchRange(ranges[11], positions));
+res.push(matchRange(ranges[9], positions));
+res.push(matchRange(ranges[15], positions));
+res.push(matchRange(ranges[10], positions));
+res.push(matchRange(ranges[19], positions));
+res.push(matchRange(ranges[18], positions));
+res.push(matchRange(ranges[2], positions));
+res.push(matchRange(ranges[4], positions));
+res.push(matchRange(ranges[1], positions));
+res.push(matchRange(ranges[3], positions));
+res.push(matchRange(ranges[0], positions));
+res.push(matchRange(ranges[5], positions));
+res.push(matchRange(ranges[16], positions));
+res.push(matchRange(ranges[12], positions));
+res.push(matchRange(ranges[13], positions));
+res.push(matchRange(ranges[14], positions));
+res.push(matchRange(ranges[7], positions));
 
 let mult = 1;
-let count = 0;
-for(let i = 0; i < pos.length; i++) {
-    let name = pos[i].name.substring(0,9);
-    // console.log(pos[i])
-    if(name === 'departure') {
-        // console.log('i -->', i, 'ticket -->', ticket[i])
-        mult *= ticket[pos[i].idx];
-        count++;
-    }
+for(let x in res) {
+    let r = res[x];
+    let name = r.name.substring(0,9);
+    if(name === 'departure')
+        mult *= ticket[r.idx];
 }
 
-// console.log(pos)
-console.log(mult)
-// console.log(count)
+console.log(mult);
