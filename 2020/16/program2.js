@@ -58,7 +58,8 @@ function parseRanges(str) {
                 'r1Start' : r1Start, 
                 'r1End': r1End,
                 'r2Start': r2Start, 
-                'r2End' : r2End };
+                'r2End' : r2End, 
+                'used' : false };
     return ret;
 }
 
@@ -146,24 +147,32 @@ for(let i = 0; i < nearby.length; i++) {
         validtickets.push(nearby[i]);
 }
 
-// console.log(validtickets.length);
+// console.log(validtickets);
 // console.log(nearby.length);
 // console.log(ranges)
+
 let pos = [];
+let posUsed = [];
 let len = validtickets[0].length;
 for(let i = 0; i < len; i++) {
    for(let k = 0; k < ranges.length; k++) {
         let pass = true;
         let range = ranges[k];
-        for(let j = 0; j < validtickets.length; j++) {
-            let el = validtickets[j][i];
-            // console.log('checking --> ', el, 'for range -->', range.name)
-            if(!((el >= range.r1Start && el <= range.r1End) || (el >= range.r2Start && el <= range.r2End))) 
-                pass = false;
-        }
-        if(pass) {
-            if(!isInArray(range.name, pos))
-                pos.push(range.name);
+        let skip = isInArray(i, posUsed)
+        if(!range['used'] && !skip) {
+            for(let j = 0; j < validtickets.length; j++) {
+                let el = validtickets[j][i];
+                // console.log('checking --> ', el, 'for range -->', range.name)
+                if(!((el >= range.r1Start && el <= range.r1End) || (el >= range.r2Start && el <= range.r2End))) 
+                    pass = false;
+            }
+            if(pass) {
+                if(!isInArray(range.name, pos)) {
+                    range['used'] = true;
+                    posUsed.push(i);
+                    pos.push({'idx': i, 'name': range.name});
+                }
+            }
         }
     }
 }
@@ -171,14 +180,15 @@ for(let i = 0; i < len; i++) {
 let mult = 1;
 let count = 0;
 for(let i = 0; i < pos.length; i++) {
-    let name = pos[i].substring(0,9);
+    let name = pos[i].name.substring(0,9);
+    // console.log(pos[i])
     if(name === 'departure') {
         // console.log('i -->', i, 'ticket -->', ticket[i])
-        mult *= ticket[i];
+        mult *= ticket[pos[i].idx];
         count++;
     }
 }
 
 // console.log(pos)
 console.log(mult)
-
+// console.log(count)
