@@ -173,12 +173,12 @@ let count = 0;
 for(let i = 0; i < pos.length; i++) {
     let name = pos[i].substring(0,9);
     if(name === 'departure') {
-        console.log('i -->', i, 'ticket -->', ticket[i])
+        // console.log('i -->', i, 'ticket -->', ticket[i])
         mult *= ticket[i];
         count++;
     }
 }
 
-console.log(pos)
+// console.log(pos)
 console.log(mult)
 
