@@ -1,4 +1,3 @@
-const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 let fs = require('fs');
 let input = fs.readFileSync('Day16.in', 'utf8');
 let arr = input.split('\n');
@@ -106,9 +105,6 @@ while (i < arr.length) {
     nearby.push(near);
     i++;
 }
-
-// console.log(ranges);
-// console.log(nearby);
 
 let res = [];
 
