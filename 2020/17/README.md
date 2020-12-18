@@ -1,5 +1,5 @@
 
-# [--- Day 18: Operation Order ---](http://adventofcode.com/2020/day/17)
+# [--- Day 17: Conway Cubes ---](http://adventofcode.com/2020/day/17)
 
 
 As your flight slowly drifts through the sky, the Elves at the Mythical Information Bureau at the North Pole contact you. They'd like some help debugging a malfunctioning experimental energy source aboard one of their super-secret imaging satellites.
