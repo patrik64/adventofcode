@@ -1,4 +1,5 @@
---- Day 18: Operation Order ---
+
+# [--- Day 18: Operation Order ---](http://adventofcode.com/2020/day/18)
 
 As you look out the window and notice a heavily-forested continent slowly appear over the horizon, you are interrupted by the child sitting next to you. They're curious if you could help them with their math homework.
 
@@ -35,8 +36,9 @@ Here are a few more examples:
 
 Before you can help with the homework, you need to understand it yourself. Evaluate the expression on each line of the homework; what is the sum of the resulting values?
 
-Your puzzle answer was 800602729153.
---- Part Two ---
+Your puzzle answer was ``800602729153``.
+
+**--- Part Two ---**
 
 You manage to answer the child's questions and they finish part 1 of their homework, but get stuck when they reach the next section: advanced math.
 
@@ -61,4 +63,4 @@ Here are the other examples from above:
 
 What do you get if you add up the results of evaluating the homework problems using these new rules?
 
-Your puzzle answer was 92173009047076.
+Your puzzle answer was ``92173009047076``.
