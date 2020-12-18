@@ -1,4 +1,6 @@
---- Day 16: Ticket Translation ---
+
+# [--- Day 16: Ticket Translation ---](http://adventofcode.com/2020/day/16)
+
 
 As you're walking to yet another connecting flight, you realize that one of the legs of your re-routed trip coming up is on a high-speed train. However, the train ticket you were given is in a language you don't understand. You should probably figure out what it says before you get to the train station after the next flight.
 
@@ -10,12 +12,14 @@ The rules for ticket fields specify a list of fields that exist somewhere on the
 
 Each ticket is represented by a single line of comma-separated values. The values are the numbers on the ticket in the order they appear; every ticket has the same format. For example, consider this ticket:
 
+```
 .--------------------------------------------------------.
 | ????: 101    ?????: 102   ??????????: 103     ???: 104 |
 |                                                        |
 | ??: 301  ??: 302             ???????: 303      ??????? |
 | ??: 401  ??: 402           ???? ????: 403    ????????? |
 '--------------------------------------------------------'
+```
 
 Here, ? represents text in a language you don't understand. This ticket might be represented as 101,102,103,104,301,302,303,401,402,403; of course, the actual train tickets you're looking at are much more complicated. In any case, you've extracted just the numbers in such a way that the first number is always the same specific field, the second number is always a different specific field, and so on - you just don't know what each position actually means!
 
@@ -40,8 +44,9 @@ It doesn't matter which position corresponds to which field; you can identify in
 
 Consider the validity of the nearby tickets you scanned. What is your ticket scanning error rate?
 
-Your puzzle answer was 26941.
---- Part Two ---
+Your puzzle answer was ``26941``.
+
+**--- Part Two ---**
 
 Now that you've identified which tickets contain invalid values, discard those tickets entirely. Use the remaining valid tickets to determine which field is which.
 
@@ -65,4 +70,4 @@ Based on the nearby tickets in the above example, the first position must be row
 
 Once you work out which field is which, look for the six fields on your ticket that start with the word departure. What do you get if you multiply those six values together?
 
-Your puzzle answer was 634796407951.
+Your puzzle answer was ``634796407951``.
