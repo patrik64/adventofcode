@@ -1,4 +1,6 @@
---- Day 17: Conway Cubes ---
+
+# [--- Day 18: Operation Order ---](http://adventofcode.com/2020/day/17)
+
 
 As your flight slowly drifts through the sky, the Elves at the Mythical Information Bureau at the North Pole contact you. They'd like some help debugging a malfunctioning experimental energy source aboard one of their super-secret imaging satellites.
 
@@ -21,29 +23,32 @@ The engineers responsible for this experimental energy source would like you to 
 
 For example, consider the following initial state:
 
+```
 .#.
 ..#
 ###
+```
 
 Even though the pocket dimension is 3-dimensional, this initial state represents a small 2-dimensional slice of it. (In particular, this initial state defines a 3x3x1 region of the 3-dimensional space.)
 
 Simulating a few cycles from this initial state produces the following configurations, where the result of each cycle is shown layer-by-layer at each given z coordinate (and the frame of view follows the active cells in each cycle):
 
 Before any cycles:
-
+```
 z=0
 .#.
 ..#
 ###
-
+```
 
 After 1 cycle:
 
+```
 z=-1
 #..
 ..#
 .#.
-
+```
 z=0
 #.#
 .##
@@ -144,8 +149,9 @@ After the full six-cycle boot process completes, 112 cubes are left in the activ
 
 Starting with your given initial configuration, simulate six cycles. How many cubes are left in the active state after the sixth cycle?
 
-Your puzzle answer was 375.
---- Part Two ---
+Your puzzle answer was ``375``.
+
+**--- Part Two ---**
 
 For some reason, your simulated results don't match what the experimental energy source engineers expected. Apparently, the pocket dimension actually has four spatial dimensions, not three.
 
@@ -396,4 +402,4 @@ After the full six-cycle boot process completes, 848 cubes are left in the activ
 
 Starting with your given initial configuration, simulate six cycles in a 4-dimensional space. How many cubes are left in the active state after the sixth cycle?
 
-Your puzzle answer was 2192.
+Your puzzle answer was ``2192``.
