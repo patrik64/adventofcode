@@ -132,19 +132,18 @@ Without updating rules ``8`` and ``11``, these rules only match three messages: 
 
 However, after updating rules ``8`` and ``11``, a total of ``12`` messages match:
 
-```
-    bbabbbbaabaabba
-    babbbbaabbbbbabbbbbbaabaaabaaa
-    aaabbbbbbaaaabaababaabababbabaaabbababababaaa
-    bbbbbbbaaaabbbbaaabbabaaa
-    bbbababbbbaaaaaaaabbababaaababaabab
-    ababaaaaaabaaab
-    ababaaaaabbbaba
-    baabbaaaabbaaaababbaababb
-    abbbbabbbbaaaababbbbbbaaaababb
-    aaaaabbaabaaaaababaa
-    aaaabbaabbaaaaaaabbbabbbaaabbaabaaa
-    aabbbbbaabbbaaaaaabbbbbababaaaaabbaaabba
+   - ``bbabbbbaabaabba``
+   - ``babbbbaabbbbbabbbbbbaabaaabaaa``
+   - ``aaabbbbbbaaaabaababaabababbabaaabbababababaaa``
+   - ``bbbbbbbaaaabbbbaaabbabaaa``
+   - ``bbbababbbbaaaaaaaabbababaaababaabab``
+   - ``ababaaaaaabaaab``
+   - ``ababaaaaabbbaba``
+   - ``baabbaaaabbaaaababbaababb``
+   - ``abbbbabbbbaaaababbbbbbaaaababb``
+   - ``aaaaabbaabaaaaababaa``
+   - ``aaaabbaabbaaaaaaabbbabbbaaabbaabaaa``
+   - ``aabbbbbaabbbaaaaaabbbbbababaaaaabbaaabba``
 ```
 
 **After updating rules 8 and 11, how many messages completely match rule 0?**
