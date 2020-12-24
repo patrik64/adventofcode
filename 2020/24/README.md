@@ -50,12 +50,12 @@ Your puzzle answer was ``495``.
 
 The tile floor in the lobby is meant to be a living art exhibit. Every day, the tiles are all flipped according to the following rules:
 
-    Any black tile with zero or more than 2 black tiles immediately adjacent to it is flipped to white.
-    Any white tile with exactly 2 black tiles immediately adjacent to it is flipped to black.
+   - Any **black** tile with **zero** or **more than 2** black tiles immediately adjacent to it is flipped to **white**.
+   - Any **white** tile with **exactly 2** black tiles immediately adjacent to it is flipped to **black**.
 
-Here, tiles immediately adjacent means the six tiles directly touching the tile in question.
+Here, **tiles immediately adjacent** means the six tiles directly touching the tile in question.
 
-The rules are applied simultaneously to every tile; put another way, it is first determined which tiles need to be flipped, then they are all flipped at the same time.
+The rules are applied **simultaneously** to every tile; put another way, it is first determined which tiles need to be flipped, then they are all flipped at the same time.
 
 In the above example, the number of black tiles that are facing up after the given number of days has passed is as follows:
 
