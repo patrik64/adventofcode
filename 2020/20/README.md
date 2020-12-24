@@ -168,7 +168,7 @@ For reference, the IDs of the above tiles are:
 2971    1489    1171
 ```
 
-To check that you've assembled the image correctly, multiply the IDs of the four corner tiles together. If you do this with the assembled tiles from the example above, you get 1951 * 3079 * 2971 * 1171 = 20899048083289.
+To check that you've assembled the image correctly, multiply the IDs of the four corner tiles together. If you do this with the assembled tiles from the example above, you get ``1951 * 3079 * 2971 * 1171`` = **``20899048083289``**.
 
 Assemble the tiles into an image. 
 **What do you get if you multiply together the IDs of the four corner tiles?**
@@ -274,7 +274,7 @@ When looking for this pattern in the image, the spaces can be anything; only the
 #...#.....#..##...###.##
 #..###....##.#...##.##.#
 ```
-Determine how rough the waters are in the sea monsters' habitat by counting the number of # that are not part of a sea monster. In the above example, the habitat's water roughness is 273.
+Determine how rough the waters are in the sea monsters' habitat by counting the number of # that are not part of a sea monster. In the above example, the habitat's water roughness is **``273``**.
 
 **How many ``#`` are not part of a sea monster?**
 
