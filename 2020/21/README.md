@@ -22,7 +22,7 @@ The first food in the list has four ingredients (written in a language you don't
 
 The first step is to determine which ingredients can't possibly contain any of the allergens in any food in your list. In the above example, none of the ingredients kfcds, nhms, sbzzf, or trh can contain an allergen. Counting the number of times any of these ingredients appear in any ingredients list produces 5: they all appear once each except ``sbzzf``, which appears twice.
 
-Determine which ingredients cannot possibly contain any of the allergens in your list. 
+Determine which ingredients cannot possibly contain any of the allergens in your list.
 **How many times do any of those ingredients appear?**
 
 Your puzzle answer was ``2203``.
@@ -39,6 +39,7 @@ In the above example:
 ```
 Arrange the ingredients alphabetically by their allergen and separate them by commas to produce your canonical dangerous ingredient list. (There should not be any spaces in your canonical dangerous ingredient list.) In the above example, this would be ``mxmxvkd,sqjhc,fvjkl``.
 
-Time to stock your raft with supplies. What is your canonical dangerous ingredient list?
+Time to stock your raft with supplies. 
+**What is your canonical dangerous ingredient list?**
 
 Your puzzle answer was ``fqfm,kxjttzg,ldm,mnzbc,zjmdst,ndvrq,fkjmz,kjkrm``.
