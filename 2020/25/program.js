@@ -9,16 +9,13 @@ function loop(subject, key) {
   return loopsize;
 }
 
-let subjectCard = 7;
+let subject = 7;
 let keyCard = 18356117;
-let lsCard = loop(subjectCard, keyCard);
-
-let subjectDoor = 7;
 let keyDoor = 5909654;
-let lsDoor = loop(subjectDoor, keyDoor);
+let loopsize = loop(subject, keyDoor);
 
 let value = 1;
-for(let i = 0; i < lsDoor; i++) {
+for(let i = 0; i < loopsize; i++) {
   value = value * keyCard;
   value = value % 20201227;
 }
