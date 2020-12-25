@@ -18,7 +18,7 @@ Unfortunately for the door, you know a thing or two about cryptographic handshak
 The handshake used by the card and the door involves an operation that **transforms** a **subject number**. To transform a subject number, start with the value 1. Then, a number of times called the loop size, perform the following steps:
 
    - Set the value to itself multiplied by the **subject number**.
-   - Set the value to the remainder after dividing the value by ``20201227``.
+   - Set the value to the remainder after dividing the value by **``20201227``**.
 
 The card always uses a specific, secret **loop size** when it transforms a subject number. The door always uses a different, secret loop size.
 
