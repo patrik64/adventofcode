@@ -1,72 +1,58 @@
-# [--- Day 7: Recursive Circus ---](http://adventofcode.com/2017/day/7)
-Wandering further through the circuits of the computer, you come upon a tower of programs that have gotten themselves into a bit of trouble. A recursive algorithm has gotten out of hand, and now they're balanced precariously in a large tower.
+# [--- Day 1: Chronal Calibration ---](http://adventofcode.com/2018/day/1)
 
-One program at the bottom supports the entire tower. It's holding a large disc, and on the disc are balanced several more sub-towers. At the bottom of these sub-towers, standing on the bottom disc, are other programs, each holding their own disc, and so on. At the very tops of these sub-sub-sub-...-towers, many programs stand simply keeping the disc below them balanced but with no disc of their own.
 
-You offer to help, but first you need to understand the structure of these towers. You ask each program to yell out their **name**, their **weight**, and (if they're holding a disc) the **names of the programs immediately above them** balancing on that disc. You write this information down (your puzzle input). Unfortunately, in their panic, they don't do this in an orderly fashion; by the time you're done, you're not sure which program gave which information.
+"We've detected some temporal anomalies," one of Santa's Elves at the Temporal Anomaly Research and Detection Instrument Station tells you. She sounded pretty worried when she called you down here. "At 500-year intervals into the past, someone has been changing Santa's history!"
 
-For example, if your list is the following:
+"The good news is that the changes won't propagate to our time stream for another 25 days, and we have a device" - she attaches something to your wrist - "that will let you fix the changes with no such propagation delay. It's configured to send you 500 years further into the past every few days; that was the best we could do on such short notice."
 
-```
-pbga (66)
-xhth (57)
-ebii (61)
-havc (66)
-ktlj (57)
-fwft (72) -> ktlj, cntj, xhth
-qoyq (66)
-padx (45) -> pbga, havc, qoyq
-tknk (41) -> ugml, padx, fwft
-jptl (61)
-ugml (68) -> gyxo, ebii, jptl
-gyxo (61)
-cntj (57)
-```
+"The bad news is that we are detecting roughly fifty anomalies throughout time; the device will indicate fixed anomalies with stars. The other bad news is that we only have one device and you're the best person for the job! Good lu--" She taps a button on the device and you suddenly feel like you're falling. To save Christmas, you need to get all fifty stars by December 25th.
 
-...then you would be able to recreate the structure of the towers that looks like this:
+Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
 
-```
-                gyxo
-              /     
-         ugml - ebii
-       /      \     
-      |         jptl
-      |        
-      |         pbga
-     /        /
-tknk --- padx - havc
-     \        \
-      |         qoyq
-      |             
-      |         ktlj
-       \      /     
-         fwft - cntj
-              \     
-                xhth
-```
-In this example, ``tknk`` is at the bottom of the tower (the bottom program), and is holding up ``ugml``, ``padx``, and ``fwft``. Those programs are, in turn, holding up other programs; in this example, none of those programs are holding up any other programs, and are all the tops of their own towers. (The actual tower balancing in front of you is much larger.)
+After feeling like you've been falling for a few minutes, you look at the device's tiny screen. "Error: Device must be calibrated before first use. Frequency drift detected. Cannot maintain destination lock." Below the message, the device shows a sequence of changes in frequency (your puzzle input). A value like +6 means the current frequency increases by 6; a value like -3 means the current frequency decreases by 3.
 
-Before you're ready to help them, you need to make sure your information is correct. 
-**What is the name of the bottom program**?
+For example, if the device displays frequency changes of +1, -2, +3, +1, then starting from a frequency of zero, the following changes would occur:
 
-Your puzzle answer was ``svugo``.
+- Current frequency  0, change of +1; resulting frequency  1.
+- Current frequency  1, change of -2; resulting frequency -1.
+- Current frequency -1, change of +3; resulting frequency  2.
+- Current frequency  2, change of +1; resulting frequency  3.
+
+In this example, the resulting frequency is 3.
+
+Here are other example situations:
+
+- +1, +1, +1 results in  3
+- +1, +1, -2 results in  0
+- -1, -2, -3 results in -6
+
+Starting with a frequency of zero, what is the resulting frequency after all of the changes in frequency have been applied?
+
+Your puzzle answer was ``513``.  
 
 **--- Part Two ---**
 
-The programs explain the situation: they can't get down. Rather, they could get down, if they weren't expending all of their energy trying to keep the tower balanced. Apparently, one program has the **wrong weight**, and until it's fixed, they're stuck here.
+You notice that the device repeats the same frequency change list over and over. To calibrate the device, you need to find the first frequency it reaches twice.
 
-For any program holding a disc, each program standing on that disc forms a sub-tower. Each of those sub-towers are supposed to be the same weight, or the disc itself isn't balanced. The weight of a tower is the sum of the weights of the programs in that tower.
+For example, using the same list of changes above, the device would loop as follows:
 
-In the example above, this means that for ``ugml``'s disc to be balanced, ``gyxo``, ``ebii``, and ``jptl`` must all have the same weight, and they do: ``61``.
+- Current frequency  0, change of +1; resulting frequency  1.
+- Current frequency  1, change of -2; resulting frequency -1.
+- Current frequency -1, change of +3; resulting frequency  2.
+- Current frequency  2, change of +1; resulting frequency  3.
+- (At this point, the device continues from the start of the list.)
+- Current frequency  3, change of +1; resulting frequency  4.
+- Current frequency  4, change of -2; resulting frequency  2, which has already been seen.
 
-However, for ``tknk`` to be balanced, each of the programs standing on its disc **and all programs above it** must each match. This means that the following sums must all be the same:
-```
-ugml + (gyxo + ebii + jptl) = 68 + (61 + 61 + 61) = 251
-padx + (pbga + havc + qoyq) = 45 + (66 + 66 + 66) = 243
-fwft + (ktlj + cntj + xhth) = 72 + (57 + 57 + 57) = 243
-```
-As you can see, ``tknk``'s disc is unbalanced: ``ugml``'s stack is heavier than the other two. Even though the nodes above ``ugml`` are balanced, ``ugml`` itself is too heavy: it needs to be ``8`` units lighter for its stack to weigh ``243`` and keep the towers balanced. If this change were made, its weight would be ``60``.
+In this example, the first frequency reached twice is 2. Note that your device might need to repeat its list of frequency changes many times before a duplicate frequency is found, and that duplicates might be found while in the middle of processing the list.
 
-Given that exactly one program is the wrong weight, **what would its weight need to be** to balance the entire tower?
+Here are other examples:
 
-Your puzzle answer was ``1152``.
+- +1, -1 first reaches 0 twice.
+- +3, +3, +4, -2, -4 first reaches 10 twice.
+- -6, +3, +8, +5, -6 first reaches 5 twice.
+- +7, +7, -2, -7, -4 first reaches 14 twice.
+
+**What is the first frequency your device reaches twice?**
+
+Your puzzle answer was ``287``.
