@@ -6,7 +6,6 @@ let arr = input.split('\n');
 function parse(str)
 {
    let ret = parseInt(str);
-   console.log(ret);
    return ret;
 }
 
