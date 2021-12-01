@@ -1,7 +1,7 @@
-var fs = require('fs');
+let fs = require('fs');
 
-var input = fs.readFileSync('Day1.in', 'utf8');
-var arr = input.split('\n');
+let input = fs.readFileSync('Day1.in', 'utf8');
+let arr = input.split('\n');
 
 function parse(str)
 {
@@ -11,7 +11,7 @@ function parse(str)
 }
 
 let sum = 0;
-for(var i in arr)
+for(let i in arr)
 {
     let n = parse(arr[i]);
     sum = sum + n;
