@@ -1,72 +1,50 @@
-# [--- Day 7: Recursive Circus ---](http://adventofcode.com/2017/day/7)
-Wandering further through the circuits of the computer, you come upon a tower of programs that have gotten themselves into a bit of trouble. A recursive algorithm has gotten out of hand, and now they're balanced precariously in a large tower.
+# [--- Day 2: Inventory Management System ---](http://adventofcode.com/2018/day/2)
 
-One program at the bottom supports the entire tower. It's holding a large disc, and on the disc are balanced several more sub-towers. At the bottom of these sub-towers, standing on the bottom disc, are other programs, each holding their own disc, and so on. At the very tops of these sub-sub-sub-...-towers, many programs stand simply keeping the disc below them balanced but with no disc of their own.
+You stop falling through time, catch your breath, and check the screen on the device. "Destination reached. Current Year: 1518. Current Location: North Pole Utility Closet 83N10." You made it! Now, to find those anomalies.
 
-You offer to help, but first you need to understand the structure of these towers. You ask each program to yell out their **name**, their **weight**, and (if they're holding a disc) the **names of the programs immediately above them** balancing on that disc. You write this information down (your puzzle input). Unfortunately, in their panic, they don't do this in an orderly fashion; by the time you're done, you're not sure which program gave which information.
+Outside the utility closet, you hear footsteps and a voice. "...I'm not sure either. But now that so many people have chimneys, maybe he could sneak in that way?" Another voice responds, "Actually, we've been working on a new kind of suit that would let him fit through tight spaces like that. But, I heard that a few days ago, they lost the prototype fabric, the design plans, everything! Nobody on the team can even seem to remember important details of the project!"
 
-For example, if your list is the following:
+"Wouldn't they have had enough fabric to fill several boxes in the warehouse? They'd be stored together, so the box IDs should be similar. Too bad it would take forever to search the warehouse for **two similar box IDs**..." They walk too far away to hear any more.
 
-```
-pbga (66)
-xhth (57)
-ebii (61)
-havc (66)
-ktlj (57)
-fwft (72) -> ktlj, cntj, xhth
-qoyq (66)
-padx (45) -> pbga, havc, qoyq
-tknk (41) -> ugml, padx, fwft
-jptl (61)
-ugml (68) -> gyxo, ebii, jptl
-gyxo (61)
-cntj (57)
-```
+Late at night, you sneak to the warehouse - who knows what kinds of paradoxes you could cause if you were discovered - and use your fancy wrist device to quickly scan every box and produce a list of the likely candidates (your puzzle input).
 
-...then you would be able to recreate the structure of the towers that looks like this:
+To make sure you didn't miss any, you scan the likely candidate boxes again, counting the number that have an ID containing exactly two of any letter and then separately counting those with exactly three of any letter. You can multiply those two counts together to get a rudimentary checksum and compare it to what your device predicts.
 
-```
-                gyxo
-              /     
-         ugml - ebii
-       /      \     
-      |         jptl
-      |        
-      |         pbga
-     /        /
-tknk --- padx - havc
-     \        \
-      |         qoyq
-      |             
-      |         ktlj
-       \      /     
-         fwft - cntj
-              \     
-                xhth
-```
-In this example, ``tknk`` is at the bottom of the tower (the bottom program), and is holding up ``ugml``, ``padx``, and ``fwft``. Those programs are, in turn, holding up other programs; in this example, none of those programs are holding up any other programs, and are all the tops of their own towers. (The actual tower balancing in front of you is much larger.)
+For example, if you see the following box IDs:
 
-Before you're ready to help them, you need to make sure your information is correct. 
-**What is the name of the bottom program**?
+- ``abcdef`` contains no letters that appear exactly two or three times.
+- ``bababc`` contains two ``a`` and three ``b``, so it counts for both.
+- ``abbcde`` contains two ``b``, but no letter appears exactly three times.
+- ``abcccd`` contains three ``c``, but no letter appears exactly two times.
+- ``aabcdd`` contains two ``a`` and two ``d``, but it only counts once.
+- ``abcdee`` contains two ``e``.
+- ``ababab`` contains three ``a`` and three ``b``, but it only counts once.
 
-Your puzzle answer was ``svugo``.
+Of these box IDs, four of them contain a letter which appears exactly twice, and three of them contain a letter which appears exactly three times. Multiplying these together produces a checksum of ``4 * 3 = 12``.
+
+**What is the checksum for your list of box IDs?**
+
+Your puzzle answer was ``8820``.  
 
 **--- Part Two ---**
 
-The programs explain the situation: they can't get down. Rather, they could get down, if they weren't expending all of their energy trying to keep the tower balanced. Apparently, one program has the **wrong weight**, and until it's fixed, they're stuck here.
+Confident that your list of box IDs is complete, you're ready to find the boxes full of prototype fabric.
 
-For any program holding a disc, each program standing on that disc forms a sub-tower. Each of those sub-towers are supposed to be the same weight, or the disc itself isn't balanced. The weight of a tower is the sum of the weights of the programs in that tower.
+The boxes will have IDs which differ by exactly one character at the same position in both strings. For example, given the following box IDs:
 
-In the example above, this means that for ``ugml``'s disc to be balanced, ``gyxo``, ``ebii``, and ``jptl`` must all have the same weight, and they do: ``61``.
-
-However, for ``tknk`` to be balanced, each of the programs standing on its disc **and all programs above it** must each match. This means that the following sums must all be the same:
 ```
-ugml + (gyxo + ebii + jptl) = 68 + (61 + 61 + 61) = 251
-padx + (pbga + havc + qoyq) = 45 + (66 + 66 + 66) = 243
-fwft + (ktlj + cntj + xhth) = 72 + (57 + 57 + 57) = 243
+abcde
+fghij
+klmno
+pqrst
+fguij
+axcye
+wvxyz
 ```
-As you can see, ``tknk``'s disc is unbalanced: ``ugml``'s stack is heavier than the other two. Even though the nodes above ``ugml`` are balanced, ``ugml`` itself is too heavy: it needs to be ``8`` units lighter for its stack to weigh ``243`` and keep the towers balanced. If this change were made, its weight would be ``60``.
 
-Given that exactly one program is the wrong weight, **what would its weight need to be** to balance the entire tower?
+The IDs abcde and axcye are close, but they differ by two characters (the second and fourth). However, the IDs fghij and fguij differ by exactly one character, the third (h and u). Those must be the correct boxes.
 
-Your puzzle answer was ``1152``.
+**What letters are common between the two correct box IDs?** 
+(In the example above, this is found by removing the differing character from either ID, producing ``fgij``.)
+
+Your puzzle answer was ```bpacnmglhizqygfsjixtkwudr```.
