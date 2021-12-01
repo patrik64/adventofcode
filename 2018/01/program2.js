@@ -1,18 +1,15 @@
-var fs = require('fs');
+let fs = require('fs');
+let input = fs.readFileSync('Day1.in', 'utf8');
+let arr = input.split('\n');
 
-var input = fs.readFileSync('Day1.in', 'utf8');
-var arr = input.split('\n');
-
-function parse(str)
-{
+function parse(str) {
    let ret = parseInt(str);
    return ret;
 }
 
 arr.concat(arr);
 let lst = [];
-for(var i in arr)
-{
+for(let i in arr) {
     let n = parse(arr[i]);
     lst.push(n);
 }
@@ -25,11 +22,9 @@ for(let i = 0; i < 143; i++)
 
 let lstSums = [0];
 let sum = 0;
-for(var i in llst)
-{
+for(let i in llst) {
     sum = sum + llst[i];
-    if(lstSums.includes(sum))
-    {
+    if(lstSums.includes(sum)) {
         console.log(sum);
         process.exit(0);
     }
