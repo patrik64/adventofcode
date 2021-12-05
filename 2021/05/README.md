@@ -1,9 +1,9 @@
 # [--- Day 5: Hydrothermal Venture ---](http://adventofcode.com/2021/day/5)
 
-You come across a field of hydrothermal vents on the ocean floor! 
+You come across a field of [hydrothermal vents](https://en.wikipedia.org/wiki/Hydrothermal_vent) on the ocean floor! 
 These vents constantly produce large, opaque clouds, so it would be best to avoid them if possible.
 
-They tend to form in lines; the submarine helpfully produces a list of 
+They tend to form in **lines**; the submarine helpfully produces a list of 
 nearby lines of vents (your puzzle input) for you to review. For example:
 
 ```
