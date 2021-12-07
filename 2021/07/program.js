@@ -2,12 +2,7 @@ let fs = require('fs');
 let input = fs.readFileSync('Day7.in', 'utf8');
 let arr = input.split('\n');
 
-let pos = arr[0].split(',');
-
-let positions = [];
-for(let x in pos) {
-    positions.push(Number(pos[x]));
-}
+let positions = arr[0].split(',').map(x => Number(x));
 
 let min = Math.min(...positions);
 let max = Math.max(...positions);
@@ -23,4 +18,3 @@ for(let i = min; i <= max; i++){
 }
 
 console.log(minFuel);
-
