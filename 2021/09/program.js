@@ -31,8 +31,7 @@ function isLowPoint(m, val, y, x) {
     let limitY = m.length;
     
     //up
-    if(((y-1) >= 0) && ((y-1) < limitY)) {
-        //console.log('up -->', m[y-1][x]);
+    if (y-1 >= 0 && y-1 < limitY) {
         if(m[y-1][x] <= val) return false;
     }
     //left
@@ -41,40 +40,34 @@ function isLowPoint(m, val, y, x) {
             return false;
     }
     //right
-    if(x+1 >= 0 && x+1 < limitX) {
+    if (x+1 >= 0 && x+1 < limitX) {
         if(m[y][x+1] <= val)
             return false;
     }
     //down
-    if(((y+1) >= 0) && ((y+1) < limitY)) {
+    if (y+1 >= 0 && y+1 < limitY) {
         if(m[y+1][x] <= val)
             return false;
     }
     return true;
 }
 
-let dimX = arr.length;
-let dimY = arr[0].length;
+let dimY = arr.length;
+let dimX = arr[0].length;
 
-let matrix = new Array(dimX);
+let matrix = new Array(dimY);
 
 for (let i = 0; i < matrix.length; i++) {
-    matrix[i] = new Array(dimY).fill('.');
+    matrix[i] = new Array(dimX).fill('.');
 }
 
-for(let i = 0; i < arr.length; i++) {
+for(let i in arr) {
     let nums = arr[i].split('').map(x => Number(x));
-    matrix[i] = nums
+    matrix[i] = nums;
 }
 
 let lowPoints = [];
-
 lowPoints = collectLowPoints(matrix);
-
-let sum = 0;
-for(let l in lowPoints) {
-    sum += lowPoints[l] + 1;
-}
-
-
-console.log(sum);
+lowPoints = lowPoints.map(x => x+1);
+const reducer = (prev, curr) => prev + curr;
+console.log(lowPoints.reduce(reducer));
