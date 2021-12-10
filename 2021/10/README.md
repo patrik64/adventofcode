@@ -68,7 +68,7 @@ In the above example, an illegal ``)`` was found twice (``2*3 = 6`` points),
 an illegal ``]`` was found once (``57`` points), an illegal ``}`` was found once (``1197`` points), 
 and an illegal ``>`` was found once (``25137`` points). So, the total syntax error score for this file is ``6+57+1197+25137 = 26397`` points!
 
-Find the first illegal character in each corrupted line of the navigation subsystem. 
+Find the first illegal character in each corrupted line of the navigation subsystem.   
 **What is the total syntax error score for those errors?**
 
 Your puzzle answer was ``413733``.
@@ -108,9 +108,9 @@ So, the last completion string above - ``])}>`` - would be scored as follows:
 
 - Start with a total score of ``0``.
 - Multiply the total score by ``5`` to get ``0``, then add the value of ``]`` (``2``) to get a new total score of ``2``.
-- Multiply the total score by 5 to get 10, then add the value of ) (1) to get a new total score of 11.
-- Multiply the total score by 5 to get 55, then add the value of } (3) to get a new total score of 58.
-- Multiply the total score by 5 to get 290, then add the value of > (4) to get a new total score of 294.
+- Multiply the total score by ``5`` to get ``10``, then add the value of ``)`` (``1``) to get a new total score of ``11``.
+- Multiply the total score by ``5`` to get ``55``, then add the value of ``}`` (``3``) to get a new total score of ``58``.
+- Multiply the total score by ``5`` to get ``290``, then add the value of ``>`` (``4``) to get a new total score of ``294``.
 
 The five lines' completion strings have total scores as follows:
 
