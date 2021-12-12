@@ -1,4 +1,5 @@
-#[--- Day 12: Passage Pathing ---](https://adventofcode.com/2021/day/12)
+# [--- Day 12: Passage Pathing ---](https://adventofcode.com/2021/day/12)
+
 
 With your submarine's subterranean subsystems subsisting suboptimally, 
 the only way you're getting out of this cave anytime soon is by finding a path yourself. 
