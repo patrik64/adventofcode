@@ -41,6 +41,7 @@ function initTracker(vertices){
         }
     }
     tracker['doubleFound'] = 0;
+    tracker['lastVertex'] = 'start';
     return tracker;
 }
 
@@ -62,31 +63,24 @@ function checkTracker(v, tracker) {
     return false;
 }
 
-function makePathForVertice(v, vertices, edges, paths) {
+function makePathForVertex(v, vertices, edges, paths) {
+  
 
     let resultPaths = [];
     for (let p in paths) {
-        let path = paths[p].path;
-        let tracker = paths[p].tracker;
-        let lastVertex = path[path.length -1];
+        let path = paths[p];
+        let lastVertex = path['lastVertex'];
 
         if(lastVertex === v) {
             for(let e in edges[v]) {
                 let w = edges[v][e];
-                let newPath = [...path];
-                let newTracker = JSON.parse(JSON.stringify(paths[p].tracker));
-                newTracker = applyTracker(w, newTracker);
-
-                newPath.push(w);
-                if(!checkTracker(w, newTracker)){
-                    let newFullPath = {
-                        'path' : newPath,
-                        'tracker' : newTracker
-                    }
-
-                    resultPaths.push(newFullPath);                    
+                let newPath = { ...path };
+                newPath = applyTracker(w, newPath);
+                newPath['lastVertex'] = w;
+                if(!checkTracker(w, newPath)){
+                    resultPaths.push(newPath);                    
                     if(w !== 'end') {
-                        resultPaths = makePathForVertice(w, vertices, edges, resultPaths);                    
+                        resultPaths = makePathForVertex(w, vertices, edges, resultPaths);                    
                     }
                 }
             }        
@@ -114,12 +108,9 @@ for(let i in arr) {
 
 edges['end'] = [];
 let tracker = initTracker (vertices);
-let startPath = {
-    'path': ['start'],
-    'tracker' : tracker
-}
 let paths = [];
-paths.push(startPath);
+paths.push(tracker);
 
-paths = makePathForVertice('start', vertices, edges, paths);
-console.log('paths num --> ', paths.length);
+console.log('processing .... (it might take an hour)');
+paths = makePathForVertex('start', vertices, edges, paths);
+console.log(paths.length);

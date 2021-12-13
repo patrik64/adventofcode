@@ -41,7 +41,7 @@ function containLowercase(v, path) {
     return false;
 }
 
-function makePathForVertice(v, vertices, edges, paths) {
+function makePathForVertex(v, vertices, edges, paths) {
 
     let resultPaths = [];
     for (let p in paths) {
@@ -56,7 +56,7 @@ function makePathForVertice(v, vertices, edges, paths) {
                 if(!containLowercase(w, path)){
                     resultPaths.push(newPath);                    
                     if(w !== 'end') {
-                        resultPaths = makePathForVertice(w, vertices, edges, resultPaths);                    
+                        resultPaths = makePathForVertex(w, vertices, edges, resultPaths);                    
                     }
                 }
             }        
@@ -85,5 +85,5 @@ for(let i in arr) {
 edges['end'] = [];
 let paths = [['start']];
 
-paths = makePathForVertice('start', vertices, edges, paths);
+paths = makePathForVertex('start', vertices, edges, paths);
 console.log(paths.length);
