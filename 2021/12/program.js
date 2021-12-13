@@ -1,6 +1,4 @@
-const { ifError } = require('assert');
 let fs = require('fs');
-const { off } = require('process');
 let input = fs.readFileSync('Day12.in', 'utf8');
 let arr = input.split('\n');
 
