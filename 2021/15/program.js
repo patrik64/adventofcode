@@ -2,57 +2,138 @@ let fs = require('fs');
 let input = fs.readFileSync('Day15.in', 'utf8');
 let arr = input.split('\n');
 
-function bellmanFord(vertices, edges, source) {
-    let distances = {};
-    let parents = {};
-  
-    vertices.map(v => { distances[v] = Infinity; parents[v] = null; });
-    distances[source] = 0;
-  
-    for (let i = 1; i < vertices.length; i++) {
-        for (let { u, v, w } of edges) {
-            if (distances[u] + w < distances[v]) {
-                distances[v] = distances[u] + w;
-                parents[v] = u;
-            }
-        }
-    }
-  
-    /*for (let { u, v, w } of edges) {
-        if (distances[u] + w < distances[v]) {
-            throw "Graph contains a negative-weight cycle";
-        }
-    }*/
-  
-    return { parents, distances };
+class Node {
+  constructor(val, priority) {
+    this.val = val;
+    this.priority = priority;
+  }
 }
+    
+class PriorityQueue {
+  constructor() {
+    this.values = [];
+  }
+    
+  enqueue(val, priority) {
+    let newNode = new Node(val, priority);
+    this.values.push(newNode);
+    this.bubbleUp();
+  }
 
-function traverseParents(parents, distances, matrix) {
-    let dim = matrix.length - 1;
-    
-    let source = 'P-' + dim + '-' + dim;
-    let coords = source.split('-');
-    let y = Number(coords[1]);
-    let x = Number(coords[2]);
-    
-    let ret = matrix[y][x];
-    
-    let parent = parents[source];
-    
-    while(parent) {
-        coords = parent.split('-');
-        let py = Number(coords[1]);
-        let px = Number(coords[2]);
-
-        if(py === 0 && px === 0) {
-            console.log(ret);
-            return ret;
-        }
-    
-        ret += matrix[py][px];
-        parent = parents[parent];
+  bubbleUp() {
+    let idx = this.values.length - 1;
+    const element = this.values[idx];
+    while (idx > 0) {
+      let parentIdx = Math.floor((idx - 1) / 2);
+      let parent = this.values[parentIdx];
+      if (element.priority >= parent.priority) break;
+      this.values[parentIdx] = element;
+      this.values[idx] = parent;
+      idx = parentIdx;
     }
-    return ret;
+  }
+
+  dequeue() {
+    const min = this.values[0];
+    const end = this.values.pop();
+    if (this.values.length > 0) {
+      this.values[0] = end;
+      this.sinkDown();
+    }
+    return min;
+  }
+
+  sinkDown() {
+    let idx = 0;
+    const length = this.values.length;
+    const element = this.values[0];
+    while (true) {
+      let leftChildIdx = 2 * idx + 1;
+      let rightChildIdx = 2 * idx + 2;
+      let leftChild, rightChild;
+      let swap = null;
+
+      if (leftChildIdx < length) {
+          leftChild = this.values[leftChildIdx];
+          if (leftChild.priority < element.priority) {
+          swap = leftChildIdx;
+          }
+      }
+
+      if (rightChildIdx < length) {
+          rightChild = this.values[rightChildIdx];
+          if (
+            (swap === null && rightChild.priority < element.priority) ||
+            (swap !== null && rightChild.priority < leftChild.priority)
+          ) {
+            swap = rightChildIdx;
+          }
+      }
+      if (swap === null) break;
+      this.values[idx] = this.values[swap];
+      this.values[swap] = element;
+      idx = swap;
+    }
+  }
+}
+    
+class WeightedGraph {
+
+  constructor() {
+    this.adjacencyList = {};
+  }
+
+  addVertex(vertex) {
+    if (!this.adjacencyList[vertex]) this.adjacencyList[vertex] = [];
+  }
+
+  addEdge(vertex1, vertex2, weight) {
+    this.adjacencyList[vertex1].push({ node: vertex2, weight });
+    this.adjacencyList[vertex2].push({ node: vertex1, weight });
+  }
+
+  dijkstra(start, finish) {
+    const nodes = new PriorityQueue();
+    const distances = {};
+    const previous = {};
+    let path = [];
+    let smallest;
+
+    for (let vertex in this.adjacencyList) {
+      if (vertex === start) {
+        distances[vertex] = 0;
+        nodes.enqueue(vertex, 0);
+      } else {
+        distances[vertex] = Infinity;
+        nodes.enqueue(vertex, Infinity);
+      }
+      previous[vertex] = null;
+    }
+
+    while (nodes.values.length) {
+      smallest = nodes.dequeue().val;
+      if (smallest === finish) {
+        while (previous[smallest]) {
+          path.push(smallest);
+          smallest = previous[smallest];
+        }
+        break;
+      }
+      if (smallest || distances[smallest] !== Infinity) {
+        for (let neighbor in this.adjacencyList[smallest]) {
+          let nextNode = this.adjacencyList[smallest][neighbor];
+          let candidate = distances[smallest] + nextNode.weight;
+          let nextNeighbor = nextNode.node;
+          if (candidate < distances[nextNeighbor]) {
+            distances[nextNeighbor] = candidate;
+            previous[nextNeighbor] = smallest;
+            nodes.enqueue(nextNeighbor, candidate);
+          }
+        }
+      }
+    }
+    return path.concat(smallest).reverse();
+  }
 }
 
 let dimY = arr.length;
@@ -69,15 +150,14 @@ for(let i in arr) {
     matrix[i] = nums;
 }
 
-let vertices = [];
-let edges = [];
+var graph = new WeightedGraph();
 
 for(let i = 0; i < matrix.length; i++) {
     let row = matrix[i];
     let p = 'P' + '-' + i;
     for(let j = 0; j < row.length; j++) {
         pt = p + '-' + j;
-        vertices.push(pt);
+        graph.addVertex(pt);
     }
 }
 
@@ -90,25 +170,31 @@ for(let i = 0; i < matrix.length; i++) {
             let pt1 = pt + '-' + j;
             let pt2 = pt + '-' + (j+1);
             let val2 = row[j+1];
-            let edge = { u: pt1, v: pt2, w: val2+val1};
-            edges.push(edge);
-
+            graph.addEdge(pt1, pt2, val2+val1);
         }
         if(i+1 < matrix.length) {
             let pt1 = 'P' + '-' + i + '-' + j;
             let pt2 = 'P' + '-' + (i+1) + '-' + j;
             let val2 = matrix[i+1][j];
-            let edge = { u: pt1, v: pt2, w: val2+val1};
-            edges.push(edge);
+            graph.addEdge(pt1, pt2, val2+val1);
         }
     }
     
 }
 
-const graph = {
-    vertices: vertices,
-    edges: edges
-};
+let firstPt = 'P-0-0';
+let lastPt = 'P-' + (matrix.length - 1) + '-' + (matrix.length - 1);
 
-result = bellmanFord(graph.vertices, graph.edges, "P-0-0");
-traverseParents(result.parents, result.distances, matrix);
+let path = graph.dijkstra(firstPt, lastPt);
+
+let sum = 0;
+for(let p = 1; p < path.length; p++) {
+    let pt = path[p];
+    let coords = pt.split('-');
+    let y = Number(coords[1]);
+    let x = Number(coords[2]);
+
+    sum += matrix[y][x];
+}
+    
+console.log(sum);
