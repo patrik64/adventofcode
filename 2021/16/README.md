@@ -29,16 +29,16 @@ E = 1110
 F = 1111
 ```
 
-The BITS transmission contains a single packet at its outermost layer which itself contains many other packets. 
+The BITS transmission contains a single **packet** at its outermost layer which itself contains many other packets. 
 The hexadecimal representation of this packet might encode a few extra 0 bits at the end; 
 these are not part of the transmission and should be ignored.
 
-Every packet begins with a standard header: the first three bits encode the packet version, 
-and the next three bits encode the packet type ID. These two values are numbers; 
+Every packet begins with a standard header: the first three bits encode the packet **version**, 
+and the next three bits encode the packet **type ID**. These two values are numbers; 
 all numbers encoded in any packet are represented as binary with the most significant bit first. 
 For example, a version encoded as the binary sequence 100 represents the number ``4``.
 
-Packets with type ID ``4`` represent a literal value. 
+Packets with type ID ``4`` represent a **literal value**. 
 Literal value packets encode a single binary number. To do this, the binary number is 
 padded with leading zeroes until its length is a multiple of four bits, 
 and then it is broken into groups of four bits. 
@@ -61,14 +61,14 @@ Below each bit is a label indicating its purpose:
 
 So, this packet represents a literal value with binary representation ``011111100101``, which is ``2021`` in decimal.
 
-Every other type of packet (any packet with a type ID other than 4) represent an operator that performs some calculation on one or more sub-packets contained within. Right now, the specific operations aren't important; focus on parsing the hierarchy of sub-packets.
+Every other type of packet (any packet with a type ID other than 4) represent an **operator** that performs some calculation on one or more sub-packets contained within. Right now, the specific operations aren't important; focus on parsing the hierarchy of sub-packets.
 
-An operator packet contains one or more packets. To indicate which subsequent binary data represents its sub-packets, an operator packet can use one of two modes indicated by the bit immediately after the packet header; this is called the length type ID:
+An operator packet contains one or more packets. To indicate which subsequent binary data represents its sub-packets, an operator packet can use one of two modes indicated by the bit immediately after the packet header; this is called the **length type ID**:
 
-- If the length type ID is ``0``, then the next ``15`` bits are a number that represents the total length in bits of the sub-packets contained by this packet.
-- If the length type ID is ``1``, then the next ``11`` bits are a number that represents the number of sub-packets immediately contained by this packet.
+- If the length type ID is ``0``, then the next **15** bits are a number that represents the **total length in bits** of the sub-packets contained by this packet.
+- If the length type ID is ``1``, then the next **11** bits are a number that represents the **number of sub-packets immediately contained** by this packet.
 
-Finally, after the length type ID bit and the ``15``-bit or ``11``-bit field, the sub-packets appear.
+Finally, after the length type ID bit and the 15-bit or 11-bit field, the sub-packets appear.
 
 For example, here is an operator packet (hexadecimal string ``38006F45291200``) with length type ID ``0`` that contains two sub-packets:
 
@@ -106,14 +106,14 @@ VVVTTTILLLLLLLLLLLAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCC
 After reading ``3`` complete sub-packets, the number of sub-packets indicated in L (``3``) is reached,  
 and so parsing of this packet stops.
 
-For now, parse the hierarchy of the packets throughout the transmission and add up all of the version numbers.
+For now, parse the hierarchy of the packets throughout the transmission and **add up all of the version numbers**.
 
 Here are a few more examples of hexadecimal-encoded transmissions:
 
-- ``8A004A801A8002F478`` represents an operator packet (version ``4``) which contains an operator packet (version ``1``) which contains an operator packet (version ``5``) which contains a literal value (version ``6``); this packet has a version sum of ``16``.
-- ``620080001611562C8802118E34`` represents an operator packet (version ``3``) which contains two sub-packets; each sub-packet is an operator packet that contains two literal values. This packet has a version sum of ``12``.
-- ``C0015000016115A2E0802F182340`` has the same structure as the previous example, but the outermost packet uses a different length type ID. This packet has a version sum of ``23``.
-- ``A0016C880162017C3686B18A3D4780`` is an operator packet that contains an operator packet that contains an operator packet that contains five literal values; it has a version sum of ``31``.
+- ``8A004A801A8002F478`` represents an operator packet (version ``4``) which contains an operator packet (version ``1``) which contains an operator packet (version ``5``) which contains a literal value (version ``6``); this packet has a version sum of **``16``**.
+- ``620080001611562C8802118E34`` represents an operator packet (version ``3``) which contains two sub-packets; each sub-packet is an operator packet that contains two literal values. This packet has a version sum of **``12``**.
+- ``C0015000016115A2E0802F182340`` has the same structure as the previous example, but the outermost packet uses a different length type ID. This packet has a version sum of **``23``**.
+- ``A0016C880162017C3686B18A3D4780`` is an operator packet that contains an operator packet that contains an operator packet that contains five literal values; it has a version sum of **``31``**.
 
 Decode the structure of your hexadecimal-encoded BITS transmission; 
 **what do you get if you add up the version numbers in all packets?**
@@ -126,26 +126,26 @@ Now that you have the structure of your transmission decoded, you can calculate 
 
 Literal values (type ID ``4``) represent a single number as described above. The remaining type IDs are more interesting:
 
-- Packets with type ID ``0`` are sum packets - their value is the sum of the values of their sub-packets. If they only have a single sub-packet, their value is the value of the sub-packet.
-- Packets with type ID ``1`` are product packets - their value is the result of multiplying together the values of their sub-packets. If they only have a single sub-packet, their value is the value of the sub-packet.
-- Packets with type ID ``2`` are minimum packets - their value is the minimum of the values of their sub-packets.
-- Packets with type ID ``3`` are maximum packets - their value is the maximum of the values of their sub-packets.
-- Packets with type ID ``5`` are greater than packets - their value is ``1`` if the value of the first sub-packet is greater than the value of the second sub-packet; otherwise, their value is ``0``. These packets always have exactly two sub-packets.
-- Packets with type ID ``6`` are less than packets - their value is ``1`` if the value of the first sub-packet is less than the value of the second sub-packet; otherwise, their value is ``0``. These packets always have exactly two sub-packets.
-- Packets with type ID ``7`` are equal to packets - their value is ``1`` if the value of the first sub-packet is equal to the value of the second sub-packet; otherwise, their value is ``0``. These packets always have exactly two sub-packets.
+- Packets with type ID ``0`` are **sum** packets - their value is the sum of the values of their sub-packets. If they only have a single sub-packet, their value is the value of the sub-packet.
+- Packets with type ID ``1`` are **product** packets - their value is the result of multiplying together the values of their sub-packets. If they only have a single sub-packet, their value is the value of the sub-packet.
+- Packets with type ID ``2`` are **minimum** packets - their value is the minimum of the values of their sub-packets.
+- Packets with type ID ``3`` are **maximum** packets - their value is the maximum of the values of their sub-packets.
+- Packets with type ID ``5`` are **greater than** packets - their value is **``1``8* if the value of the first sub-packet is greater than the value of the second sub-packet; otherwise, their value is **``0``**. These packets always have exactly two sub-packets.
+- Packets with type ID ``6`` are **less than** packets - their value is **``1``** if the value of the first sub-packet is less than the value of the second sub-packet; otherwise, their value is **``0``**. These packets always have exactly two sub-packets.
+- Packets with type ID ``7`` are **equal to** packets - their value is **``1``** if the value of the first sub-packet is equal to the value of the second sub-packet; otherwise, their value is **``0``**. These packets always have exactly two sub-packets.
 
 Using these rules, you can now work out the value of the outermost packet in your BITS transmission.
 
 For example:
 
-- ``C200B40A82`` finds the sum of ``1`` and ``2``, resulting in the value ``3``.
-- ``04005AC33890`` finds the product of ``6`` and ``9``, resulting in the value ``54``.
-- ``880086C3E88112`` finds the minimum of ``7``, ``8``, and ``9``, resulting in the value ``7``.
-- ``CE00C43D881120`` finds the maximum of ``7``, ``8``, and ``9``, resulting in the value ``9``.
-- ``D8005AC2A8F0`` produces ``1``, because ``5`` is less than ``15``.
-- ``F600BC2D8F`` produces ``0``, because ``5`` is not greater than ``15``.
-- ``9C005AC2F8F0`` produces ``0``, because ``5`` is not equal to ``15``.
-- ``9C0141080250320F1802104A08`` produces ``1``, because ``1 + 3 = 2 * 2``.
+- ``C200B40A82`` finds the sum of ``1`` and ``2``, resulting in the value **``3``**.
+- ``04005AC33890`` finds the product of ``6`` and ``9``, resulting in the value **``54``**.
+- ``880086C3E88112`` finds the minimum of ``7``, ``8``, and ``9``, resulting in the value **``7``**.
+- ``CE00C43D881120`` finds the maximum of ``7``, ``8``, and ``9``, resulting in the value **``9``**.
+- ``D8005AC2A8F0`` produces **``1``**, because ``5`` is less than ``15``.
+- ``F600BC2D8F`` produces **``0``**, because ``5`` is not greater than ``15``.
+- ``9C005AC2F8F0`` produces **``0``**, because ``5`` is not equal to ``15``.
+- ``9C0141080250320F1802104A08`` produces **``1``**, because ``1 + 3 = 2 * 2``.
 
 **What do you get if you evaluate the expression represented by your hexadecimal-encoded BITS transmission?**
 
