@@ -8,5 +8,5 @@ node program
 node program2  
 
 <div align="center">
-  <img alt="bestscore" height="2000" src="score.png" />
+  <img alt="bestscore" width="1000" src="score.png" />
 </div>
