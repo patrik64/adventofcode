@@ -13,9 +13,6 @@ function step(pos, vel) {
   if(retVel.x < 0) retVel.x += 1;
 
   retVel.y -= 1;
-
-  
-
   return { pos: retPos, vel: retVel };
 }
 
@@ -57,6 +54,3 @@ for(let vx = 0; vx < 95; vx++) {
   }
 }
 console.log(y);
-
-
-
