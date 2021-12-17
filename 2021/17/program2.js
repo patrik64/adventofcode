@@ -31,9 +31,6 @@ let pos = { x: 0, y: 0 };
 let vel = { x: 8, y: -1 };    
 
 let hit = false;
-let ymax = -1000000000000000;
-let yfinal = -100000000000000000;
-
 const hitSet = new Set();
 
 for(let vx = 0; vx < 95; vx++) {
