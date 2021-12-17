@@ -6,3 +6,7 @@ Usage:
 
 node program  
 node program2  
+
+<div align="center">
+  <img alt="bestscore" height="2000" src="score.png" />
+</div>
