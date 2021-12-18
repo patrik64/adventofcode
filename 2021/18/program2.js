@@ -1,5 +1,5 @@
 let fs = require('fs');
-let input = fs.readFileSync('Day19.in', 'utf8');
+let input = fs.readFileSync('Day18.in', 'utf8');
 let arr = input.split('\n');
 
 class Node {
@@ -33,7 +33,6 @@ function getNode(tree, level, i) {
     return tree;
   }
 
-  let finalx = -1;
   i += 1;
 
   let nodeX = tree.x;
