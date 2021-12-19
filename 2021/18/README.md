@@ -1,10 +1,11 @@
 # [--- Day 18: Snailfish ---](https://adventofcode.com/2021/day/18)
 
-You descend into the ocean trench and encounter some snailfish.  
-They say they saw the sleigh keys! They'll even tell you which direction the keys went if you help one of the smaller snailfish with his math homework.
+You descend into the ocean trench and encounter some [snailfish](https://en.wikipedia.org/wiki/Snailfish).  
+They say they saw the sleigh keys! They'll even tell you which direction the keys  
+went if you help one of the smaller snailfish with his **math homework**.
 
 Snailfish numbers aren't like regular numbers. Instead, every snailfish number is a 
-pair - an ordered list of two elements. Each element of the pair can be either a regular number or another pair.
+**pair** - an ordered list of two elements. Each element of the pair can be either a regular number or another pair.
 
 Pairs are written as ``[x,y]``, where ``x`` and ``y`` are the elements within the pair. 
 Here are some example snailfish numbers, one snailfish number per line:
@@ -19,16 +20,16 @@ Here are some example snailfish numbers, one snailfish number per line:
 [[[[1,3],[5,3]],[[1,3],[8,7]]],[[[4,9],[6,9]],[[8,2],[7,3]]]]
 ```
 
-This snailfish homework is about addition. To add two snailfish numbers, 
+This snailfish homework is about **addition**. To add two snailfish numbers, 
 form a pair from the left and right parameters of the addition operator. 
 For example, ``[1,2] + [[3,4],5]`` becomes ``[[1,2],[[3,4],5]]``.
 
-There's only one problem: snailfish numbers must always be reduced, 
+There's only one problem: **snailfish numbers must always be reduced**, 
 and the process of adding two snailfish numbers can result in snailfish numbers that need to be reduced.
 
-To reduce a snailfish number, you must repeatedly do the first action in this list that applies to the snailfish number:
+To **reduce a snailfish numbe**r, you must repeatedly do the first action in this list that applies to the snailfish number:
 
-- If any pair is nested inside four pairs, the leftmost such pair explodes.
+- If any pair is **nested inside four pairs**, the leftmost such pair explodes.
 - If any regular number is 10 or greater, the leftmost such regular number splits.
 
 Once no action in the above list applies, the snailfish number is reduced.
@@ -89,7 +90,7 @@ The final sum of this list is ``[[[[3,0],[5,3]],[4,4]],[5,5]]``:
 [4,4]
 [5,5]
 ```
-The final sum of this list is [[[[5,0],[7,4]],[5,5]],[6,6]]:
+The final sum of this list is ``[[[[5,0],[7,4]],[5,5]],[6,6]]``:
 
 ```
 [1,1]
