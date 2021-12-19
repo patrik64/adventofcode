@@ -92,25 +92,22 @@ function collect(scanners) {
 
             changed = positions.map(x => rotate(x, rotation));
 
+            let pt = null;
             let distances = {}
             for(let x in beacons) {
               for(let y in changed) {
                 let dist = distance(beacons[x], changed[y]).toString();
                 if(dist in distances) {
                   distances[dist] += 1;
+                  if(distances[dist]>= 12) {
+                    pt = dist;
+                    break;
+                  }
                 } else {
                   distances[dist] = 1;
                 }
               }
             } 
-
-            let pt = null; 
-            for(let d in distances) {
-              if(distances[d] >= 12) {
-                pt = d;
-                break;
-              }
-            }
           
             if(pt) {
               pt = pt.split(',').map(x => Number(x));
