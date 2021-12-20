@@ -11,5 +11,7 @@ Best score so far - [50th place](https://adventofcode.com/2016/leaderboard/day/2
 
 
 <div align="center">
-  <img alt="bestscore" width="1000" src="score.png" />
+  <a href="https://adventofcode.com/2016/leaderboard/day/25">
+    <img alt="bestscore" width="1000" src="score.png" />
+  </a>
 </div>
