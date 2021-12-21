@@ -25,7 +25,6 @@ function play(player1, player2, turnOdd, score){
         if(turnOdd) {
           nextPos = player1.pos + sum;
           if(nextPos > 10) { nextPos = nextPos % 10; }
-          
           nextPoints = player1.points + nextPos;
 
           if(nextPoints >= 21) {
@@ -39,7 +38,6 @@ function play(player1, player2, turnOdd, score){
         } else {
           nextPos = player2.pos + sum;
           if(nextPos > 10) { nextPos = nextPos % 10; }
-
           nextPoints = player2.points + nextPos;
 
           if(nextPoints >= 21) {
