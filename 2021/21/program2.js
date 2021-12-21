@@ -23,11 +23,8 @@ function play(player1, player2, turnOdd, score){
         let nextPos = -1;
         let nextPoints = -1;
         if(turnOdd) {
-          nextPos = player1.pos;
-          nextPos += sum;
-          nextPos -= 1;
-          nextPos = nextPos % 10;
-          nextPos += 1;
+          nextPos = player1.pos + sum;
+          if(nextPos > 10) { nextPos = nextPos % 10; }
           
           nextPoints = player1.points + nextPos;
 
@@ -40,11 +37,8 @@ function play(player1, player2, turnOdd, score){
             player2Won += res[1];
           }
         } else {
-          nextPos = player2.pos;
-          nextPos += sum;
-          nextPos -= 1;
-          nextPos = nextPos % 10;
-          nextPos += 1;
+          nextPos = player2.pos + sum;
+          if(nextPos > 10) { nextPos = nextPos % 10; }
 
           nextPoints = player2.points + nextPos;
 
