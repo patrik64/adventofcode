@@ -75,17 +75,17 @@ function takeApart(oldCuboid, newCuboid) {
   if(holdsCuboid(newCuboid, oldCuboid)) { return []; }
   if(!cutsCuboid(newCuboid, oldCuboid)) { return [oldCuboid]; }
 
-  let xsplitPoints = getCrossPoints(newCuboid.x, oldCuboid.x);
-  let ysplitPoints = getCrossPoints(newCuboid.y, oldCuboid.y);
-  let zsplitPoints = getCrossPoints(newCuboid.z, oldCuboid.z);
+  let xcross = getCrossPoints(newCuboid.x, oldCuboid.x);
+  let ycross = getCrossPoints(newCuboid.y, oldCuboid.y);
+  let zcross = getCrossPoints(newCuboid.z, oldCuboid.z);
 
-  for(let i in xsplitPoints) {
-    for(let j in ysplitPoints) {
-      for(let k in zsplitPoints) {
-        let testCuboid = { x: xsplitPoints[i], y: ysplitPoints[j], z: zsplitPoints[k], on: true };
+  for(let i in xcross) {
+    for(let j in ycross) {
+      for(let k in zcross) {
+        let cutCuboid = { x: xcross[i], y: ycross[j], z: zcross[k], on: true };
 
-        if(!holdsCuboid(newCuboid, testCuboid)){
-          ret.push(testCuboid);
+        if(!holdsCuboid(newCuboid, cutCuboid)){
+          ret.push(cutCuboid);
         }
       }
     }
