@@ -64,7 +64,7 @@ for(let i in arr) {
     inst.z = [z0,z1];
 
     
-    if (onoff === 'on') {
+    if(onoff === 'on') {
       inst.on = true;
       
       let x = line[0].split('..');

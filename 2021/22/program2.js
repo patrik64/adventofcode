@@ -14,27 +14,29 @@ function size(cuboid) {
 
 function holdsCuboid(cuboidA, cuboidB) {
 
-  if( cuboidA.x[0] <= cuboidB.x[0] &&
-      cuboidA.x[1] >= cuboidB.x[1] &&
-      cuboidA.y[0] <= cuboidB.y[0] &&
-      cuboidA.y[1] >= cuboidB.y[1] &&
-      cuboidA.z[0] <= cuboidB.z[0] &&
-      cuboidA.z[1] >= cuboidB.z[1]) {
-        return true;
+  if(cuboidA.x[0] <= cuboidB.x[0] &&
+     cuboidA.x[1] >= cuboidB.x[1] &&
+     cuboidA.y[0] <= cuboidB.y[0] &&
+     cuboidA.y[1] >= cuboidB.y[1] &&
+     cuboidA.z[0] <= cuboidB.z[0] &&
+     cuboidA.z[1] >= cuboidB.z[1]) {
+      return true;
   }
+
   return false;
 }
 
 function cutsCuboid(cuboidA, cuboidB) {
 
-  if( cuboidA.x[1] > cuboidB.x[0] &&
-      cuboidA.x[0] < cuboidB.x[1] &&
-      cuboidA.y[1] > cuboidB.y[0] &&
-      cuboidA.y[0] < cuboidB.y[1] &&
-      cuboidA.z[1] > cuboidB.z[0] &&
-      cuboidA.z[0] < cuboidB.z[1]) {
-        return true;
-    }
+  if(cuboidA.x[1] > cuboidB.x[0] &&
+     cuboidA.x[0] < cuboidB.x[1] &&
+     cuboidA.y[1] > cuboidB.y[0] &&
+     cuboidA.y[0] < cuboidB.y[1] &&
+     cuboidA.z[1] > cuboidB.z[0] &&
+     cuboidA.z[0] < cuboidB.z[1]) {
+      return true;
+  }
+
   return false;
 }
 
@@ -129,7 +131,7 @@ for(let i in arr) {
     inst.z = [z0,z1];
 
     
-    if (onoff === 'on') {
+    if(onoff === 'on') {
       inst.on = true;
       
       let x = line[0].split('..');
