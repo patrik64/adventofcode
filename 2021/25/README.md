@@ -4,7 +4,7 @@ This is it: the bottom of the ocean trench, the last place the sleigh keys could
 Your submarine's experimental antenna still isn't boosted enough to detect the keys, but they must be here. 
 All you need to do is reach the seafloor and find them.
 
-At least, you'd touch down on the seafloor if you could; unfortunately, it's completely covered by two large herds of sea cucumbers, 
+At least, you'd touch down on the seafloor if you could; unfortunately, it's completely covered by two large herds of [sea cucumbers](https://en.wikipedia.org/wiki/Sea_cucumber), 
 and there isn't an open space large enough for your submarine.
 
 You suspect that the Elves must have done this before, because just then you discover the phone number of a  
@@ -351,4 +351,4 @@ Boost strength due to matching signal phase: 1 star
 
 **Both parts of this puzzle are complete! They provide two gold stars**
 
-At this point, all that is left is for you to admire your Advent calendar.
+At this point, all that is left is for you to [admire your Advent calendar](https://adventofcode.com/2021).
