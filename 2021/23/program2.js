@@ -108,13 +108,13 @@ function move(apod, state) {
         if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'A1', 'C4', 9));
         }
-        else if(state.C4.current === 'B' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        else if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'A1', 'C3', 8));
         }
-        else if(state.C4.current === 'B' && state.C3.current === 'B' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'A1', 'C2', 7));
         }
-        else if(state.C4.current === 'B' &&  state.C3.current === 'B' && state.C2.current === 'B' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        else if(state.C4.current === 'C' &&  state.C3.current === 'C' && state.C2.current === 'C' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'A1', 'C1', 6));
         }
       }
@@ -122,13 +122,13 @@ function move(apod, state) {
         if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'A1', 'D4', 11));
         }
-        else if(state.D4.current === 'B' && state.D3.current === '.' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        else if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'A1', 'D3', 10));
         }
-        else if(state.D4.current === 'B' && state.D3.current === 'B' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'A1', 'D2', 9));
         }
-        else if(state.D4.current === 'B' &&  state.D3.current === 'B' && state.D2.current === 'B' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        else if(state.D4.current === 'D' &&  state.D3.current === 'D' && state.D2.current === 'D' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'A1', 'D1', 8));
         }
       }
@@ -161,27 +161,185 @@ function move(apod, state) {
       }
       //check slots for A2
       if(apod.current ==='B') {
-        if(state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
+        if(state.B4.current === '.' && state.B3.current === '.' && state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A2', 'B4', 8));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === '.' && state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A2', 'B3', 7));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
           ret.push(createNewState(state, apod, 'A2', 'B2', 6));
         }
-        else if(state.B2.current === 'B' && state.B1.current === '.' && state.H4.current === '.') {
+        else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === 'B' && state.B1.current === '.' && state.H4.current === '.') {
           ret.push(createNewState(state, apod, 'A2', 'B1', 5));
         }
       }
       if(apod.current ==='C') {
-        if(state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A2', 'C4', 10));
+        }
+        if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A2', 'C3', 9));
+        }
+        if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'A2', 'C2', 8));
         }
-        else if(state.C2.current === 'C' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === 'C' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'A2', 'C1', 7));
         }
       }
       if(apod.current ==='D') {
-        if(state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A2', 'D4', 12));
+        }
+        if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A2', 'D3', 11));
+        }
+        if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'A2', 'D2', 10));
         }
-        else if(state.D2.current === 'D' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === 'D' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'A2', 'D1', 9));
+        }
+      }
+    }
+  }
+
+  //for A3
+  if(apod.name === 'A3') {
+    if(apod.current !== '.' && state.A2.current === '.' && state.A1.current === '.') {
+      if(state.H1.current === '.' && state.H2.current === '.') {
+        ret.push(createNewState(state, apod, 'A3', 'H1', 5));
+      }
+      if(state.H2.current === '.') {
+        ret.push(createNewState(state, apod, 'A3', 'H2', 4));
+      }
+      if(state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'A3', 'H4', 4));
+      }
+      if(state.H4.current === '.' && state.H6.current === '.') {
+        ret.push(createNewState(state, apod, 'A3', 'H6', 6));
+      }
+      if(state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        ret.push(createNewState(state, apod, 'A3', 'H8', 8));
+      }
+      if(state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.' && state.H10.current === '.') {
+        ret.push(createNewState(state, apod, 'A3', 'H10', 10));
+      }
+      if(state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.' && state.H10.current === '.' && state.H11.current === '.') {
+        ret.push(createNewState(state, apod, 'A3', 'H11', 11));
+      }
+      //check slots for A3
+      if(apod.current ==='B') {
+        if(state.B4.current === '.' && state.B3.current === '.' && state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'B4', 9));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === '.' && state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'B3', 8));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'B2', 7));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === 'B' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'B1', 6));
+        }
+      }
+      if(apod.current ==='C') {
+        if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'C4', 11));
+        }
+        if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'C3', 10));
+        }
+        if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'C2', 9));
+        }
+        if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === 'C' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'C1', 8));
+        }
+      }
+      if(apod.current ==='D') {
+        if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'D4', 13));
+        }
+        if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'D3', 12));
+        }
+        if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'D2', 11));
+        }
+        if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === 'D' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A3', 'D1', 10));
+        }
+      }
+    }
+  }
+
+  //for A4
+  if(apod.name === 'A4') {
+    if(apod.current !== '.' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.') {
+      if(state.H1.current === '.' && state.H2.current === '.') {
+        ret.push(createNewState(state, apod, 'A4', 'H1', 6));
+      }
+      if(state.H2.current === '.') {
+        ret.push(createNewState(state, apod, 'A4', 'H2', 5));
+      }
+      if(state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'A4', 'H4', 5));
+      }
+      if(state.H4.current === '.' && state.H6.current === '.') {
+        ret.push(createNewState(state, apod, 'A4', 'H6', 7));
+      }
+      if(state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        ret.push(createNewState(state, apod, 'A4', 'H8', 9));
+      }
+      if(state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.' && state.H10.current === '.') {
+        ret.push(createNewState(state, apod, 'A4', 'H10', 11));
+      }
+      if(state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.' && state.H10.current === '.' && state.H11.current === '.') {
+        ret.push(createNewState(state, apod, 'A4', 'H11', 12));
+      }
+      //check slots for A4
+      if(apod.current ==='B') {
+        if(state.B4.current === '.' && state.B3.current === '.' && state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'B4', 10));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === '.' && state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'B3', 9));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === '.' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'B2', 8));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === 'B' && state.B1.current === '.' && state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'B1', 7));
+        }
+      }
+      if(apod.current ==='C') {
+        if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'C4', 10));
+        }
+        if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'C3', 9));
+        }
+        if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'C2', 8));
+        }
+        if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === 'C' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'C1', 7));
+        }
+      }
+      if(apod.current ==='D') {
+        if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'D4', 14));
+        }
+        if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'D3', 13));
+        }
+        if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'D2', 12));
+        }
+        if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === 'D' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'A4', 'D1', 11));
         }
       }
     }
@@ -213,26 +371,44 @@ function move(apod, state) {
       }
       //check slots for B1
       if(apod.current ==='A') {
-        if(state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+        if(state.A4.current === '.' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B1', 'A4', 7));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B1', 'A3', 6));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
           ret.push(createNewState(state, apod, 'B1', 'A2', 5));
         }
-        else if(state.A2.current === 'A' && state.A1.current === '.' && state.H4.current === '.') {
+        if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === 'A' && state.A1.current === '.'&& state.H4.current === '.') {
           ret.push(createNewState(state, apod, 'B1', 'A1', 4));
         }
       }
       if(apod.current ==='C') {
-        if(state.C1.current === '.' && state.C2.current === '.' && state.H6.current === '.') {
+        if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B1', 'C4', 7));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B1', 'C3', 6));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'B1', 'C2', 5));
         }
-        else if(state.C2.current === 'C' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === 'C' && state.C1.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'B1', 'C1', 4));
         }
       }
       if(apod.current ==='D') {
-        if(state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B1', 'D4', 9));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B1', 'D3', 8));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'B1', 'D2', 7));
         }
-        else if(state.D2.current === 'D' && state.H6.current === '.' && state.H8.current === '.') {
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === 'D' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'B1', 'D1', 6));
         }
       }
@@ -265,27 +441,185 @@ function move(apod, state) {
       }
       //check slots for B1
       if(apod.current ==='A') {
-        if(state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+        if(state.A4.current === '.' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B2', 'A4', 8));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B2', 'A3', 7));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
           ret.push(createNewState(state, apod, 'B2', 'A2', 6));
         }
-        else if(state.A2.current === 'A' && state.A1.current === '.' && state.H4.current === '.') {
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === 'A' && state.A1.current === '.'&& state.H4.current === '.') {
           ret.push(createNewState(state, apod, 'B2', 'A1', 5));
         }
       }
       if(apod.current ==='C') {
-        if(state.C1.current === '.' && state.C2.current === '.' && state.H6.current === '.') {
-          ret.push(createNewState(state, apod, 'B2', 'C2', 6));
+        if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B2', 'C4', 10));
         }
-        else if(state.C2.current === 'C' && state.C1.current === '.' && state.H6.current === '.') {
-          ret.push(createNewState(state, apod, 'B2', 'C1', 5));
+        else if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B2', 'C3', 9));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B2', 'C2', 8));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === 'C' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B2', 'C1', 7));
         }
       }
       if(apod.current ==='D') {
-        if(state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B2', 'D4', 10));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B2', 'D3', 9));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'B2', 'D2', 8));
         }
-        else if(state.D2.current === 'D' && state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === 'D' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
           ret.push(createNewState(state, apod, 'B2', 'D1', 7));
+        }
+      }
+    }
+  }
+
+  //for B3
+  if(apod.name === 'B3') {
+    if(apod.current !== '.' && state.B2.current === '.' && state.B1.current === '.') {
+      if(state.H1.current === '.' && state.H2.current === '.' && state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'B3', 'H1', 7));
+      }
+      if(state.H2.current === '.' && state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'B3', 'H2', 6));
+      }
+      if(state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'B3', 'H4', 4));
+      }
+      if(state.H6.current === '.') {
+        ret.push(createNewState(state, apod, 'B3', 'H6', 4));
+      }
+      if(state.H6.current === '.' && state.H8.current === '.') {
+        ret.push(createNewState(state, apod, 'B3', 'H8',6));
+      }
+      if(state.H6.current === '.' && state.H8.current === '.' && state.H10.current === '.') {
+        ret.push(createNewState(state, apod, 'B3', 'H10', 8));
+      }
+      if(state.H6.current === '.' && state.H8.current === '.' && state.H10.current === '.' && state.H11.current === '.') {
+        ret.push(createNewState(state, apod, 'B3', 'H11', 9));
+      }
+      //check slots for B3
+      if(apod.current ==='A') {
+        if(state.A4.current === '.' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'A4', 9));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'A3', 8));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'A2', 7));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === 'A' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'A1', 6));
+        }
+      }
+      if(apod.current ==='C') {
+        if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'C4', 11));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'C3',10));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'C2', 9));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === 'C' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'C1', 8));
+        }
+      }
+      if(apod.current ==='D') {
+        if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'D4', 11));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'D3', 10));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'D2', 9));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === 'D' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B3', 'D1', 8));
+        }
+      }
+    }
+  }
+
+  //for B4
+  if(apod.name === 'B4') {
+    if(apod.current !== '.' && state.B3.current === '.' && state.B2.current === '.' && state.B1.current === '.') {
+      if(state.H1.current === '.' && state.H2.current === '.' && state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'B4', 'H1', 8));
+      }
+      if(state.H2.current === '.' && state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'B4', 'H2', 7));
+      }
+      if(state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'B4', 'H4', 5));
+      }
+      if(state.H6.current === '.') {
+        ret.push(createNewState(state, apod, 'B4', 'H6', 5));
+      }
+      if(state.H6.current === '.' && state.H8.current === '.') {
+        ret.push(createNewState(state, apod, 'B4', 'H8',7));
+      }
+      if(state.H6.current === '.' && state.H8.current === '.' && state.H10.current === '.') {
+        ret.push(createNewState(state, apod, 'B4', 'H10', 9));
+      }
+      if(state.H6.current === '.' && state.H8.current === '.' && state.H10.current === '.' && state.H11.current === '.') {
+        ret.push(createNewState(state, apod, 'B4', 'H11', 10));
+      }
+      //check slots for B4
+      if(apod.current ==='A') {
+        if(state.A4.current === '.' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'A4', 10));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'A3', 9));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === '.' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'A2', 8));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === 'A' && state.A1.current === '.'&& state.H4.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'A1', 7));
+        }
+      }
+      if(apod.current ==='C') {
+        if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'C4', 10));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'C3', 9));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'C2', 8));
+        }
+        else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === 'C' && state.C1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'C1', 7));
+        }
+      }
+      if(apod.current ==='D') {
+        if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'D4', 10));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'D3', 9));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'D2', 8));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === 'D' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'B4', 'D1', 7));
         }
       }
     }
@@ -317,27 +651,45 @@ function move(apod, state) {
       }
       //check slots for C1
       if(apod.current ==='A') {
-        if(state.A2.current === '.' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        if(state.A4.current === '.' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'C1', 'A4', 9));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'C1', 'A3', 8));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === '.' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'C1', 'A2', 7));
         }
-        else if(state.A2.current === 'A' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === 'A' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'C1', 'A1', 6));
         }
       }
       if(apod.current ==='B') {
-        if(state.B2.current === '.' && state.B1.current === '.' && state.H6.current === '.') {
+        if(state.B4.current === '.' && state.B3.current === '.' && state.B2.current === '.' && state.B1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'C1', 'B4', 7));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === '.' && state.B2.current === '.' && state.B1.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'C1', 'B3', 6));
+        }
+        else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === '.' && state.B1.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'C1', 'B2', 5));
         }
-        else if(state.B2.current === 'B' && state.B1.current === '.' && state.H6.current === '.') {
+        else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === 'B' && state.B1.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'C1', 'B1', 4));
         }
       }
       if(apod.current ==='D') {
-        if(state.D2.current === '.' &&  state.D1.current === '.' && state.H8.current === '.') {
-          ret.push(createNewState(state, apod, 'C1', 'D2', 5));
+        if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'C1', 'D4', 9));
         }
-        else if(state.D1.current === 'D' && state.D1.current === '.' && state.H8.current === '.') {
-          ret.push(createNewState(state, apod, 'C1', 'D1', 4));
+        else if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'C1', 'D3', 8));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' &&  state.D1.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'C1', 'D2', 7));
+        }
+        else if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === 'D' &&  state.D1.current === '.' && state.H8.current === '.') {
+          ret.push(createNewState(state, apod, 'C1', 'D1', 6));
         }
       }
     }
@@ -369,15 +721,21 @@ function move(apod, state) {
       }
       //check slots for C2
       if(apod.current ==='A') {
-        if(state.A2.current === '.' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        if(state.A4.current === '.' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'C2', 'A4', 10));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+          ret.push(createNewState(state, apod, 'C2', 'A3', 9));
+        }
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === '.' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'C2', 'A2', 8));
         }
-        else if(state.A2.current === 'A' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === 'A' && state.A1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'C2', 'A1', 7));
         }
       }
       if(apod.current ==='B') {
-        if(state.B1.current === '.' && state.B2.current === '.' && state.H6.current === '.') {
+        if(state.B2.current === '.' && state.B1.current === '.' && state.H6.current === '.') {
           ret.push(createNewState(state, apod, 'C2', 'B2', 6));
         }
         else if(state.B2.current === 'B' && state.B1.current === '.' && state.H6.current === '.') {
@@ -563,34 +921,58 @@ function move(apod, state) {
   //for H2
   if(apod.name === 'H2') {
     if(apod.current ==='A') {
-      if(state.A2.current === '.' &&  state.A1.current === '.') {
+      if(state.A4.current === '.' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.') {
+        ret.push(createNewState(state, apod, 'H2', 'A4', 5));
+      }
+      else if(state.A4.current === 'A' && state.A3.current === '.' && state.A2.current === '.' && state.A1.current === '.') {
+        ret.push(createNewState(state, apod, 'H2', 'A3', 4));
+      }
+      else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === '.' && state.A1.current === '.') {
         ret.push(createNewState(state, apod, 'H2', 'A2', 3));
       }
-      else if(state.A2.current === 'A' && state.A1.current === '.' && state.A2.current === 'A') {
+      else if(state.A4.current === 'A' && state.A3.current === 'A' && state.A2.current === 'A' && state.A1.current === '.') {
         ret.push(createNewState(state, apod, 'H2', 'A1', 2));
       }
     }
     if(apod.current ==='B') {
-      if(state.B2.current === '.' &&  state.B1.current === '.' && state.H4.current === '.') {
+      if(state.B4.current === '.' && state.B3.current === '.' && state.B2.current === '.' &&  state.B1.current === '.' && state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'H2', 'B4', 7));
+      }
+      else if(state.B4.current === 'B' && state.B3.current === '.' && state.B2.current === '.' &&  state.B1.current === '.' && state.H4.current === '.') {
+        ret.push(createNewState(state, apod, 'H2', 'B3', 6));
+      }
+      else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === '.' &&  state.B1.current === '.' && state.H4.current === '.') {
         ret.push(createNewState(state, apod, 'H2', 'B2', 5));
       }
-      else if(state.B2.current === 'B' && state.B1.current === '.' && state.H4.current === '.') {
+      else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === 'B' &&  state.B1.current === '.' && state.H4.current === '.') {
         ret.push(createNewState(state, apod, 'H2', 'B1', 4));
       }
     }
     if(apod.current ==='C') {
-      if(state.C2.current === '.' &&  state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+      if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' &&  state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        ret.push(createNewState(state, apod, 'H2', 'C4', 9));
+      }
+      else if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' &&  state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+        ret.push(createNewState(state, apod, 'H2', 'C3', 8));
+      }
+      else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' &&  state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
         ret.push(createNewState(state, apod, 'H2', 'C2', 7));
       }
-      else if(state.C2.current === 'C' && state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
+      else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === 'C' &&  state.C1.current === '.' && state.H4.current === '.' && state.H6.current === '.') {
         ret.push(createNewState(state, apod, 'H2', 'C1', 6));
       }
     }
     if(apod.current ==='D') {
-      if(state.D2.current === '.' &&  state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
-        ret.push(createNewState(state, apod, 'H2', 'D2', 9));
+      if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        ret.push(createNewState(state, apod, 'H2', 'D4', 11));
       }
       else if(state.D2.current === 'D' && state.D1.current === '.' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        ret.push(createNewState(state, apod, 'H2', 'D3', 10));
+      }
+      else if(state.D2.current === 'D' && state.D1.current === 'D' && state.H4.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        ret.push(createNewState(state, apod, 'H2', 'D2', 9));
+      }
+      else if(state.D2.current === 'D' && state.D1.current === 'D' && state.H4.current === 'D' && state.H6.current === '.' && state.H8.current === '.') {
         ret.push(createNewState(state, apod, 'H2', 'D1', 8));
       }
     }
@@ -599,35 +981,58 @@ function move(apod, state) {
   //for H4
   if(apod.name === 'H4') {
     if(apod.current ==='A') {
-      if(state.A2.current === '.' &&  state.A1.current === '.') {
+      if(state.A4.current === '.' && state.A3.current === '.' &&  state.A2.current === '.' &&  state.A1.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'A4', 5));
+      }
+      else if(state.A4.current === 'A' && state.A3.current === '.' &&  state.A2.current === '.' &&  state.A1.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'A3', 4));
+      }
+      else if(state.A4.current === 'A' && state.A3.current === 'A' &&  state.A2.current === '.' &&  state.A1.current === '.') {
         ret.push(createNewState(state, apod, 'H4', 'A2', 3));
       }
-      else if(state.A2.current === 'A' && state.A1.current === '.') {
+      else if(state.A4.current === 'A' && state.A3.current === 'A' &&  state.A2.current === 'A' &&  state.A1.current === '.') {
         ret.push(createNewState(state, apod, 'H4', 'A1', 2));
       }
     }
     if(apod.current ==='B') {
-      if(state.B2.current === '.' &&  state.B1.current === '.') {
-        ret.push(createNewState(state, apod, 'H4', 'B2', 3));
-        
+      if(state.B4.current === '.' && state.B3.current === '.' && state.B2.current === '.' &&  state.B1.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'B4', 5));
       }
-      else if(state.B2.current === 'B' && state.B1.current === '.') {
-        ret.push(createNewState(state, apod, 'H4', 'B1', 2));
+      else if(state.B4.current === 'B' && state.B3.current === '.' && state.B2.current === '.' &&  state.B1.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'B3', 4));
+      }
+      else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === '.' &&  state.B1.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'B2', 3));
+      }
+      else if(state.B4.current === 'B' && state.B3.current === 'B' && state.B2.current === 'B' &&  state.B1.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'B4', 2));
       }
     }
     if(apod.current ==='C') {
-      if(state.C2.current === '.' &&  state.C1.current === '.' && state.H6.current === '.') {
+      if(state.C4.current === '.' && state.C3.current === '.' && state.C2.current === '.' &&  state.C1.current === '.' && state.H6.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'C4', 7));
+      }
+      else if(state.C4.current === 'C' && state.C3.current === '.' && state.C2.current === '.' &&  state.C1.current === '.' && state.H6.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'C3', 6));
+      }
+      else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === '.' &&  state.C1.current === '.' && state.H6.current === '.') {
         ret.push(createNewState(state, apod, 'H4', 'C2', 5));
       }
-      else if(state.C2.current === 'C' && state.C1.current === '.' && state.H6.current === '.') {
+      else if(state.C4.current === 'C' && state.C3.current === 'C' && state.C2.current === 'C' &&  state.C1.current === '.' && state.H6.current === '.') {
         ret.push(createNewState(state, apod, 'H4', 'C1', 4));
       }
     }
     if(apod.current ==='D') {
-      if(state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+      if(state.D4.current === '.' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'D4', 9));
+      }
+      if(state.D4.current === 'D' && state.D3.current === '.' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+        ret.push(createNewState(state, apod, 'H4', 'D3', 8));
+      }
+      if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === '.' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
         ret.push(createNewState(state, apod, 'H4', 'D2', 7));
       }
-      else if(state.D2.current === 'D' && state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
+      if(state.D4.current === 'D' && state.D3.current === 'D' && state.D2.current === 'D' &&  state.D1.current === '.' && state.H6.current === '.' && state.H8.current === '.') {
         ret.push(createNewState(state, apod, 'H4', 'D1', 6));
       }
     }
