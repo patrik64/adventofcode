@@ -1,6 +1,4 @@
-const { ECDH } = require('crypto');
 let fs = require('fs');
-const { resourceLimits } = require('worker_threads');
 let input = fs.readFileSync('Day4.in', 'utf8');
 let arr = input.split('\n');
 

@@ -1,6 +1,4 @@
-const { count } = require('console');
 let fs = require('fs');
-const { resourceLimits } = require('worker_threads');
 let input = fs.readFileSync('Day5.in', 'utf8');
 let arr = input.split('\n');
 
