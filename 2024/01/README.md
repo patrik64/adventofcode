@@ -43,7 +43,7 @@ Your actual left and right lists contain many location IDs.
 
 Your puzzle answer was ``1970720``.
 
---- Part Two ---
+**--- Part Two ---**
 
 Your analysis only confirmed what everyone feared: the two lists of location IDs are indeed very different.
 
